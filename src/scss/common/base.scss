@@ -1,0 +1,82 @@
+@use "../vars/vars" as v;
+@use "../mixins/ui-mixins" as m;
+
+* {
+  outline: none;
+  box-sizing: border-box;
+  font-family: v.$ff-m;
+}
+
+body,
+html {
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0;
+}
+
+body {
+  position: relative;
+  min-width: 300px;
+  display: flex;
+  height: auto;
+  font-family: v.$ff-m;
+  font-size: v.$fs-md;
+  line-height: v.$lh;
+  color: v.$black;
+  background-color: v.$dark;
+
+  @include m.minimal-scrollbar()
+}
+
+h1,h2,h3,h4,h5,h6,ul,ol,p,form,fieldset,
+input,textarea,select,button {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto
+}
+
+ul, ol {
+  list-style: none;
+}
+
+form,
+fieldset {
+  border: 0;
+}
+
+input,
+button,
+a,
+textarea {
+  &:focus-visible {
+    outline: 2px solid v.$gray;
+    outline-offset: 2px;
+    border-radius: v.$br;
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor:  pointer;
+}
+
+strong {
+  color: v.$accent;
+}
+
+* {
+  &::selection {
+    background-color: v.$dark;
+    color: v.$accent
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

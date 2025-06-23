@@ -1,0 +1,97 @@
+@use '../../../scss/vars/vars' as v;
+@use '../../../scss/mixins/typography' as m;
+
+.hero {
+  padding-top: 80px;
+  position: relative;
+
+  .blocks {
+    position: absolute;
+    left: -50%;
+    top: -20%;
+    width: 100%;
+    min-width: 1400px;
+    min-height: 1400px;
+    z-index: -1;
+
+    @media(min-width: v.$xl) {
+      left: -20%;
+      top: -25%;
+    }
+  }
+
+  &Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 68px);
+    gap: 32px;
+
+    @media(min-width: v.$xl) {
+      min-height: calc(100vh - 80px);
+    }
+  }
+
+  &Desc {
+    width: 100%;
+    max-width: 833px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    position: relative;
+
+
+    @media(min-width: v.$xxl) {
+      max-width: 760px;
+    }
+  }
+
+  &Heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    .subtitle {
+      color: v.$accent;
+      font-family: v.$ff-r;
+      font-size: v.$fs-md;
+      font-weight: v.$fw-medium;
+      line-height: v.$lh;
+      text-transform: uppercase;
+
+      @media(min-width: v.$md) {
+        font-size: v.$fs-lg;
+      }
+
+      @media(min-width: v.$xl) {
+        font-size: v.$fs-xl;
+      }
+    }
+
+    h1 {
+      max-width: 750px;
+      color: v.$white;
+      font-family: v.$ff-r;
+      font-size: v.$fs-3xl;
+      font-style: normal;
+      font-weight: v.$fw-bold;
+      line-height: v.$lh-title;
+      text-transform: uppercase;
+      word-break: keep-all;
+
+      @media(min-width: v.$md) {
+        font-size: v.$fs-4xl;
+      }
+
+      @media(min-width: v.$xl) {
+        font-size: v.$fs-5xl;
+      }
+    }
+
+    p {
+      @include m.subtext(left);
+    }
+  }
+}

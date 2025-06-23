@@ -1,0 +1,120 @@
+@use '../../../scss/vars/vars' as v;
+@use '../../../scss/mixins/typography' as t;
+
+.about {
+  position: relative;
+
+  .blocks {
+    position: absolute;
+    left: -50%;
+    top: -10%;
+    width: 100%;
+    min-width: 1400px;
+    min-height: 1400px;
+    z-index: -1;
+
+    @media(min-width: v.$md) {
+      top: -5%;
+    }
+
+    @media(min-width: v.$xl) {
+      left: 0;
+      top: -35%;
+    }
+  }
+
+  &Wrapper {
+    display:  flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  &Inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+
+    @media(min-width: v.$xl) {
+      flex-direction: row;
+    }
+  }
+
+  &Items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+
+    @media(min-width: v.$xl) {
+      max-width: 500px;
+      gap: 64px;
+    }
+
+    @media(min-width: v.$xxl) {
+      max-width: 700px;
+    }
+  }
+
+  &Item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    h3 {
+      @include t.h3();
+    }
+
+    p {
+      @include t.subtext(left);
+    }
+  }
+
+  &Images {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+
+    @media(min-width: v.$xl) {
+      width: calc(100% - 532px);
+      gap: 32px;
+    }
+
+    @media(min-width: v.$xxl) {
+      width: calc(100% - 764px);
+    }
+
+    &Left, &Right {
+      width: calc(50% - 16px);
+      height: 100%;
+      display: flex;
+      gap: 16px;
+      flex-direction:  column;
+      align-items: flex-start;
+
+      img {
+        width: 100%;
+        height: auto;
+        box-shadow: v.$bs-type1;
+        border-radius: v.$br;
+      }
+    }
+
+    &Left {
+      @media(min-width: v.$xl) {
+        gap: 44px;
+      }
+    }
+
+    &Right {
+      @media(min-width: v.$xl) {
+        gap: 72px;
+      }
+    }
+
+  }
+}

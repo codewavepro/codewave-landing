@@ -1,0 +1,29 @@
+@use '../../../scss/vars/vars' as v;
+@use '../../../scss/placeholders/button' as *;
+
+.tabBtn {
+  @extend %btn-base;
+  width: 100%;
+  background-color: v.$dark;
+  padding: 8px 16px;
+  color: v.$white;
+  text-align: center;
+  font-family: v.$ff-m;
+  font-size: v.$fs-md;
+  font-weight: v.$fw-regular;
+  line-height: v.$lh;
+  border-radius: v.$br;
+  box-shadow: v.$bs-type1;
+  text-transform: capitalize;
+  transition: background-color ease v.$tr, color ease v.$tr;
+
+  @media(min-width: v.$xl) {
+    padding: 16px 24px;
+    font-size: v.$fs-lg;
+  }
+
+  &.active {
+    background-color: v.$gray;
+    color: v.$dark;
+  }
+}

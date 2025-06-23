@@ -1,0 +1,402 @@
+@use '../../../scss/vars/vars' as v;
+@use '../../../scss/mixins/typography' as t;
+
+.contact {
+  padding: 60px 0;
+
+  @media(min-width: v.$xl) {
+    padding: 120px 0;
+  }
+
+  &Wrapper {
+    display:  flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 64px;
+
+    @media(min-width: v.$lg) {
+      flex-direction: row;
+    }
+  }
+
+  &Info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 504px;
+
+    @media(min-width: v.$xl) {
+      max-width: 604px;
+    }
+
+    h2 {
+      @include t.h2();
+    }
+
+    p {
+      @include t.subtext(left);
+    }
+  }
+
+  .successContainer {
+    width: 100%;
+    max-width: 565px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: v.$br;
+    border: 1px solid v.$gray;
+    background-color: rgba(46, 204, 113, 0.05);
+    min-height: 300px;
+    
+    .formMessage {
+      font-family: v.$ff-r;
+      text-align: center;
+      font-size: v.$fs-xl;
+      color: v.$white;
+    }
+  }
+  
+  form {
+    width: 100%;
+    max-width: 565px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+
+    .halfWidth {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      width: 100%;
+
+      @media(min-width: v.$md) {
+        flex-direction: row;
+      }
+
+      .inputRow {
+       width: 100%;
+
+        @media(min-width: v.$md) {
+          width: calc(50% - 8px);
+        }
+      }
+    }
+
+    .inputRow {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+
+      &.required {
+        &::after {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          content: '*';
+          color: v.$accent;
+        }
+      }
+
+      &.error {
+        input, textarea {
+          border-color: v.$accent;
+        }
+      }
+    }
+
+    fieldset {
+      width: 100%;
+      display:flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      border: none;
+      padding: 0;
+      margin: 0;
+
+      input, textarea {
+        width: 100%;
+        padding: 8px 16px;
+        background-color: transparent;
+        color: v.$white;
+        font-family: v.$ff-r;
+        font-size: v.$fs-lg;
+        font-weight: v.$fw-regular;
+        border-radius: v.$br;
+        border: 1px solid v.$gray;
+
+        @media(min-width: v.$xl) {
+          padding: 6px 14px;
+          font-size: v.$fs-xl;
+        }
+
+        &::placeholder{
+          color: v.$gray;
+          font-family: v.$ff-r;
+          font-size: v.$fs-lg;
+          font-weight: v.$fw-regular;
+          text-transform: none;
+
+          @media(min-width: v.$xl) {
+            font-size: v.$fs-xl;
+          }
+        }
+      }
+
+      textarea {
+        resize: none;
+        height: 150px;
+      }
+
+      .deadline {
+        width: 100%;
+        display: flex;
+        flex-direction:  column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 6px 14px;
+        border: 1px solid v.$gray;
+        border-radius: v.$br;
+
+        @media(min-width: v.$md) {
+          flex-direction: row;
+          align-items: center;
+          padding: 8px 16px;
+        }
+
+        span {
+          width: 100%;
+          color: v.$white;
+          font-family: v.$ff-r;
+          font-size: v.$fs-lg;
+          font-weight: v.$fw-regular;
+
+          @media(min-width: v.$md) {
+            width: calc(50% - 8px);
+            font-size: v.$fs-xl;
+          }
+        }
+
+        input[type="date"] {
+          width: 100%;
+          padding: 0;
+          border: 0;
+
+          @media(min-width: v.$md) {
+            width: calc(50% - 8px);
+          }
+        }
+      }
+    }
+
+    .preferredContact {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .preferredLabel {
+        color: v.$white;
+        font-family: v.$ff-r;
+        font-size: v.$fs-xl;
+        font-weight: v.$fw-regular;
+      }
+
+      .contactMethodWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+      }
+
+      .preferredItems {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .preferredItem {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: v.$br;
+        border: 1px solid v.$gray;
+        cursor: pointer;
+        transition: all ease v.$tr;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          color: v.$gray;
+          transition: color ease v.$tr;
+        }
+
+        span {
+          color: v.$gray;
+          font-family: v.$ff-r;
+          font-size: v.$fs-sm;
+          font-weight: v.$fw-regular;
+          transition: color ease v.$tr;
+        }
+
+        &:hover {
+          border-color: v.$accent;
+          
+          svg, span {
+            color: v.$accent;
+          }
+        }
+
+        &.active {
+          border-color: v.$accent;
+          background-color: rgba(v.$accent, 0.1);
+          
+          svg, span {
+            color: v.$accent;
+          }
+        }
+      }
+
+      .contactDetailsInput {
+        width: 100%;
+        position: relative;
+
+        &.required {
+          &::after {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            content: '*';
+            color: v.$accent;
+          }
+        }
+
+        &.error {
+          input {
+            border-color: v.$accent
+          }
+        }
+      }
+    }
+
+    .checkWrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+
+      &.required {
+        &::after {
+          content: '*';
+          display: block;
+          color: v.$accent;
+        }
+
+      }
+
+      &.error {
+        label {
+          color: v.$accent;
+
+          span {
+            border-color: v.$accent;
+          }
+        }
+      }
+
+      &.error {
+        label span {
+          border-color: v.$accent;
+        }
+      }
+
+      label {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: v.$gray;
+        font-family: v.$ff-r;
+        font-size: v.$fs-xs;
+        font-weight: v.$fw-regular;
+        line-height: v.$lh;
+        cursor: pointer;
+        position: relative;
+
+        span {
+          position: relative;
+          width: 20px;
+          height: 20px;
+          min-width: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid v.$gray;
+          border-radius: v.$br;
+
+          &:after {
+            content: '';
+            font-family: v.$ff-r;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 14px;
+            height: 14px;
+            opacity: 0;
+            background-color: v.$gray;
+            border-radius: v.$br;
+            transition: opacity ease v.$tr;
+          }
+        }
+
+        input[type="checkbox"] {
+          position: absolute;
+          left: 0;
+          width: 1px;
+          height: 1px;
+          opacity: 0;
+        }
+
+        input[type="checkbox"]:checked + span::after {
+          opacity: 1;
+        }
+        
+        input[type="checkbox"].error + span {
+          border-color: v.$accent;
+          box-shadow: 0 0 0 1px v.$accent;
+        }
+        
+        input[type="checkbox"]:focus + span {
+          box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      .errorMessage {
+        margin-left: 36px;
+        margin-top: 4px;
+      }
+    }
+
+    button {
+      margin: 0;
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

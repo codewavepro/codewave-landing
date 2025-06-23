@@ -1,0 +1,124 @@
+@use '../../../scss/vars/vars' as v;
+
+.footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 40px 0;
+  border-top: 1px solid v.$accent;
+  position: relative;
+
+  @media(min-width: v.$lg) {
+    padding: 60px 0;
+  }
+
+  .blocks {
+    position: absolute;
+    right: -100%;
+    top: -50%;
+    width: 100%;
+    min-width: 1400px;
+    min-height: 1400px;
+    z-index: -1;
+
+    @media(min-width: v.$md) {
+      top: -60%;
+      right: -50%;
+    }
+
+    @media(min-width: v.$xl) {
+      right: 0;
+      top: -170%;
+    }
+  }
+
+  &Wrapper {
+    width: 100%;
+  }
+
+  &Cols {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    h2 {
+      color: v.$white;
+      font-family: v.$ff-r;
+      font-size: v.$fs-lg;
+      font-weight: v.$fw-regular;
+      text-transform: capitalize;
+
+      @media(min-width: v.$lg) {
+        font-size: v.$fs-xl;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+
+      li {
+        padding-right: 10px;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: v.$gray;
+          font-family: v.$ff-m;
+          font-size: v.$fs-md;
+          font-weight: v.$fw-regular;
+          transition: opacity ease v.$tr;
+
+          &:hover {
+            opacity: v.$op;
+          }
+
+          img {
+            width: 24px;
+            height: 24px;
+            aspect-ratio: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &Col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    a {
+      transition: opacity ease v.$tr;
+
+      img {
+        width: 220px;
+        height: auto;
+      }
+
+      &:hover {
+        opacity: v.$op;
+      }
+    }
+
+    p, span {
+      color: v.$gray;
+      font-family: v.$ff-m;
+      font-size: v.$fs-md;
+      font-weight: v.$fw-regular;
+      transition: opacity ease v.$tr;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@use '../../../scss/vars/vars' as v;
+
+.stats {
+  &Wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    @media(min-width: v.$md) {
+      flex-direction: row;
+      gap: 32px;
+    }
+
+    @media(min-width: v.$lg) {
+      gap: 64px;
+    }
+  }
+
+  .hiddenHeading {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 0;
+    visibility: hidden;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+  }
+
+  &Card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: v.$dark;
+    box-shadow: v.$bs-type1;
+    padding: 16px;
+    border-radius: v.$br;
+
+    @media(min-width: v.$md) {
+      width: 33.333%;
+    }
+
+    &Inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      @media(min-width: v.$md) {
+        gap: 32px;
+      }
+    }
+
+    h3 {
+      color: v.$white;
+      font-family: v.$ff-r;
+      font-size: v.$fs-2xl;
+      font-weight: v.$fw-regular;
+      line-height: v.$lh;
+      text-align: center;
+
+      @media(min-width: v.$lg) {
+        font-size: 64px;
+      }
+    }
+
+    p {
+      color: v.$white;
+      font-family: v.$ff-r;
+      font-size: v.$fs-lg;
+      font-weight: v.$fw-regular;
+      line-height: v.$lh;
+      text-align: center;
+      text-transform: capitalize;
+
+      @media(min-width: v.$lg) {
+        font-size: v.$fs-xl;
+      }
+    }
+  }
+}

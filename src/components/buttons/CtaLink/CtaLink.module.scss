@@ -1,0 +1,98 @@
+@use '../../../scss/vars/vars' as v;
+
+.ctaLink {
+  padding: 12px 20px 12px 0;
+  background-color: v.$dark;
+  border-radius: v.$br;
+  box-shadow: v.$bs-type1;
+
+  @media(min-width: v.$md) {
+    padding: 12px 12px 12px 0;
+  }
+
+  &:hover {
+    .ctaLinkInner {
+      &:before {
+        width: 100%;
+      }
+
+      .arrow {
+        svg {
+          color: v.$white
+        }
+      }
+    }
+  }
+
+  &Inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 12px;
+    position: relative;
+    z-index: 1;
+
+    @media(min-width: v.$md) {
+      gap: 15px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      display: block;
+      width: 32px;
+      height: 100%;
+      border-radius: v.$br;
+      background-color: v.$accent;
+      box-shadow: v.$bs-type1;
+      transition: width ease v.$tr;
+      z-index: -1;
+
+      @media(min-width: v.$md) {
+        width: 54px;
+      }
+    }
+  }
+
+  &Text {
+    color: v.$white;
+    font-family: v.$ff-m;
+    font-size: v.$fs-lg;
+    font-weight: v.$fw-medium;
+    line-height: v.$lh;
+
+    @media(min-width: v.$md) {
+      font-size: v.$fs-xl;
+    }
+
+    @media(min-width: v.$xl) {
+      font-size: v.$fs-2xl;
+    }
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    padding: 6px;
+
+    @media(min-width: v.$md) {
+      padding: 14px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: v.$black;
+      transition: color ease v.$tr;
+
+      @media(min-width: v.$md) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

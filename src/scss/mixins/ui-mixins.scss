@@ -1,0 +1,39 @@
+@use "../vars/vars" as v;
+
+@mixin minimal-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  @media(min-width: v.$lg) {
+    scrollbar-width: thin;
+    scrollbar-color: v.$dark transparent;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: v.$dark;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: v.$white;
+      border-radius: v.$br;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: v.$white;
+    }
+  }
+}
+
+@mixin hiddenXScroll() {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

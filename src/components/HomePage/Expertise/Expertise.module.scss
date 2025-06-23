@@ -1,0 +1,152 @@
+@use '../../../scss/vars/vars' as v;
+@use '../../../scss/mixins/typography' as t;
+
+.expertise {
+  position: relative;
+
+  .blocks {
+    position: absolute;
+    right: -20%;
+    top: -40%;
+    width: 100%;
+    min-width: 1400px;
+    min-height: 1400px;
+    z-index: -1;
+
+    @media(min-width: v.$md) {
+      top: -35%;
+    }
+
+    @media(min-width: v.$xl) {
+      right: 5%;
+      top: 15%;
+    }
+  }
+
+  &Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+
+    @media(min-width: v.$xl) {
+      gap: 64px;
+    }
+
+    .tabs {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+
+      @media(min-width: v.$xl) {
+        gap: 32px;
+      }
+
+      ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 8px 0;
+
+        li {
+          min-width: calc(25% - 12px);
+        }
+      }
+    }
+
+    .tabContent {
+      width: 100%;
+
+      &Inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        justify-content: space-between;
+
+        @media(min-width: v.$lg) {
+          flex-direction: row;
+        }
+      }
+
+      &Info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+
+        @media(min-width: v.$lg) {
+          max-width: 548px;
+        }
+
+        h3 {
+          @include t.h3();
+        }
+
+        p {
+          @include t.body(white);
+        }
+      }
+
+      &Stack {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 8px;
+
+        .stackItem {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 8px;
+          padding: 8px 16px;
+          border-radius: v.$br;
+          background-color: v.$dark;
+          box-shadow: v.$bs-type1;
+
+          span {
+            color: v.$white;
+            font-family: v.$ff-m;
+            font-size: v.$fs-sm;
+            font-weight: v.$fw-regular;
+            line-height: v.$lh;
+          }
+
+          img {
+            width: 24px;
+            height: 24px;
+            aspect-ratio: 1;
+          }
+        }
+      }
+
+      &Img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        aspect-ratio: 16/9;
+
+        @media(min-width: v.$lg) {
+          max-width: 702px;
+          justify-content: flex-start;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: v.$br;
+          box-shadow: v.$bs-type1;
+        }
+      }
+    }
+  }
+}

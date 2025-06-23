@@ -1,0 +1,44 @@
+@use '../../../scss/vars/vars' as v;
+@use '../../../scss/placeholders/button' as *;
+
+.button {
+  width: 100%;
+  padding: 16px 24px;
+  text-align: center;
+  font-family: v.$ff-r;
+  font-size: v.$fs-lg;
+  font-style: normal;
+  font-weight: v.$fw-regular;
+  box-shadow: v.$bs-type1;
+  border-radius: v.$br;
+  text-transform: capitalize;
+  margin: 0 auto;
+
+  @extend %btn-base;
+
+  @media(min-width: v.$xl) {
+    font-size: v.$fs-xl;
+  }
+
+  &.dark {
+    background-color: v.$dark;
+    color: v.$white;
+  }
+
+  &.light {
+    background-color: v.$gray;
+    color: v.$black;
+  }
+
+  &.default {
+    max-width: 200px;
+  }
+
+  &.large {
+    max-width: 300px;
+  }
+
+  &.full {
+    max-width: 100%;
+  }
+}

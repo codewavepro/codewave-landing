@@ -1,0 +1,64 @@
+@use '../vars/vars' as v;
+
+// Header cta-btn
+@keyframes cta-rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+@keyframes cta-glow {
+  0%, 80% {
+    filter: drop-shadow(0 0 0 v.$accent);
+  }
+
+  90% {
+    filter: drop-shadow(0 0 6px v.$accent);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 0 v.$accent);
+  }
+}
+
+//Hero blobs
+@keyframes moveBlob {
+  0% {
+    transform: translateX(100px) translateY(60px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(250px) translateY(150px) rotate(40deg);
+  }
+  100% {
+    transform: translateX(100px) translateY(60px) rotate(0deg);
+  }
+}
+
+@keyframes moveBlob7 {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50px) translateY(50px) rotate(10deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes moveBlob9 {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50px) translateY(30px) rotate(5deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

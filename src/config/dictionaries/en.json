@@ -1,0 +1,412 @@
+{
+  "common": {
+    "header": {
+      "navigation": {
+        "expertise": "Expertise",
+        "cases": "Case Studies",
+        "testimonials": "Testimonials",
+        "about": "About Us",
+        "contact": "Contact"
+      }
+    },
+    "footer": {
+      "columns": [
+        {
+          "title": "Reach us",
+          "type": "contacts",
+          "items": [
+            {
+              "icon": "/icons/mail.svg",
+              "text": "Mail"
+            },
+            {
+              "icon": "/icons/telegram.svg",
+              "text": "Telegram"
+            },
+            {
+              "icon": "/icons/discord.svg",
+              "text": "Discord"
+            },
+            {
+              "icon": "/icons/linkedin.svg",
+              "text": "LinkedIn"
+            },
+            {
+              "icon": "/icons/x.svg",
+              "text": "Twitter(X)"
+            }
+          ]
+        },
+        {
+          "title": "Menu",
+          "type": "links",
+          "items": [
+            { "text": "Expertise", "href": "#" },
+            { "text": "Case Studies", "href": "#" },
+            { "text": "Testimonials", "href": "#" },
+            { "text": "About Us", "href": "#" },
+            { "text": "Contact", "href": "#" }
+          ]
+        },
+        {
+          "title": "Legal",
+          "type": "links",
+          "items": [
+            { "text": "Privacy Policy", "href": "/privacy" },
+            { "text": "Terms & Services", "href": "#" },
+            { "text": "Terms Of Use", "href": "#" },
+            { "text": "Refund Policy", "href": "#" }
+          ]
+        },
+        {
+          "type": "brand",
+          "logo": "/logo.svg",
+          "description": "All rights reserved."
+        }
+      ]
+    }
+  },
+  "home": {
+    "hero": {
+      "subtext": "We are codeWavePro",
+      "h1": "Smart solutions for web and e-Commerce.",
+      "desc": "More than a decade of engineering robust digital ecosystems using WordPress, WooCommerce, and modern JavaScript frameworks — built to scale and perform.",
+      "cta": "Get Started"
+    },
+    "stats": {
+      "hidden": "Key statistics and achievements of Codewave",
+      "items": [
+        {
+          "title": "350+",
+          "text": "Projects Completed"
+        },
+        {
+          "title": "270+",
+          "text": "Satisfied Clients"
+        },
+        {
+          "title": "15+",
+          "text": "Years Of Experience"
+        }
+      ]
+    },
+    "expertise": {
+      "h2": "Our Expertise",
+      "subtext": "Our team provides end-to-end web development services, focusing on building robust websites, e-commerce platforms, and web applications. With expertise in modern technologies, we create solutions that meet your business needs and deliver seamless user experiences.",
+      "tabs": [
+        {
+          "label": "WordPress",
+          "title": "Custom WordPress Websites",
+          "description": "We develop custom WordPress websites that are fast, scalable, and built with long-term maintainability in mind. From project architecture to design integration and deployment, we handle the entire development cycle. Our focus is on clean code, SEO-optimized markup, accessibility, and performance tuning. Whether it's a marketing site, blog, or multi-page platform — we ensure seamless content management and flexibility through intuitive admin tools tailored to your needs. Our stack includes ACF, CPTs, multilingual support, and block-based layouts — no bloated themes, only efficient custom development.",
+          "stack": [
+            {
+              "name": "WordPress",
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "name": "PHP",
+              "icon": "/icons/php.svg"
+            },
+            {
+              "name": "JavaScript",
+              "icon": "/icons/js.svg"
+            },
+            {
+              "name": "mySQL",
+              "icon": "/icons/sql.svg"
+            }
+          ],
+          "image": "/wordpress.png"
+        },
+        {
+          "label": "WooCommerce",
+          "title": "WooCommerce Stores",
+          "description": "We build custom WooCommerce stores that combine performance, scalability, and clean UX. From product logic and checkout flows to custom payment integrations — everything is crafted to maximize conversions and optimize store management. We ensure fast page loads, clean code, and extendable architecture — whether it's a B2C shop, subscription model, or multi-language storefront.",
+          "stack": [
+            {
+              "name": "WooCommerce",
+              "icon": "/icons/woo.svg"
+            },
+            {
+              "name": "Stripe API",
+              "icon": "/icons/stripe.svg"
+            },
+            {
+              "name": "WordPress REST API",
+              "icon": "/icons/api.svg"
+            }
+          ],
+          "image": "/woo.jpg"
+        },
+        {
+          "label": "Frontend/Backend",
+          "title": "Modern Frontend & API Integrations",
+          "description": "We develop fast, responsive, and scalable frontend interfaces using modern frameworks (React, Next.js, TypeScript), connecting them with powerful backend solutions on Go. We implement custom APIs, server-side rendering, SSR/SSG, security, and authentication. We support an architecture designed for project growth — focusing on code readability, SEO, and high performance.",
+          "stack": [
+            {
+              "name": "React",
+              "icon": "/icons/react.svg"
+            },
+            {
+              "name": "Next.js",
+              "icon": "/icons/next.svg"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "/icons/ts.svg"
+            },
+            {
+              "name": "GoLang",
+              "icon": "/icons/go.svg"
+            },
+            {
+              "name": "REST API",
+              "icon": "/icons/api.svg"
+            }
+          ],
+          "image": "/web.jpg"
+        },
+        {
+          "label": "Support/Plugins",
+          "title": "Ongoing Support & Plugin Development",
+          "description": "We provide long-term support for your web platforms, including performance optimization, security audits, and plugin development tailored to your needs. Whether it's extending WordPress/WooCommerce functionality or building lightweight custom tools — we ensure stable, scalable, and maintainable solutions that evolve with your business.",
+          "stack": [
+            {
+              "name": "Custom Plugins",
+              "icon": "/icons/plugins.svg"
+            },
+            {
+              "name": "Security",
+              "icon": "/icons/security.svg"
+            },
+            {
+              "name": "Performance",
+              "icon": "/icons/performance.svg"
+            },
+            {
+              "name": "Maintenance",
+              "icon": "/icons/maintenance.svg"
+            }
+          ],
+          "image": "/main.jpg"
+        }
+      ]
+    },
+    "cta": {
+      "h2": "We build. You <strong>grow.</strong>",
+      "subtext": "Drop us a message — we’ll take it from there.",
+      "btn": "Get Started",
+      "desc": "You can also reach us via Telegram, Discord, LinkedIn or X — whichever is more convenient. We're quick to respond."
+    },
+    "portfolio": {
+      "h2": "Case studies",
+      "subtext": "Explore real-world projects where our team delivered tailored web solutions to meet complex business needs.\u2028 From e-commerce platforms and custom CMS features to high-performance frontend applications — each case highlights our process, tech stack, and the value delivered.\u2028 These examples demonstrate our ability to solve technical challenges, optimize user experience, and drive measurable results.",
+      "tabButtons": [
+        "WordPress", "WooCommerce", "React", "Web3", "test"
+      ],
+      "tabs": [
+        {
+          "label": "WordPress",
+          "img": "/portfolio.jpg",
+          "h3": "3D Solar System Planets to Explore",
+          "desc": "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" },
+            { "icon": "/icons/tailwind.svg" }
+          ],
+          "link": "https://example.com"
+        },
+        {
+          "label": "WordPress",
+          "img": "/portfolio.jpg",
+          "h3": "Project A",
+          "desc": "Description",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" }
+          ],
+          "link": "https://example.com"
+        },
+        {
+          "label": "WordPress",
+          "img": "/portfolio.jpg",
+          "h3": "3D Solar System Planets to Explore",
+          "desc": "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" },
+            { "icon": "/icons/tailwind.svg" }
+          ],
+          "link": "https://example.com"
+        },
+        {
+          "label": "WordPress",
+          "img": "/portfolio.jpg",
+          "h3": "Project A",
+          "desc": "Description",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" }
+          ],
+          "link": "https://example.com"
+        },
+        {
+          "label": "WordPress",
+          "img": "/portfolio.jpg",
+          "h3": "3D Solar System Planets to Explore",
+          "desc": "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" },
+            { "icon": "/icons/tailwind.svg" }
+          ],
+          "link": "https://example.com"
+        },
+        {
+          "label": "WordPress",
+          "img": "/portfolio.jpg",
+          "h3": "Project A",
+          "desc": "Description",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" }
+          ],
+          "link": "https://example.com"
+        },
+        {
+          "label": "WordPress",
+          "img": "/portfolio.jpg",
+          "h3": "3D Solar System Planets to Explore",
+          "desc": "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" },
+            { "icon": "/icons/tailwind.svg" }
+          ],
+          "link": "https://example.com"
+        },
+        {
+          "label": "WooCommerce",
+          "img": "/portfolio.jpg",
+          "h3": "Project A",
+          "desc": "Description",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" }
+          ],
+          "link": "https://example.com"
+        }
+      ],
+      "load": "Load More"
+    },
+    "testimonials": {
+      "h2": "Testimonials",
+      "subtext": "Quality is at the core of everything we do at codeWave. From the first planning call to final deployment, we aim to exceed expectations — not just deliver what’s asked. But don’t just take our word for it. Below, you’ll find stories and feedback from teams we’ve worked with — highlighting the results we’ve achieved together and the relationships we’ve built along the way.",
+      "slides": [
+        {
+          "img": "/users/user1.jpg",
+          "stars": 5,
+          "p": "I reached out to codeWave to help us build a professional WordPress site for our new brand, and they absolutely nailed it. The design is clean, modern, and perfectly reflects our identity.\nWhat impressed me most was how smooth the whole process was. Communication was easy, deadlines were respected, and they took care of both design and development from start to finish.\nThe site is fast, SEO-friendly, and super simple to update — exactly what we needed. I highly recommend codeWave if you're looking for real professionals.",
+          "name": "Michael Evans",
+          "position": "Founder & CEO"
+        },
+        {
+          "img": "/users/user2.jpg",
+          "stars": 5,
+          "p": "We hired codeWave to help us build a new SaaS platform using Next.js on the frontend and Node.js for our API layer. From day one, their team showed deep technical expertise and strong architectural thinking.\nThey helped us set up a scalable foundation, implemented authentication, SSR, API routing, and handled deployment via Vercel and Docker with zero friction. Communication was efficient, the codebase is clean and easy to maintain, and performance is excellent.\nI’ve worked with many dev teams — codeWave stands out for both professionalism and technical depth. Highly recommended for any serious full-stack project.",
+          "name": "Elena Morozova",
+          "position": "CTO"
+        },
+        {
+          "img": "/users/user3.jpg",
+          "stars": 5,
+          "p": "Working with codeWave on our Web3 project was a great decision. We needed a secure, modern frontend built with Next.js and a reliable Node.js backend to integrate with multiple smart contracts and wallet providers.\nThe team handled everything professionally — from Web3 wallet connectivity (MetaMask, WalletConnect) to smart contract interactions and real-time data sync from the blockchain. They paid close attention to performance and security, which was critical for us.\nThe end result is a clean, responsive dashboard our users love, and a backend we trust. codeWave delivered exactly what we needed — on time and with zero unnecessary noise. Would definitely work with them again.",
+          "name": "Lucas Pereira",
+          "position": "Head of Product"
+        },
+        {
+          "img": "/users/user1.jpg",
+          "stars": 5,
+          "p": "I reached out to codeWave to help us build a professional WordPress site for our new brand, and they absolutely nailed it. The design is clean, modern, and perfectly reflects our identity.\nWhat impressed me most was how smooth the whole process was. Communication was easy, deadlines were respected, and they took care of both design and development from start to finish.\nThe site is fast, SEO-friendly, and super simple to update — exactly what we needed. I highly recommend codeWave if you're looking for real professionals.",
+          "name": "Michael Evans",
+          "position": "Founder & CEO"
+        },
+        {
+          "img": "/users/user2.jpg",
+          "stars": 5,
+          "p": "We hired codeWave to help us build a new SaaS platform using Next.js on the frontend and Node.js for our API layer. From day one, their team showed deep technical expertise and strong architectural thinking.\nThey helped us set up a scalable foundation, implemented authentication, SSR, API routing, and handled deployment via Vercel and Docker with zero friction. Communication was efficient, the codebase is clean and easy to maintain, and performance is excellent.\nI’ve worked with many dev teams — codeWave stands out for both professionalism and technical depth. Highly recommended for any serious full-stack project.",
+          "name": "Elena Morozova",
+          "position": "CTO"
+        },
+        {
+          "img": "/users/user3.jpg",
+          "stars": 5,
+          "p": "Working with codeWave on our Web3 project was a great decision. We needed a secure, modern frontend built with Next.js and a reliable Node.js backend to integrate with multiple smart contracts and wallet providers.\nThe team handled everything professionally — from Web3 wallet connectivity (MetaMask, WalletConnect) to smart contract interactions and real-time data sync from the blockchain. They paid close attention to performance and security, which was critical for us.\nThe end result is a clean, responsive dashboard our users love, and a backend we trust. codeWave delivered exactly what we needed — on time and with zero unnecessary noise. Would definitely work with them again.",
+          "name": "Lucas Pereira",
+          "position": "Head of Product"
+        }
+      ]
+    },
+    "about": {
+      "h2": "About Us",
+      "subtext": "We are a full-stack web development team. From concept to deployment — we turn your ideas into scalable, production-ready web products.",
+      "items": [
+        {
+          "title": "Planning & <strong>Architecture</strong>",
+          "text": "We start by analyzing your goals and defining a clear technical roadmap. We design scalable architecture and choose the right stack from day one."
+        },
+        {
+          "title": "<strong>UI</strong> Implementation",
+          "text": "We translate Figma designs into clean, modular, and pixel-perfect components. Using CSS Modules and React, we build structured and maintainable UIs."
+        },
+        {
+          "title": "Backend & <strong>Integration</strong>",
+          "text": "We implement backend logic, database structures, authentication, and external integrations. REST, gRPC, WebSocket — we connect all the dots reliably."
+        },
+        {
+          "title": "<strong>Deployment</strong> & Handoff",
+          "text": "We prepare the product for production, set up CI/CD, and deploy to cloud or custom infrastructure. Full documentation and support included."
+        }
+      ]
+    },
+    "contact": {
+      "h2": "Send us a message",
+      "subtext": "Have a question or want to discuss your project? Fill out the form — we’ll reply shortly via Telegram.\nYour message will be sent directly to our us. No spam. No bots. Just real humans.",
+      "form": {
+        "name": "First name",
+        "surname": "Surname",
+        "company": "Company",
+        "budget": "Project Budget",
+        "deadline": "Deadline",
+        "message": "Message",
+        "preferred": "Preferred contact method",
+        "privacy": "I agree to share my contact details so you can reach out.",
+        "button": "Send"
+      },
+      "toast": {
+        "fill": "Please fill all required fields correctly",
+        "init": "reCAPTCHA has not been initialized. Please reload the page.",
+        "verify": "Failed to pass reCAPTCHA verification. Please try again.",
+        "sending": "Sending your message...",
+        "failed": "Failed to send message. Please try again later.",
+        "success": "Your message has been sent successfully!"
+      }
+    }
+  },
+  "notFound": {
+    "info": {
+      "title": "404 - Page Not Found",
+      "description": "Sorry, the requested page does not exist",
+      "backButton": "Back to Home"
+    }
+  }
+}

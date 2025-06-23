@@ -1,0 +1,68 @@
+@use '../vars/vars' as v;
+
+@mixin subtext($align) {
+  color: v.$gray;
+  text-align: #{$align};
+  font-family: v.$ff-m;
+  font-size: v.$fs-md;
+  font-weight: v.$fw-regular;
+  line-height: v.$lh;
+
+  @media(min-width: v.$md) {
+    font-size: v.$fs-lg;
+  }
+
+  @media(min-width: v.$xl) {
+    font-size: v.$fs-xl;
+  }
+}
+
+@mixin h2() {
+  color: v.$white;
+  font-family: v.$ff-r;
+  font-size: v.$fs-2xl;
+  font-weight: v.$fw-bold;
+  line-height: v.$lh-title;
+  text-transform: capitalize;
+
+  @media(min-width: v.$md) {
+    font-size: v.$fs-3xl;
+  }
+
+  @media(min-width: v.$xl) {
+    font-size: v.$fs-4xl;
+  }
+}
+
+@mixin h3() {
+  color: v.$white;
+  font-family: v.$ff-r;
+  font-size: v.$fs-xl;
+  font-weight: v.$fw-bold;
+  line-height: v.$lh-title;
+  text-transform: capitalize;
+
+  @media(min-width: v.$md) {
+    font-size: v.$fs-2xl;
+  }
+
+  @media(min-width: v.$xl) {
+    font-size: v.$fs-3xl;
+  }
+}
+
+@mixin body($color) {
+  color: $color;
+  font-family: v.$ff-m;
+  font-size: v.$fs-sm;
+  font-weight: v.$fw-regular;
+  line-height: v.$lh;
+
+  @media(min-width: v.$md) {
+    font-size: v.$fs-md;
+  }
+
+  @media(min-width: v.$xl) {
+    font-size: v.$fs-lg;
+  }
+}

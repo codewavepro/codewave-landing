@@ -1,0 +1,80 @@
+@use '../../scss/vars/vars' as v;
+@use '../../scss/mixins/typography' as m;
+
+.titlebox {
+  &.center {
+    .titleboxWrapper {
+      justify-content:  center;
+    }
+
+    .titleboxInner {
+      align-items: center;
+
+      h2 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  &.left {
+    .titleboxWrapper {
+      justify-content:  flex-start;
+    }
+
+    .titleboxInner {
+      align-items: flex-start;
+
+      h2 {
+        text-align: left;
+      }
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  &Wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &Inner {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    gap: 16px;
+
+    @media(min-width: v.$md) {
+      gap: 32px;
+    }
+
+    h2 {
+      color: v.$white;
+      font-family: v.$ff-r;
+      font-size: v.$fs-2xl;
+      font-weight: v.$fw-bold;
+      line-height: v.$lh-title;
+      text-transform: capitalize;
+
+      @media(min-width: v.$md) {
+        font-size: v.$fs-3xl;
+      }
+
+      @media(min-width: v.$xl) {
+        font-size: v.$fs-4xl;
+      }
+    }
+
+    p {
+      @include m.subtext(center)
+    }
+  }
+}
