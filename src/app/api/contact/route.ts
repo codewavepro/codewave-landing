@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getCountry } from '@/lib/ipUtils';
 
 type ContactMethod = 'email' | 'telegram' | 'twitter' | 'discord' | 'linkedin' | 'whatsapp';
 
@@ -6,19 +7,6 @@ type FormResponse = {
   success: boolean;
   message: string;
 };
-
-async function getCountryFromIP(ip: string): Promise<string> {
-  try {
-    const res = await fetch(`https://ipapi.co/${ip}/json/`);
-    if (!res.ok) console.error('IP API failed');
-
-    const data = await res.json();
-    return data.country_name || 'Неизвестная страна';
-  } catch (error) {
-    console.error('Error fetching country from IP:', error);
-    return 'Неизвестная страна';
-  }
-}
 
 async function verifyRecaptcha(token: string): Promise<boolean> {
   try {
@@ -145,8 +133,8 @@ export async function POST(request: NextRequest): Promise<NextResponse<FormRespo
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
       request.headers.get('x-real-ip') ||
       'Неизвестный IP';
-    
-    const country = await getCountryFromIP(ip);
+
+    const country = getCountry(ip);
 
     const formData = await request.formData();
     const recaptchaToken = formData.get('recaptchaToken') as string;
