@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCountry } from '@/lib/ipUtils';
-
-type ContactMethod = 'email' | 'telegram' | 'twitter' | 'discord' | 'linkedin' | 'whatsapp';
+import {validateContactDetails, validateDate, ContactMethod} from "@/shared/validation";
 
 type FormResponse = {
   success: boolean;
@@ -32,47 +31,6 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
     console.error('Error verifying reCAPTCHA:', error);
     return false;
   }
-}
-
-function validateContactDetails(method: ContactMethod, details: string): boolean {
-  if (!details.trim()) return false;
-
-  switch (method) {
-    case 'email':
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(details);
-
-    case 'telegram':
-      return /^@[a-zA-Z0-9_]{5,}$/.test(details) ||
-        /^(https?:\/\/)?(t\.me\/)[a-zA-Z0-9_]{5,}$/.test(details);
-
-    case 'twitter':
-      return /^@[a-zA-Z0-9_]{1,15}$/.test(details) ||
-        /^(https?:\/\/)?(twitter\.com|x\.com)\/[a-zA-Z0-9_]{1,15}$/.test(details);
-
-    case 'discord':
-      return /^[a-zA-Z0-9_-]{2,32}$/.test(details) ||
-        /^(https?:\/\/)?(discord\.gg|discord\.com\/invite)\/[a-zA-Z0-9_-]+$/.test(details);
-
-    case 'linkedin':
-      return /^(https?:\/\/)?(www\.)?linkedin\.com\/(in|company)\/[a-zA-Z0-9_-]+\/?$/.test(details);
-
-    case 'whatsapp':
-      return /^\+[0-9]{7,15}$/.test(details) ||
-        /^(https?:\/\/)?(wa\.me)\/[0-9]{7,15}$/.test(details);
-
-    default:
-      return true;
-  }
-}
-
-function validateDate(dateStr: string): boolean {
-  if (!dateStr) return true;
-
-  const selectedDate = new Date(dateStr);
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  return !isNaN(selectedDate.getTime()) && selectedDate >= today;
 }
 
 async function sendTelegramMessage(text: string, orderId: string): Promise<Response> {
@@ -142,7 +100,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<FormRespo
     if (!recaptchaToken) {
       return NextResponse.json({
         success: false,
-        message: 'reCAPTCHA verification is required',
+        message: 'form.recaptchaRequired',
       }, { status: 400 });
     }
 
@@ -151,7 +109,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<FormRespo
     if (!isHuman) {
       return NextResponse.json({
         success: false,
-        message: 'reCAPTCHA verification failed. Please try again.',
+        message: 'form.recaptchaFail',
       }, { status: 400 });
     }
 
@@ -168,35 +126,35 @@ export async function POST(request: NextRequest): Promise<NextResponse<FormRespo
     if (!name || !surname || !message || !contactMethod || !contactDetails || !privacyAccepted) {
       return NextResponse.json({
         success: false,
-        message: 'Please fill in all required fields',
+        message: 'form.fillRequiredFields',
       }, { status: 400 });
     }
 
     if (message.length < 30) {
       return NextResponse.json({
         success: false,
-        message: 'Message is too short. Please provide more details.',
+        message: 'form.tooShort',
       }, { status: 400 });
     }
 
     if (message.length > 3000) {
       return NextResponse.json({
         success: false,
-        message: 'Message is too long. Please limit your message to 3000 characters.',
+        message: 'form.tooLong',
       }, { status: 400 });
     }
 
     if (deadline && !validateDate(deadline)) {
       return NextResponse.json({
         success: false,
-        message: 'Deadline cannot be in the past.',
+        message: 'form.invalidDeadline',
       }, { status: 400 });
     }
 
     if (!validateContactDetails(contactMethod, contactDetails)) {
       return NextResponse.json({
         success: false,
-        message: `Invalid ${contactMethod} contact details`,
+        message: `form.invalidContact`,
       }, { status: 400 });
     }
 
@@ -230,14 +188,14 @@ ${contactDetails}
 
       return NextResponse.json({
         success: true,
-        message: 'Your message has been sent successfully!',
+        message: 'form.success',
       });
     } catch (error) {
       console.error('Error in sendTelegramMessage:', error);
       
       return NextResponse.json({
         success: false,
-        message: 'Failed to send message. Please try again later.',
+        message: 'form.error',
       }, { status: 500 });
     }
 

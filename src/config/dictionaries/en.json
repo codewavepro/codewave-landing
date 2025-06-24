@@ -393,12 +393,18 @@
         "button": "Send"
       },
       "toast": {
-        "fill": "Please fill all required fields correctly",
-        "init": "reCAPTCHA has not been initialized. Please reload the page.",
-        "verify": "Failed to pass reCAPTCHA verification. Please try again.",
-        "sending": "Sending your message...",
-        "failed": "Failed to send message. Please try again later.",
-        "success": "Your message has been sent successfully!"
+        "form.fillRequiredFields": "Please fill in all required fields.",
+        "form.tooShort": "Message is too short. Please provide more details.",
+        "form.tooLong": "Message is too long. Please limit your message to 3000 characters.",
+        "form.invalidDeadline": "Deadline cannot be in the past.",
+        "form.invalidContact": "Invalid contact details for the selected method.",
+        "form.privacyRequired": "You must accept the privacy policy.",
+        "form.recaptchaFail": "reCAPTCHA verification failed.",
+        "form.recaptchaNotReady": "reCAPTCHA is not ready. Please try again later.",
+        "form.recaptchaMissing": "reCAPTCHA token is missing. Please refresh and try again.",
+        "form.success": "Your message has been sent successfully!",
+        "form.error": "Failed to send message. Please try again.",
+        "form.sending": "Sending..."
       }
     }
   },
