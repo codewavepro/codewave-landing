@@ -80,6 +80,8 @@ export default function Header({ lang }: HeaderProps) {
 
   if (loading || !dictionary) return null;
 
+  const headerData = dictionary.common.header;
+
   return (
     <header className={styles.header}>
       <LayoutContainer>
@@ -109,7 +111,7 @@ export default function Header({ lang }: HeaderProps) {
               <div className={styles.headerRight}>
                 <LangBtn/>
                 <Link href={`/${lang}/contact`} className={styles.ctaBtn}>
-                  Let's Talk
+                  {headerData.cta}
                   <div className={styles.glow}></div>
                   <div className={styles.box}></div>
                 </Link>
@@ -145,7 +147,7 @@ export default function Header({ lang }: HeaderProps) {
                 <div className={styles.mobileBottom}>
                   <LangBtn isMobile={true} />
                   <Link href={`/${lang}/contact`} className={styles.ctaBtn} onClick={handleMenuItemClick}>
-                    Let's Talk
+                    {headerData.cta}
                     <div className={styles.glow}></div>
                     <div className={styles.box}></div>
                   </Link>
