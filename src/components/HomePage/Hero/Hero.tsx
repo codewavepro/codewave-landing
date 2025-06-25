@@ -38,7 +38,7 @@ export default function Hero() {
                                 {heroData.desc}
                             </p>
                         </div>
-                        <CtaLink text={heroData.cta} href="#"></CtaLink>
+                        <CtaLink text={heroData.cta} href="/#stats"></CtaLink>
                     </div>
                     <TerminalAnimation />
                 </div>
