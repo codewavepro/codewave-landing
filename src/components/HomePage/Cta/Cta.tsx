@@ -52,7 +52,7 @@ const Cta = () => {
     const ctaData = dictionary.home.cta;
 
     return (
-        <section className={styles.cta}>
+        <section className={styles.cta} id="cta">
             <SectionContainer>
                 <div className={styles.ctaWrapper}>
                     <div className={styles.ctaInner}>

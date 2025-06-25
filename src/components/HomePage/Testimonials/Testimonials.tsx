@@ -33,7 +33,7 @@ const Testimonials = () => {
     } = dictionary.home.testimonials;
 
     return (
-        <section className={styles.testimonials}>
+        <section className={styles.testimonials} id="testimonials">
             <Image className={styles.blocks} src="/blocks4.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.testimonialsWrapper}>

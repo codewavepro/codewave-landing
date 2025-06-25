@@ -58,7 +58,7 @@ const Portfolio = () => {
     const portfolioData = dictionary.home.portfolio
 
     return (
-        <section className={styles.portfolio}>
+        <section className={styles.portfolio} id="portfolio">
             <Image className={styles.blocks} src="/blocks3.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.portfolioWrapper}>

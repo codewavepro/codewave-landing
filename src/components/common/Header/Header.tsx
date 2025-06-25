@@ -70,11 +70,11 @@ export default function Header({ lang }: HeaderProps) {
   const menuItems = useMemo(() => {
     if (!dictionary) return [];
     return [
-      { name: dictionary.common.header.navigation.expertise, path: `/${lang}/#` },
-      { name: dictionary.common.header.navigation.cases, path: `/${lang}/#` },
-      { name: dictionary.common.header.navigation.testimonials, path: `/${lang}/#` },
-      { name: dictionary.common.header.navigation.about, path: `/${lang}/#` },
-      { name: dictionary.common.header.navigation.contact, path: `/${lang}/#` },
+      { name: dictionary.common.header.navigation.expertise, path: `/#expertise` },
+      { name: dictionary.common.header.navigation.cases, path: `/#portfolio` },
+      { name: dictionary.common.header.navigation.testimonials, path: `/#testimonials` },
+      { name: dictionary.common.header.navigation.about, path: `/#about` },
+      { name: dictionary.common.header.navigation.contact, path: `/#contact` },
     ];
   }, [dictionary, lang]);
 
@@ -110,7 +110,7 @@ export default function Header({ lang }: HeaderProps) {
               </nav>
               <div className={styles.headerRight}>
                 <LangBtn/>
-                <Link href={`/${lang}/contact`} className={styles.ctaBtn}>
+                <Link href={`/#contact`} className={styles.ctaBtn}>
                   {headerData.cta}
                   <div className={styles.glow}></div>
                   <div className={styles.box}></div>
@@ -146,7 +146,7 @@ export default function Header({ lang }: HeaderProps) {
                 </nav>
                 <div className={styles.mobileBottom}>
                   <LangBtn isMobile={true} />
-                  <Link href={`/${lang}/contact`} className={styles.ctaBtn} onClick={handleMenuItemClick}>
+                  <Link href={`/contact`} className={styles.ctaBtn} onClick={handleMenuItemClick}>
                     {headerData.cta}
                     <div className={styles.glow}></div>
                     <div className={styles.box}></div>

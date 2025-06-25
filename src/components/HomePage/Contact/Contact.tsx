@@ -14,6 +14,7 @@ import { BiLogoTelegram } from "react-icons/bi";
 import { BsTwitterX, BsWhatsapp } from "react-icons/bs";
 import { FaDiscord, FaLinkedin } from "react-icons/fa";
 import useReCaptcha from '@/hooks/useReCaptcha';
+import Image from "next/image";
 
 type FormState = {
     success: boolean;
@@ -180,7 +181,8 @@ const Contact = () => {
     };
 
     return (
-        <section className={styles.contact}>
+        <section className={styles.contact} id="contact">
+            <Image className={styles.blocks} src="/blocks3.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.contactWrapper}>
                     <div className={styles.contactInfo}>

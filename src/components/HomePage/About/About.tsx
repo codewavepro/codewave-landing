@@ -18,7 +18,7 @@ const About = () => {
     const aboutData = dictionary.home.about;
 
     return (
-        <section className={styles.about}>
+        <section className={styles.about} id="about">
             <Image className={styles.blocks} src="/blocks1.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.aboutWrapper}>
