@@ -852,6 +852,13 @@
     "contactTitle": "Contact Us",
     "contactText": "If you have any questions about these Terms of Use, please contact us at:"
   },
+  "cookieBanner": {
+    "text": "We use cookies to improve your experience. Read our",
+    "privacyPolicy": "Privacy Policy",
+    "acceptButton": "Accept",
+    "declineButton": "Decline",
+    "description": "By accepting, you consent to the use of cookies to enhance site functionality. If you decline, some features may be limited."
+  },
   "notFound": {
     "info": {
       "title": "404 - Page Not Found",

@@ -16,12 +16,12 @@
   z-index: 100;
   border-top: 1px solid v.$gray;
 
-  .text {
+  p {
     text-align: center;
     @include t.body(white)
   }
 
-  .link {
+  a {
     color: v.$accent;
     text-decoration: underline;
   }

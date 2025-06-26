@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import styles from './CookieBanner.module.scss';
+import useDictionary from "@/hooks/useDictionary";
 import Button from "@/components/buttons/Button/Button";
 import Link from 'next/link';
 
@@ -9,6 +10,7 @@ const COOKIE_KEY = 'cookie-consent';
 
 export default function CookieBanner() {
     const [visible, setVisible] = useState(false);
+    const { loading, dictionary } = useDictionary();
 
     useEffect(() => {
         const saved = localStorage.getItem(COOKIE_KEY);
@@ -20,19 +22,36 @@ export default function CookieBanner() {
         setVisible(false);
     };
 
-    if (!visible) return null;
+    if (loading || !visible || !dictionary) return null;
+
+    const t = dictionary.cookieBanner;
 
     return (
         <div className={styles.banner}>
-            <p className={styles.text}>
-                We use cookies to improve your experience. Read our {''}
-                <Link href="/privacy-policy" className={styles.link}>
-                    Privacy Policy
+            <p>
+                {t.text}{" "}
+                <Link href="/privacy-policy">
+                    {t.privacyPolicy}
                 </Link>.
             </p>
+            <p>
+                {t.description}
+            </p>
             <div className={styles.buttons}>
-                <Button text="Accept" size="sm" color="light" ariaLabel="Accept" onClick={() => handleChoice('accepted')}  />
-                <Button text="Decline" size="sm" color="dark" ariaLabel="Decline" onClick={() => handleChoice('declined')} />
+                <Button
+                    text={t.acceptButton}
+                    size="sm"
+                    color="light"
+                    ariaLabel="Accept"
+                    onClick={() => handleChoice('accepted')}
+                />
+                <Button
+                    text={t.declineButton}
+                    size="sm"
+                    color="dark"
+                    ariaLabel="Decline"
+                    onClick={() => handleChoice('declined')}
+                />
             </div>
         </div>
     );
