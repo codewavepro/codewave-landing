@@ -266,6 +266,39 @@
         {
           "id": 4,
           "images": [
+            "/cases/builder/1.jpg",
+            "/cases/builder/2.jpg",
+            "/cases/builder/3.jpg",
+            "/cases/builder/4.jpg",
+            "/cases/builder/5.jpg"
+          ],
+          "h3": "Платформа для создания NFT с высокой производительностью",
+          "desc": "CRMH builder — высокопроизводительная платформа для создания NFT-коллекций, построенная на стеке Go (1.24), Gin и PostgreSQL. Архитектура реализует  распределенную обработку задач генерации цифровых активов через систему  горутин с динамическим контролем ресурсов, где каждый модуль отвечает за конкретный этап жизненного цикла NFT — от проектирования слоев до  финального рендеринга.\nИнтеграция с  Groq Cloud через llama3-8b модель добавляет интеллектуальную генерацию  метаданных, автоматически создавая уникальные описания и имена для  трейтов. Платформа использует гибридный подход к безопасности:  JWT-авторизация сочетается с механизмами защиты от брутфорса, а  транзакционная работа с медиафайлами гарантирует целостность данных на  каждом этапе.",
+          "stack": [
+            {
+              "icon": "/icons/next.svg"
+            },
+            {
+              "icon": "/icons/ts.svg"
+            },
+            {
+              "icon": "/icons/node.svg"
+            },
+            {
+              "icon": "/icons/go.svg"
+            },
+            {
+              "icon": "/icons/postgres.svg"
+            },
+            {
+              "icon": "/icons/ai.svg"
+            }
+          ],
+          "link": "https://builder.crmh.xyz"
+        },
+        {
+          "id": 5,
+          "images": [
             "/cases/industrialcyber/1.jpg",
             "/cases/industrialcyber/2.jpg",
             "/cases/industrialcyber/3.jpg",
@@ -283,7 +316,7 @@
           "link": "https://industrialcyber.co/"
         },
         {
-          "id": 5,
+          "id": 6,
           "images": [
             "/cases/maximumstudio/1.jpg",
             "/cases/maximumstudio/2.jpg",
@@ -302,7 +335,7 @@
           "link": "https://maximumstudio.ru/"
         },
         {
-          "id": 6,
+          "id": 7,
           "images": [
             "/cases/mercifultowing/1.jpg",
             "/cases/mercifultowing/2.jpg",
@@ -321,7 +354,7 @@
           "link": "https://mercifultowing.com/"
         },
         {
-          "id": 7,
+          "id": 8,
           "images": [
             "/cases/centrysec/1.jpg",
             "/cases/centrysec/2.jpg",
@@ -340,7 +373,7 @@
           "link": "https://sentrysecurity.com/"
         },
         {
-          "id": 8,
+          "id": 9,
           "images": [
             "/cases/takepoint/1.jpg",
             "/cases/takepoint/2.jpg",
@@ -361,7 +394,7 @@
           "link": "https://takepoint.co/"
         },
         {
-          "id": 9,
+          "id": 10,
           "images": [
             "/cases/tesidea/1.jpg",
             "/cases/tesidea/2.jpg",
@@ -380,7 +413,7 @@
           "link": "https://tesidea.com/"
         },
         {
-          "id": 10,
+          "id": 11,
           "images": [
             "/cases/tsh-system/1.jpg",
             "/cases/tsh-system/2.jpg",
@@ -401,7 +434,7 @@
           "link": "https://tsh-system.de/"
         },
         {
-          "id": 11,
+          "id": 12,
           "images": [
             "/cases/jamtal/1.jpg",
             "/cases/jamtal/2.jpg",
@@ -422,7 +455,7 @@
           "link": "https://www.jamtalhuette.at/en/"
         },
         {
-          "id": 12,
+          "id": 13,
           "images": [
             "/cases/kicknote/1.jpg",
             "/cases/kicknote/2.jpg",
@@ -441,7 +474,7 @@
           "link": "https://www.kicknote.net/"
         },
         {
-          "id": 13,
+          "id": 14,
           "images": [
             "/cases/cryptomatcha/1.jpg",
             "/cases/cryptomatcha/2.jpg",
