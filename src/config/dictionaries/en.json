@@ -42,11 +42,11 @@
           "title": "Menu",
           "type": "links",
           "items": [
-            { "text": "Expertise", "href": "#" },
-            { "text": "Case Studies", "href": "#" },
-            { "text": "Testimonials", "href": "#" },
-            { "text": "About Us", "href": "#" },
-            { "text": "Contact", "href": "#" }
+            { "text": "Expertise", "href": "/#expertise" },
+            { "text": "Case Studies", "href": "/#portfolio" },
+            { "text": "Testimonials", "href": "/#testimonials" },
+            { "text": "About Us", "href": "/#about" },
+            { "text": "Contact", "href": "/#contact" }
           ]
         },
         {
@@ -61,7 +61,7 @@
         },
         {
           "type": "brand",
-          "logo": "/logo.svg",
+          "logo": "/images/logo.svg",
           "description": "All rights reserved."
         }
       ]

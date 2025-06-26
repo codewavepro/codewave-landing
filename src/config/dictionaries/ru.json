@@ -42,11 +42,11 @@
           "title": "Меню",
           "type": "links",
           "items": [
-            { "text": "Экспертиза", "href": "#" },
-            { "text": "Кейсы", "href": "#" },
-            { "text": "Отзывы", "href": "#" },
-            { "text": "О нас", "href": "#" },
-            { "text": "Контакты", "href": "#" }
+            { "text": "Экспертиза", "href": "/#expertise" },
+            { "text": "Кейсы", "href": "/#portfolio" },
+            { "text": "Отзывы", "href": "/#testimonials" },
+            { "text": "О нас", "href": "/#about" },
+            { "text": "Контакты", "href": "/#contact" }
           ]
         },
         {
@@ -61,7 +61,7 @@
         },
         {
           "type": "brand",
-          "logo": "/logo.svg",
+          "logo": "/images/logo.svg",
           "description": "Все права защищены."
         }
       ]
