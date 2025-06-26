@@ -11,7 +11,7 @@ export default function Hero() {
 
     if (loading || !dictionary) return null;
     
-    const heroData = dictionary.home.hero
+    const t = dictionary.home.hero
 
     return (
         <section
@@ -29,16 +29,16 @@ export default function Hero() {
                         </div>
                         <div className={styles.heroHeading}>
                             <div className={styles.subtitle}>
-                                {heroData.subtext}
+                                {t.subtext}
                             </div>
                             <h1>
-                                {heroData.h1}
+                                {t.h1}
                             </h1>
                             <p>
-                                {heroData.desc}
+                                {t.desc}
                             </p>
                         </div>
-                        <CtaLink text={heroData.cta} href="/#stats"></CtaLink>
+                        <CtaLink text={t.cta} href="/#stats"></CtaLink>
                     </div>
                     <TerminalAnimation />
                 </div>

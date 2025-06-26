@@ -30,24 +30,4 @@
     display: flex;
     gap: 8px;
   }
-
-  .accept, .decline {
-    @extend %btn-base;
-    color: v.$white;
-    border-radius: v.$br;
-    padding: 8px 16px;
-    font-size: v.$fs-sm;
-
-    @media(min-width: v.$lg) {
-      font-size: v.$fs-lg;
-    }
-  }
-
-  .accept {
-    background-color: v.$green;
-  }
-
-  .decline {
-    background-color: v.$accent;
-  }
 }

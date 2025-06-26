@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import styles from './CookieBanner.module.scss';
+import Button from "@/components/buttons/Button/Button";
 import Link from 'next/link';
 
 const COOKIE_KEY = 'cookie-consent';
@@ -24,18 +25,14 @@ export default function CookieBanner() {
     return (
         <div className={styles.banner}>
             <p className={styles.text}>
-                We use cookies to improve your experience. Read our{' '}
-                <Link href="/privacy" className={styles.link}>
+                We use cookies to improve your experience. Read our {''}
+                <Link href="/privacy-policy" className={styles.link}>
                     Privacy Policy
                 </Link>.
             </p>
             <div className={styles.buttons}>
-                <button className={styles.accept} onClick={() => handleChoice('accepted')}>
-                    Accept
-                </button>
-                <button className={styles.decline} onClick={() => handleChoice('declined')}>
-                    Decline
-                </button>
+                <Button text="Accept" size="sm" color="light" ariaLabel="Accept" onClick={() => handleChoice('accepted')}  />
+                <Button text="Decline" size="sm" color="dark" ariaLabel="Decline" onClick={() => handleChoice('declined')} />
             </div>
         </div>
     );

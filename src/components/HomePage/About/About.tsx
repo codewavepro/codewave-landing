@@ -15,17 +15,17 @@ const About = () => {
 
     if (loading || !dictionary) return null;
 
-    const aboutData = dictionary.home.about;
+    const t = dictionary.home.about;
 
     return (
         <section className={styles.about} id="about">
             <Image className={styles.blocks} src="/blocks1.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.aboutWrapper}>
-                    <Titlebox title={aboutData.h2} text={aboutData.subtext} direction="center" />
+                    <Titlebox title={t.h2} text={t.subtext} direction="center" />
                     <div className={styles.aboutInner}>
                         <div className={styles.aboutItems}>
-                            {aboutData.items.map((item: AboutItem, index: number) => (
+                            {t.items.map((item: AboutItem, index: number) => (
                                 <div key={index} className={styles.aboutItem}>
                                     <h3>{parseSafeHtml(item.title)}</h3>
                                     <p>{item.text}</p>

@@ -70,15 +70,15 @@
           "items": [
             {
               "text": "Privacy Policy",
-              "href": "/privacy"
+              "href": "/privacy-policy"
             },
             {
               "text": "Terms & Services",
-              "href": "#"
+              "href": "/terms-of-services"
             },
             {
               "text": "Terms Of Use",
-              "href": "#"
+              "href": "/terms-of-use"
             }
           ]
         },
@@ -770,6 +770,87 @@
         "form.sending": "Sending..."
       }
     }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: June 27, 2025",
+    "introTitle": "Introduction",
+    "introText": "Welcome to codeWavePro's Privacy Policy. This document explains how we collect, use, and protect your personal information when you use our website and services.",
+    "infoTitle": "Information We Collect",
+    "infoText": "We collect several different types of information for various purposes to provide and improve our service to you.",
+    "personalTitle": "Personal Data",
+    "personalText": "While using our service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you.",
+    "usageTitle": "Usage Data",
+    "usageText": "We may also collect information on how the service is accessed and used.",
+    "trackingTitle": "Tracking & Cookies Data",
+    "trackingText": "We use cookies and similar tracking technologies to track activity on our service.",
+    "useTitle": "Use of Data",
+    "useText": "codeWavePro uses the collected data for various purposes:",
+    "list": [
+      "To provide and maintain our service",
+      "To notify you about changes to our service",
+      "To allow you to participate in interactive features of our service",
+      "To provide customer support",
+      "To gather analysis or valuable information so that we can improve our service",
+      "To monitor the usage of our service",
+      "To detect, prevent and address technical issues"
+    ],
+    "securityTitle": "Data Security",
+    "securityText": "The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure.",
+    "rightsTitle": "Your Data Protection Rights",
+    "rightsText": "You have the right to access, update or delete your information.",
+    "contactTitle": "Contact Us",
+    "contactText": "If you have any questions about this Privacy Policy, please contact us at:"
+  },
+  "termsOfServices": {
+    "title": "Terms of Service",
+    "updated": "Last updated: June 27, 2025",
+    "introTitle": "Introduction",
+    "introText": "Welcome to codeWavePro's Terms of Service. These Terms govern your use of our website and the services we provide.",
+    "servicesTitle": "Services",
+    "servicesText": "codeWavePro offers web development, design, and consulting services. The specific services we provide will be outlined in a separate agreement or technical specification.",
+    "ipTitle": "Intellectual Property",
+    "ourContentTitle": "Our Content",
+    "ourContentText": "All content on our website, including text, graphics, logos, and software, is our property or the property of our licensors and is protected by copyright laws.",
+    "yourContentTitle": "Your Content",
+    "yourContentText": "You retain ownership of any content you provide to us. By submitting content, you grant us a non-exclusive, worldwide, royalty-free license to use, modify, and display such content in connection with our services.",
+    "liabilityTitle": "Limitation of Liability",
+    "liabilityText": "In no event shall codeWavePro be liable for any indirect, incidental, special, punitive, or consequential damages arising out of your use of our services.",
+    "terminationTitle": "Termination",
+    "terminationText": "We reserve the right to terminate or suspend your access to our services immediately, without prior notice or liability, for any reason including your breach of these Terms.",
+    "changesTitle": "Changes to Terms",
+    "changesText": "We reserve the right to modify or replace these Terms at any time at our sole discretion. We will notify you of any changes by posting the new Terms on this page.",
+    "contactTitle": "Contact Us",
+    "contactText": "If you have any questions about these Terms of Service, please contact us at:"
+  },
+  "termsOfUse": {
+    "title": "Terms of Use",
+    "updated": "Last updated: June 27, 2025",
+    "acceptanceTitle": "Acceptance of Terms",
+    "acceptanceText": "By using the codewave.pro website, you agree to comply with these Terms of Use and our Privacy Policy.",
+    "licenseTitle": "License to Use",
+    "licenseText": "You are granted a limited, non-exclusive, non-transferable license to access and use the website for personal, non-commercial purposes.",
+    "licenseProhibited": "You are prohibited from:",
+    "licenseList": [
+      "Modifying or copying site materials",
+      "Using materials for commercial purposes",
+      "Attempting to decompile or reverse engineer any software",
+      "Removing copyright notices"
+    ],
+    "conductTitle": "User Conduct",
+    "conductText": "You agree not to use the website in any way that:",
+    "conductList": [
+      "Violates applicable law",
+      "Infringes intellectual property rights",
+      "Contains malicious software",
+      "Disrupts the site or related servers"
+    ],
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerText": "The website is provided \"as is\". codewave.pro makes no warranties, express or implied.",
+    "linksTitle": "Links to Other Websites",
+    "linksText": "Our website may contain links to third-party websites that are not controlled by us.",
+    "contactTitle": "Contact Us",
+    "contactText": "If you have any questions about these Terms of Use, please contact us at:"
   },
   "notFound": {
     "info": {

@@ -1,0 +1,65 @@
+@use '../../scss/vars/vars' as v;
+@use '../../scss/mixins/typography' as t;
+
+.privacy {
+  padding: 120px 0 60px;
+
+  &Wrapper {
+    width: 100%;
+    max-width: 1000px;
+    display:  flex;
+    flex-direction:  column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  &Info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    h1, h2, h3 {
+      font-family: v.$ff-r;
+      color: v.$white;
+    }
+
+    h2,h3 {
+      font-size: v.$fs-xl;
+
+      @media(min-width: v.$xl) {
+        font-size: v.$fs-2xl;
+      }
+    }
+
+    h1 {
+      font-size: v.$fs-2xl;
+
+      @media(min-width: v.$xl) {
+        font-size: v.$fs-4xl;
+      }
+    }
+
+    p,li,a {
+      font-family: v.$ff-m;
+      color: v.$white;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      list-style: disc inside;
+    }
+
+    a {
+      color: v.$accent;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

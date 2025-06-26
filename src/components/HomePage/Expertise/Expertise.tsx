@@ -46,7 +46,7 @@ const Expertise = () => {
 
     if (loading || !dictionary) return null;
 
-    const expertiseData = dictionary.home.expertise;
+    const t = dictionary.home.expertise;
 
     return (
         <section className={styles.expertise} id="expertise">
@@ -54,8 +54,8 @@ const Expertise = () => {
             <SectionContainer>
                 <div className={styles.expertiseWrapper}>
                     <Titlebox
-                        title={expertiseData.h2}
-                        text={expertiseData.subtext}
+                        title={t.h2}
+                        text={t.subtext}
                         direction="center"
                     />
                     <div className={styles.tabs}>

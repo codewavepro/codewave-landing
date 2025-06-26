@@ -30,6 +30,15 @@
     color: v.$black;
   }
 
+  &.sm {
+    font-size: v.$fs-sm;
+    padding: 8px 16px;
+
+    @media(min-width: v.$xl) {
+      font-size: v.$fs-md;
+    }
+  }
+
   &.default {
     max-width: 200px;
   }

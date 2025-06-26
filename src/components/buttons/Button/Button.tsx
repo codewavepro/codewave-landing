@@ -2,7 +2,7 @@ import styles from './Button.module.scss';
 
 interface ButtonProps {
     text: string;
-    size: "default" | "large" | "full";
+    size: "sm" | "default" | "large" | "full";
     color: "dark" | "light";
     ariaLabel?: string;
     type?: "button" | "submit";

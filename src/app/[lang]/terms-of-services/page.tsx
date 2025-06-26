@@ -1,17 +1,18 @@
+import {Metadata} from "next";
 import { type Locale } from '@/config/i18n-config';
-import { Metadata } from 'next';
 import { getDictionary } from '@/lib/dictionary';
-import HomeClient from '@/app/[lang]/client/HomeClient';
+import TermsOfServicesClient from '@/app/[lang]/terms-of-services/client/TermsOfServicesClient'
 import { generateMetadata as createMetadata } from '@/lib/metadata';
+
 
 export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const locale = params.lang as Locale;
-  return createMetadata(locale, 'home');
+  return createMetadata(locale, 'termsOfServices');
 }
 
-export default async function Home({ params }: { params: { lang: string } }) {
+export default async function TermsOfServicesPage({ params }: { params: { lang: string } }) {
   const locale = params.lang as Locale;
   const dictionary = await getDictionary(locale);
 
-  return <HomeClient dictionary={dictionary} lang={locale} />;
+  return <TermsOfServicesClient dictionary={dictionary} lang={locale} />;
 }
