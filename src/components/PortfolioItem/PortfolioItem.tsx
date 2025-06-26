@@ -61,15 +61,17 @@ const PortfolioItem = ({ id, images, h3, desc, stack, link, visit, reverse }: po
                                 </div>
                             ))}
                         </div>
-                        <Link
-                            href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.visitLink}
-                        >
-                            <BiWorld />
-                            {visit}
-                        </Link>
+                        {link && (
+                            <Link
+                                href={link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.visitLink}
+                            >
+                                <BiWorld />
+                                {visit}
+                            </Link>
+                        )}
                     </div>
                 </div>
             </div>

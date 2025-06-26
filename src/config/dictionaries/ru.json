@@ -117,7 +117,7 @@
               "icon": "/icons/sql.svg"
             }
           ],
-          "image": "/wordpress.png"
+          "image": "/images/wp.svg"
         },
         {
           "label": "WooCommerce",
@@ -137,7 +137,7 @@
               "icon": "/icons/api.svg"
             }
           ],
-          "image": "/woo.jpg"
+          "image": "/images/woo.svg"
         },
         {
           "label": "Frontend/Backend",
@@ -165,7 +165,7 @@
               "icon": "/icons/api.svg"
             }
           ],
-          "image": "/web.jpg"
+          "image": "/images/dev.svg"
         },
         {
           "label": "Support/Plugins",
@@ -189,7 +189,7 @@
               "icon": "/icons/maintenance.svg"
             }
           ],
-          "image": "/main.jpg"
+          "image": "/images/support.svg"
         }
       ]
     },

@@ -34,12 +34,12 @@ const About = () => {
                         </div>
                         <div className={styles.aboutImages}>
                             <div className={styles.aboutImagesLeft}>
-                                <Image src="/cwp.jpg" width={300} height={300} alt="desc" />
-                                <Image src="/cwp.jpg" width={300} height={300} alt="desc" />
+                                <Image src="/images/arch.svg" width={300} height={300} alt="desc" />
+                                <Image src="/images/ui.svg" width={300} height={300} alt="desc" />
                             </div>
                             <div className={styles.aboutImagesRight}>
-                                <Image src="/cwp.jpg" width={300} height={300} alt="desc" />
-                                <Image src="/cwp.jpg" width={300} height={300} alt="desc" />
+                                <Image src="/images/backend.svg" width={300} height={300} alt="desc" />
+                                <Image src="/images/deploy.svg" width={300} height={300} alt="desc" />
                             </div>
                         </div>
                     </div>

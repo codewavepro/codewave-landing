@@ -8,7 +8,7 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import useDictionary from "@/hooks/useDictionary";
 import SectionContainer from "@/components/common/Container/SectionContainer";
 import Titlebox from "@/components/TitleBox/Titlebox";
-import PortfolioItem from "@/components/TabItem/PortfolioItem";
+import PortfolioItem from "@/components/PortfolioItem/PortfolioItem";
 import Button from "@/components/buttons/Button/Button";
 
 interface StackItem {
