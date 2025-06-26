@@ -42,21 +42,48 @@
           "title": "Menu",
           "type": "links",
           "items": [
-            { "text": "Expertise", "href": "/#expertise" },
-            { "text": "Case Studies", "href": "/#portfolio" },
-            { "text": "Testimonials", "href": "/#testimonials" },
-            { "text": "About Us", "href": "/#about" },
-            { "text": "Contact", "href": "/#contact" }
+            {
+              "text": "Expertise",
+              "href": "/#expertise"
+            },
+            {
+              "text": "Case Studies",
+              "href": "/#portfolio"
+            },
+            {
+              "text": "Testimonials",
+              "href": "/#testimonials"
+            },
+            {
+              "text": "About Us",
+              "href": "/#about"
+            },
+            {
+              "text": "Contact",
+              "href": "/#contact"
+            }
           ]
         },
         {
           "title": "Legal",
           "type": "links",
           "items": [
-            { "text": "Privacy Policy", "href": "/privacy" },
-            { "text": "Terms & Services", "href": "#" },
-            { "text": "Terms Of Use", "href": "#" },
-            { "text": "Refund Policy", "href": "#" }
+            {
+              "text": "Privacy Policy",
+              "href": "/privacy"
+            },
+            {
+              "text": "Terms & Services",
+              "href": "#"
+            },
+            {
+              "text": "Terms Of Use",
+              "href": "#"
+            },
+            {
+              "text": "Refund Policy",
+              "href": "#"
+            }
           ]
         },
         {
@@ -203,7 +230,11 @@
       "h2": "Case studies",
       "subtext": "Explore real-world projects where our team delivered tailored web solutions to meet complex business needs.\u2028 From e-commerce platforms and custom CMS features to high-performance frontend applications — each case highlights our process, tech stack, and the value delivered.\u2028 These examples demonstrate our ability to solve technical challenges, optimize user experience, and drive measurable results.",
       "tabButtons": [
-        "WordPress", "WooCommerce", "React", "Web3", "test"
+        "WordPress",
+        "WooCommerce",
+        "React",
+        "Web3",
+        "test"
       ],
       "tabs": [
         {
@@ -219,11 +250,21 @@
           "h3": "Intelligent Business Platform Built on Laravel, WordPress & JavaScript",
           "desc": "Creolytix is a cutting-edge platform for intelligent business solutions, built on a robust tech stack combining JavaScript for dynamic interfaces, PHP  with Laravel framework for complex backend logic, WordPress with custom  Sage theme for seamless content management, and MySQL for reliable  structured data storage. This powerful technological foundation enables  the platform to handle diverse challenges - from enterprise systems to  AI-powered analytical platforms - while maintaining architectural  flexibility and scalability for growing business needs. The solution  demonstrates effective integration of modern web technologies with  practical business automation capabilities.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/laravel.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/laravel.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            }
           ],
           "link": "https://creolytix.io/"
         },
@@ -240,11 +281,21 @@
           "h3": "Foxit Developer Platform: PDF SDK Hub for Web Developers",
           "desc": "Foxit Developer Platform is a professional hub offering comprehensive PDF processing solutions  powered by Foxit SDK. Built with JavaScript, jQuery, PHP and MySQL using a custom WordPress theme, this developer portal showcases seamless  integration of advanced PDF technologies with an optimized web  interface.\nThe platform delivers  robust documentation, code samples and technical resources through its  high-performance architecture, supporting the complete PDF development  lifecycle. Clean, developer-centric design combines with powerful  backend functionality to create an efficient technical resource center.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/laravel.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/laravel.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            }
           ],
           "link": "https://developers.foxit.com/"
         },
@@ -261,11 +312,21 @@
           "h3": "Film News Bayern – Media Outlet for Bavaria’s Film Industry",
           "desc": "Film News Bayern is a  high-performance media platform for FilmFernsehFonds Bayern (FFF Bayern) built on a sophisticated WordPress and Laravel architecture. The  solution delivers a seamless content experience for film industry  professionals, combining the editorial flexibility of WordPress with the robust data handling of Laravel through a custom Sage theme  implementation.\nThe platform  efficiently manages diverse media content including festival coverage,  funding announcements, and project showcases while maintaining optimal  loading speeds through advanced caching strategies. Its technical  foundation features JavaScript-powered interactive elements, a optimized MySQL database structure, and responsive templates that adapt to all  modern devices.\nKey technical  differentiators include custom WordPress plugins for specialized content types, Laravel-powered data processing for complex queries, and a  performance-optimized frontend architecture using the Sage theme  framework. The implementation demonstrates particular strength in  handling high-traffic media content while maintaining editorial workflow efficiency.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/laravel.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/laravel.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            }
           ],
           "link": "https://fffbayern-filmnews.com/"
         },
@@ -282,10 +343,18 @@
           "h3": "IndustrialCyber - Specialized Cybersecurity Media Platform Powered by Custom WordPress Infrastructure",
           "desc": "IndustrialCyber - is an industry-leading media platform focused on industrial  cybersecurity, built on a robust WordPress infrastructure with a custom  theme. The platform effectively combines jQuery-powered interactivity  with PHP backend processing to deliver specialized content covering  threat analysis, regulatory compliance, and critical infrastructure  protection.\nThe solution  demonstrates advanced WordPress customization capabilities, handling  complex technical documentation and analytical content through an  optimized MySQL database structure. The implementation ensures instant  loading of resource-intensive materials while maintaining intuitive  navigation through sophisticated cybersecurity topics.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            }
           ],
           "link": "https://industrialcyber.co/"
         },
@@ -302,10 +371,18 @@
           "h3": "MAXIMUM – Premium Furniture Studio with Custom E-Commerce and Project Features",
           "desc": "MAXIMUM | Furniture Studio - a comprehensive web solution for a premium furniture manufacturer,  seamlessly integrating exclusive project showcases with e-commerce  functionality. The platform is built on a heavily customized WordPress  core with a bespoke theme, enabling sophisticated features from  interactive galleries to order management systems.\nThis implementation delivers a complete customer journey: detailed portfolio filtering by room type (living rooms, kitchens, wardrobes), catalog of  serial collections with finish variations, and a design trends blog.  Performance optimization ensures smooth loading of high-resolution  furniture imagery through custom jQuery solutions and advanced caching  mechanisms.\nThe technical  architecture demonstrates extensive CMS customization for furniture  production specifics: project management tied to production stages,  bespoke order calculators, and moderated review systems. The PHP backend handles complex catalog queries while maintaining performance with  extensive media content.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            }
           ],
           "link": "https://maximumstudio.ru/"
         },
@@ -322,10 +399,18 @@
           "h3": "MercifulTowing – Fast, Responsive Website for 24/7 Roadside Assistance",
           "desc": "MercifulTowing — a performance-optimized web platform for towing and roadside assistance  services in Oak Grove, Kentucky. Built on WordPress with custom theme  architecture, the solution delivers 24/7 service visibility through  responsive design and instant tow request forms.\nThe implementation features emergency service-specific adaptations: call  prioritization system, jQuery-powered service area map, and real-time  cost estimation module. Optimized MySQL database ensures instant page  loads during peak traffic - crucial for emergency response operations.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            }
           ],
           "link": "https://mercifultowing.com/"
         },
@@ -342,10 +427,18 @@
           "h3": "SentrySecurity – Corporate Security Website with Service Filters and Client Tools",
           "desc": "SentrySecurity — a corporate security solutions platform built on customized WordPress  architecture. The project merges professional design with functional  elements for showcasing protection services and client interaction  tools.\nTechnical implementation  features adaptive multi-level navigation, security service filtering  system, and service coverage maps integration. jQuery powers section  transitions, PHP handles service request forms, while optimized MySQL  structure ensures instant access to security solution pages.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            }
           ],
           "link": "https://sentrysecurity.com/"
         },
@@ -362,12 +455,24 @@
           "h3": "Takepoint – Digital Sales Site with Auto Delivery and License Generation",
           "desc": "Takepoint — a  digital commerce platform powered by WordPress and WooCommerce,  engineered for secure online sales of electronic products. The solution  features seamless payment gateway integration with automated digital  content delivery systems.\nKey  technical differentiators include custom PHP-based license generation,  instant file distribution mechanisms, and MySQL-optimized transaction  processing. The responsive theme ensures flawless purchasing experience  across all devices while maintaining robust security standards for  digital goods.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/woo.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" },
-            { "icon": "/icons/payment.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/woo.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            },
+            {
+              "icon": "/icons/payment.svg"
+            }
           ],
           "link": "https://takepoint.co/"
         },
@@ -384,10 +489,18 @@
           "h3": "Tesidea – Corporate IT Website with Smart Content and Service Filtering",
           "desc": "Tesidea — a  corporate WordPress-based platform showcasing advanced IT solutions and  technology services. The implementation combines professional design  with functional presentation layers for technical content.\nThe architecture employs jQuery-powered dynamic components, service  filtering systems and adaptive content layouts. PHP handles complex  business inquiry forms while optimized MySQL structure ensures  performance with rich media content.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            }
           ],
           "link": "https://tesidea.com/"
         },
@@ -404,12 +517,24 @@
           "h3": "Tsh-system – Medical Locator with Google Maps and Smart Filters",
           "desc": "Tsh-system is an innovative healthcare management platform built on WordPress  using the Sage theme and Laravel framework. The site serves as a  comprehensive system for locating and filtering medical centers and  specialists through seamless Google Maps API integration.\nThe project showcases cutting-edge solutions in medical search technology,  featuring an interactive map with custom filters for specialties,  ratings, and service availability—powered by deep JavaScript and Google  Maps API integration. On the backend, Laravel handles complex MySQL  database queries, including geospatial data and filtering parameters,  while the optimized Sage theme ensures instant content loading for  optimal performance.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/laravel.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" },
-            { "icon": "/icons/maps.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/laravel.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            },
+            {
+              "icon": "/icons/maps.svg"
+            }
           ],
           "link": "https://tsh-system.de/"
         },
@@ -426,12 +551,24 @@
           "h3": "Alpine Hut Site with Animations and Booking Logic",
           "desc": "Jamtalhuette – an alpine tourism portal with  interactive interface built on WordPress (Sage) and Laravel. The  implementation features GSAP animations for seamless section transitions coupled with robust booking processing logic. Custom mountain hut  management integration via Laravel REST API works in tandem with  optimized MySQL database to ensure reliability in low-connectivity  alpine environments.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/laravel.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" },
-            { "icon": "/icons/maps.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/laravel.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            },
+            {
+              "icon": "/icons/maps.svg"
+            }
           ],
           "link": "https://www.jamtalhuette.at/en/"
         },
@@ -448,10 +585,18 @@
           "h3": "Kicknote – Custom Video Service with Distributed Storage",
           "desc": "Kicknote — a video processing platform developed on customized WordPress architecture. The solution features proprietary multi-step upload workflow with  subsequent distributed storage across remote servers.\nThe technical implementation demonstrates advanced video stream handling  through JavaScript interface coupled with PHP-based format conversion  logic. Optimized MySQL structure reliably manages media metadata for  large-scale content operations. Custom WordPress theme delivers tailored UI for upload and preview functionalities.",
           "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" },
-            { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" }
+            {
+              "icon": "/icons/wordpress.svg"
+            },
+            {
+              "icon": "/icons/php.svg"
+            },
+            {
+              "icon": "/icons/js.svg"
+            },
+            {
+              "icon": "/icons/sql.svg"
+            }
           ],
           "link": "https://www.kicknote.net/"
         },
@@ -468,11 +613,21 @@
           "h3": "Cutting-Edge CMS with Web3 Integration and Data Visualization",
           "desc": "Cutting-edge content management system with Web3 technology  integration. The solution merges advanced publishing tools with  blockchain application support and data visualization capabilities.\nThe frontend leverages React with TypeScript for type-safe development,  featuring Cosmos SDK integration (CosmJS, Stargate) for wallet  operations and GraphQL for efficient data fetching. Chart.js  visualizations and Quill rich text editor provide superior content  creation experience.\nThe backend  utilizes Node.js and Express to deliver scalable content processing and  storage architecture. The platform natively supports decentralized  applications through Web3 integrations.",
           "stack": [
-            { "icon": "/icons/next.svg" },
-            { "icon": "/icons/ts.svg" },
-            { "icon": "/icons/node.svg" },
-            { "icon": "/icons/chart.svg" },
-            { "icon": "/icons/graphql.svg" }
+            {
+              "icon": "/icons/next.svg"
+            },
+            {
+              "icon": "/icons/ts.svg"
+            },
+            {
+              "icon": "/icons/node.svg"
+            },
+            {
+              "icon": "/icons/chart.svg"
+            },
+            {
+              "icon": "/icons/graphql.svg"
+            }
           ],
           "link": ""
         }
@@ -487,44 +642,72 @@
         {
           "img": "/users/user1.jpg",
           "stars": 5,
-          "p": "I reached out to codeWave to help us build a professional WordPress site for our new brand, and they absolutely nailed it. The design is clean, modern, and perfectly reflects our identity.\nWhat impressed me most was how smooth the whole process was. Communication was easy, deadlines were respected, and they took care of both design and development from start to finish.\nThe site is fast, SEO-friendly, and super simple to update — exactly what we needed. I highly recommend codeWave if you're looking for real professionals.",
-          "name": "Michael Evans",
-          "position": "Founder & CEO"
+          "p": "We hired codeWave to completely rebuild our outdated WooCommerce store from the ground up, and the transformation exceeded our wildest expectations. They didn't just redesign our store - they reimagined our entire eCommerce experience with a custom-built solution featuring one-click checkout flows, AI-powered product recommendations, and dynamic pricing integration. Their technical implementation included advanced caching layers, automated image optimization, and a bulletproof hosting setup that handles our peak holiday traffic without breaking a sweat. The results speak for themselves: 70% increase in organic sales, 40% improvement in conversion rates, and our mobile revenue has tripled thanks to their flawless responsive implementation. What truly impressed us was their holistic approach - they didn't just build a store, they built us a revenue-generating machine that our marketing team can easily manage through their intuitive custom dashboard.",
+          "name": "Natalie Gomez",
+          "position": "eCommerce Director"
         },
         {
           "img": "/users/user2.jpg",
           "stars": 5,
-          "p": "We hired codeWave to help us build a new SaaS platform using Next.js on the frontend and Node.js for our API layer. From day one, their team showed deep technical expertise and strong architectural thinking.\nThey helped us set up a scalable foundation, implemented authentication, SSR, API routing, and handled deployment via Vercel and Docker with zero friction. Communication was efficient, the codebase is clean and easy to maintain, and performance is excellent.\nI’ve worked with many dev teams — codeWave stands out for both professionalism and technical depth. Highly recommended for any serious full-stack project.",
-          "name": "Elena Morozova",
-          "position": "CTO"
-        },
-        {
-          "img": "/users/user3.jpg",
-          "stars": 5,
-          "p": "Working with codeWave on our Web3 project was a great decision. We needed a secure, modern frontend built with Next.js and a reliable Node.js backend to integrate with multiple smart contracts and wallet providers.\nThe team handled everything professionally — from Web3 wallet connectivity (MetaMask, WalletConnect) to smart contract interactions and real-time data sync from the blockchain. They paid close attention to performance and security, which was critical for us.\nThe end result is a clean, responsive dashboard our users love, and a backend we trust. codeWave delivered exactly what we needed — on time and with zero unnecessary noise. Would definitely work with them again.",
-          "name": "Lucas Pereira",
-          "position": "Head of Product"
-        },
-        {
-          "img": "/users/user1.jpg",
-          "stars": 5,
-          "p": "I reached out to codeWave to help us build a professional WordPress site for our new brand, and they absolutely nailed it. The design is clean, modern, and perfectly reflects our identity.\nWhat impressed me most was how smooth the whole process was. Communication was easy, deadlines were respected, and they took care of both design and development from start to finish.\nThe site is fast, SEO-friendly, and super simple to update — exactly what we needed. I highly recommend codeWave if you're looking for real professionals.",
+          "p": "When we engaged codeWave to develop our corporate WordPress platform, we needed more than just developers - we needed digital transformation partners. They delivered a masterpiece that combines enterprise-grade functionality with stunning design. Their custom Gutenberg block system allows our content team to create complex, interactive layouts without touching code, while their smart personalization engine delivers tailored content to each visitor segment. The performance optimizations they implemented - from server-level caching to deferred loading - have made our site faster than all our competitors'. Since launch, we've seen our organic traffic double, lead generation increase by 150%, and perhaps most impressively, our content team can now publish and manage everything without needing IT support. codeWave didn't just meet our requirements - they anticipated needs we didn't even know we had and delivered solutions before we asked for them.",
           "name": "Michael Evans",
           "position": "Founder & CEO"
         },
         {
-          "img": "/users/user2.jpg",
+          "img": "/users/user3.jpg",
           "stars": 5,
-          "p": "We hired codeWave to help us build a new SaaS platform using Next.js on the frontend and Node.js for our API layer. From day one, their team showed deep technical expertise and strong architectural thinking.\nThey helped us set up a scalable foundation, implemented authentication, SSR, API routing, and handled deployment via Vercel and Docker with zero friction. Communication was efficient, the codebase is clean and easy to maintain, and performance is excellent.\nI’ve worked with many dev teams — codeWave stands out for both professionalism and technical depth. Highly recommended for any serious full-stack project.",
+          "p": "Launching our WooCommerce-based marketplace with codeWave was the best decision we made this year. They architected a robust multi-vendor platform that handles everything from complex commission structures to real-time inventory synchronization across hundreds of suppliers. Their custom vendor dashboard gives our sellers unprecedented control over their storefronts, while the Stripe Connect integration handles split payments with perfect precision. During our first major flash sale, the platform effortlessly handled 10x our normal traffic without a single hiccup - a testament to their forward-thinking scalability strategy. What sets codeWave apart is their ongoing support and willingness to evolve the platform with our growing needs. From advanced fraud detection to automated tax calculations, they've thought of every detail. We've grown from zero to 500+ active vendors in just six months, and we owe much of that success to the solid foundation they built.",
+          "name": "Jasper Thorsen",
+          "position": "Marketplace Lead"
+        },
+        {
+          "img": "/users/user4.jpg",
+          "stars": 5,
+          "p": "Our enterprise SaaS platform required a technical partner who could match our ambitions, and codeWave delivered beyond measure. Their Next.js frontend implementation sets new standards for performance with lightning-fast SSR pages and intelligent prefetching. The Node.js backend they architected handles millions of API calls daily with consistent sub-200ms response times. Every aspect of their work reflects engineering excellence - from the JWT authentication flow with refresh token rotation to the WebSocket implementation for real-time features. Their CI/CD pipeline enables us to deploy multiple times per day with zero downtime, and their comprehensive test coverage gives us complete confidence in every release. When we unexpectedly went viral and faced a 10x traffic spike, their infrastructure scaled seamlessly while competitors' platforms were crashing. We're now expanding our engagement with codeWave to rebuild our entire product suite, as they've proven themselves to be the rare development partner that truly understands enterprise-scale challenges.",
           "name": "Elena Morozova",
           "position": "CTO"
         },
         {
-          "img": "/users/user3.jpg",
+          "img": "/users/user5.jpg",
           "stars": 5,
-          "p": "Working with codeWave on our Web3 project was a great decision. We needed a secure, modern frontend built with Next.js and a reliable Node.js backend to integrate with multiple smart contracts and wallet providers.\nThe team handled everything professionally — from Web3 wallet connectivity (MetaMask, WalletConnect) to smart contract interactions and real-time data sync from the blockchain. They paid close attention to performance and security, which was critical for us.\nThe end result is a clean, responsive dashboard our users love, and a backend we trust. codeWave delivered exactly what we needed — on time and with zero unnecessary noise. Would definitely work with them again.",
+          "p": "codeWave's React/Next.js rebuild of our eCommerce storefront transformed our digital business. They delivered product pages that load in under 800ms - even with rich media content - through their meticulous performance optimizations. Their Stripe integration supports our complex subscription model with multiple billing scenarios, while their localization work adapted the shopping experience perfectly for our 10 target markets. The custom CMS bridge they built allows our marketing team to control promotions and content without developer involvement. The results have been staggering: 33% increase in conversion rates, 50% reduction in cart abandonment, and our mobile revenue has grown by 120%. What makes codeWave special is their product thinking - they don't just write code, they solve business problems. Every technical decision they made was justified with data and aligned with our revenue goals. We've since hired them for three additional projects because they consistently deliver exceptional results.",
+          "name": "Ihor Semenov",
+          "position": "Head of Sales"
+        },
+        {
+          "img": "/users/user6.jpg",
+          "stars": 5,
+          "p": "As an early-stage startup, our landing page needed to make an incredible first impression while clearly communicating our complex product. codeWave delivered a masterpiece in just five days that became our most powerful customer acquisition channel. Their Three.js implementation creates an interactive product demo that visitors love playing with, while their scroll-triggered animations tell our story in an engaging way. The technical execution is flawless - perfect Lighthouse scores, airtight SEO foundations, and analytics integration that gives us crystal-clear conversion insights. But beyond the technical excellence, codeWave operated like an extension of our team. They helped us prioritize features, suggested cost-effective solutions, and even connected us with potential investors who were impressed by their work. That landing page directly contributed to our successful pre-seed round, and we've since hired codeWave to build our entire product. They're the rare agency that understands startup velocity and constraints while never compromising on quality.",
+          "name": "Darya Tishchenko",
+          "position": "Marketing Lead"
+        },
+        {
+          "img": "/users/user7.jpg",
+          "stars": 5,
+          "p": "Our B2B portal project with codeWave has revolutionized how our company operates. They built a system that seamlessly integrates with our 15+ internal data sources while providing real-time dashboards and analytics. Their NestJS backend handles complex business logic with elegant efficiency, while the Next.js frontend delivers instant interactions even with massive datasets. The permission system they implemented - with attribute-based access control - gives us granular control over what each user can see and do. Features like live WebSocket updates, smart full-text search across all our systems, and automated PDF report generation have saved thousands of work hours. The impact on our operations has been profound: decision-making is faster, reporting is more accurate, and our teams are more productive. codeWave's ability to understand our complex business requirements and translate them into intuitive software is nothing short of remarkable. They didn't just build what we asked for - they built what we actually needed.",
+          "name": "Jason Lee",
+          "position": "Project Lead"
+        },
+        {
+          "img": "/users/user8.jpg",
+          "stars": 5,
+          "p": "codeWave's work on our Web3 dashboard has become the crown jewel of our platform. They seamlessly integrated NFT indexing across multiple chains, implemented secure wallet connections with MetaMask and WalletConnect, and built real-time data visualization for on-chain analytics. Their multi-signature workflow implementation is both secure and user-friendly, striking a perfect balance that few teams achieve. The backend they architected handles blockchain data with perfect reliability, while their React frontend delivers buttery-smooth interactions even when processing complex transactions. Security was clearly their top priority - every component was audited, every edge case considered. Since launch, this dashboard has become our most praised feature, with users consistently complimenting its intuitive design and rock-solid reliability. codeWave's deep understanding of Web3 fundamentals combined with their exceptional software craftsmanship makes them the only team we trust with our most sensitive blockchain integrations.",
           "name": "Lucas Pereira",
-          "position": "Head of Product"
+          "position": "Product Manager"
+        },
+        {
+          "img": "/users/user9.jpg",
+          "stars": 5,
+          "p": "The dark-mode redesign codeWave delivered for our NFT marketplace has set new standards in Web3 UX. They implemented lazy loading that makes browsing large collections effortless, rarity algorithms that highlight special items, and wallet integration that supports 15+ providers without clutter. Their attention to detail is incredible - from the perfect loading skeletons to the smooth transition animations. The technical improvements are just as impressive: page load times reduced from 4 seconds to under 1 second, even with rich media content. Engagement metrics have doubled across the board, and user retention has improved dramatically. What's most remarkable is how codeWave's design patterns have influenced our entire industry - we regularly see competitors imitating their solutions. They don't just follow Web3 best practices - they define them. Every interaction with their team reinforces why they're considered the gold standard for NFT platform development.",
+          "name": "Sophie Tanaka",
+          "position": "UX Designer"
+        },
+        {
+          "img": "/users/user10.jpg",
+          "stars": 5,
+          "p": "Our Web3-powered HR dashboard project with codeWave pushed the boundaries of what we thought possible. They implemented on-chain identity verification that integrates seamlessly with our existing systems, encrypted role mapping that maintains privacy while ensuring proper access controls, and stunning data visualizations that make smart contract activity understandable at a glance. This wasn't just development work - it was true innovation. codeWave navigated uncharted technical territory with confidence, solving problems that lacked existing solutions. The result works flawlessly, providing insights into our organization that were previously impossible to gather. Their ability to bridge the gap between cutting-edge blockchain technology and practical business applications is unparalleled. We're already planning three additional projects with codeWave because they've proven they can turn our most ambitious ideas into reliable, production-ready solutions. They're not just contractors - they're pioneers who happen to write incredible code.",
+          "name": "Leila Hassan",
+          "position": "Product Owner"
         }
       ]
     },

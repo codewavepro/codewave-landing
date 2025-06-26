@@ -87,10 +87,7 @@
     }
 
     :global(.swiper-pagination.swiper-pagination-bullets-dynamic) {
-      margin: 32px auto 0 auto;
-      width: 100% !important;
-      max-width: 140px;
-      position: static;
+      width: 280px !important;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -102,6 +99,7 @@
     :global(.swiper-pagination-bullet) {
       width: 8px;
       height: 8px;
+      margin: 0;
       border-radius: v.$br;
       background-color: v.$gray;
       transition: width ease v.$tr, background-color ease v.$tr;
