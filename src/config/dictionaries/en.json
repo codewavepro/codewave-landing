@@ -229,17 +229,9 @@
     "portfolio": {
       "h2": "Case studies",
       "subtext": "Explore real-world projects where our team delivered tailored web solutions to meet complex business needs.\u2028 From e-commerce platforms and custom CMS features to high-performance frontend applications — each case highlights our process, tech stack, and the value delivered.\u2028 These examples demonstrate our ability to solve technical challenges, optimize user experience, and drive measurable results.",
-      "tabButtons": [
-        "WordPress",
-        "WooCommerce",
-        "React",
-        "Web3",
-        "test"
-      ],
       "tabs": [
         {
           "id": 1,
-          "label": "WordPress",
           "images": [
             "/cases/creolytix/1.jpg",
             "/cases/creolytix/2.jpg",
@@ -270,7 +262,6 @@
         },
         {
           "id": 2,
-          "label": "WordPress",
           "images": [
             "/cases/foxit/1.jpg",
             "/cases/foxit/2.jpg",
@@ -301,7 +292,6 @@
         },
         {
           "id": 3,
-          "label": "WordPress",
           "images": [
             "/cases/fffbayern-filmnews/1.jpg",
             "/cases/fffbayern-filmnews/2.jpg",
@@ -332,7 +322,6 @@
         },
         {
           "id": 4,
-          "label": "WordPress",
           "images": [
             "/cases/industrialcyber/1.jpg",
             "/cases/industrialcyber/2.jpg",
@@ -360,7 +349,6 @@
         },
         {
           "id": 5,
-          "label": "WordPress",
           "images": [
             "/cases/maximumstudio/1.jpg",
             "/cases/maximumstudio/2.jpg",
@@ -388,7 +376,6 @@
         },
         {
           "id": 6,
-          "label": "WordPress",
           "images": [
             "/cases/mercifultowing/1.jpg",
             "/cases/mercifultowing/2.jpg",
@@ -416,7 +403,6 @@
         },
         {
           "id": 7,
-          "label": "WordPress",
           "images": [
             "/cases/centrysec/1.jpg",
             "/cases/centrysec/2.jpg",
@@ -444,7 +430,6 @@
         },
         {
           "id": 8,
-          "label": "WooCommerce",
           "images": [
             "/cases/takepoint/1.jpg",
             "/cases/takepoint/2.jpg",
@@ -478,7 +463,6 @@
         },
         {
           "id": 9,
-          "label": "WordPress",
           "images": [
             "/cases/tesidea/1.jpg",
             "/cases/tesidea/2.jpg",
@@ -506,7 +490,6 @@
         },
         {
           "id": 10,
-          "label": "WordPress",
           "images": [
             "/cases/tsh-system/1.jpg",
             "/cases/tsh-system/2.jpg",
@@ -540,7 +523,6 @@
         },
         {
           "id": 11,
-          "label": "WordPress",
           "images": [
             "/cases/jamtal/1.jpg",
             "/cases/jamtal/2.jpg",
@@ -574,7 +556,6 @@
         },
         {
           "id": 12,
-          "label": "WordPress",
           "images": [
             "/cases/kicknote/1.jpg",
             "/cases/kicknote/2.jpg",
@@ -602,7 +583,6 @@
         },
         {
           "id": 13,
-          "label": "WordPress",
           "images": [
             "/cases/cryptomatcha/1.jpg",
             "/cases/cryptomatcha/2.jpg",
@@ -610,8 +590,8 @@
             "/cases/cryptomatcha/4.jpg",
             "/cases/cryptomatcha/5.jpg"
           ],
-          "h3": "Cutting-Edge CMS with Web3 Integration and Data Visualization",
-          "desc": "Cutting-edge content management system with Web3 technology  integration. The solution merges advanced publishing tools with  blockchain application support and data visualization capabilities.\nThe frontend leverages React with TypeScript for type-safe development,  featuring Cosmos SDK integration (CosmJS, Stargate) for wallet  operations and GraphQL for efficient data fetching. Chart.js  visualizations and Quill rich text editor provide superior content  creation experience.\nThe backend  utilizes Node.js and Express to deliver scalable content processing and  storage architecture. The platform natively supports decentralized  applications through Web3 integrations.",
+          "h3": "Web3 Integration and Data Visualization Platform",
+          "desc": "A custom platform integrating Web3 technologies, data visualization, and content tools. It combines blockchain wallet functionality with modern publishing capabilities and interactive dashboards.\nThe frontend is built with React and TypeScript, featuring Cosmos SDK integration (CosmJS, Stargate) for wallet operations and GraphQL for optimized data fetching. Visualizations are powered by Chart.js, and content editing uses the Quill rich text editor.\nThe backend is developed with Node.js and Express, providing a scalable architecture for handling data and content. Web3 support is built-in, enabling seamless decentralized application integration.",
           "stack": [
             {
               "icon": "/icons/next.svg"
