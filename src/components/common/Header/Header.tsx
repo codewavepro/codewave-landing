@@ -88,7 +88,7 @@ export default function Header({ lang }: HeaderProps) {
         <div className={`${styles.headerWrapper} ${isMobileMenuOpen ? styles.opened : ''}`}>
           <Link href={`/${lang}`} className={styles.logo}>
             <Image 
-              src="/logo.svg"
+              src="/images/logo.svg"
               alt="White logo" 
               width={200}
               height={40}
