@@ -7,6 +7,11 @@
   font-family: v.$ff-m;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 body,
 html {
   height: 100%;
@@ -15,7 +20,6 @@ html {
 }
 
 body {
-  position: relative;
   min-width: 300px;
   display: flex;
   height: auto;

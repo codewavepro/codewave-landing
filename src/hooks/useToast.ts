@@ -41,30 +41,41 @@ const errorStyles = {
 };
 
 export default function useToast(): UseToastProps {
-    const showToast =
-        (message: string, type: ToastType = 'success', options?: ToastOptions): string | number => {
-            const defaultOptions: ToastOptions = {
-                duration: 4000,
-                position: 'top-right',
-                style: defaultStyles,
-                ...options,
-            };
-
-            switch (type) {
-                case 'success':
-                    return toast.success(message, {
-                        ...defaultOptions
-                    });
-                case 'error':
-                    return toast.error(message, {
-                        ...defaultOptions
-                    });
-                case 'loading':
-                    return toast.loading(message, defaultOptions);
-                default:
-                    return toast(message, defaultOptions);
-            }
+    const showToast = (
+        message: string,
+        type: ToastType = 'success',
+        options?: ToastOptions
+    ): string | number => {
+        const baseOptions: ToastOptions = {
+            duration: 4000,
+            position: 'top-right',
+            ...options,
         };
+
+        switch (type) {
+            case 'success':
+                return toast.success(message, {
+                    ...baseOptions,
+                    style: { ...successStyles, ...(options?.style || {}) },
+                });
+            case 'error':
+                return toast.error(message, {
+                    ...baseOptions,
+                    style: { ...errorStyles, ...(options?.style || {}) },
+                });
+            case 'loading':
+                return toast.loading(message, {
+                    ...baseOptions,
+                    style: { ...defaultStyles, ...(options?.style || {}) },
+                });
+            default:
+                return toast(message, {
+                    ...baseOptions,
+                    style: { ...defaultStyles, ...(options?.style || {}) },
+                });
+        }
+    };
+
 
     const showPromiseToast = <T>(
         promise: Promise<T>,
@@ -75,9 +86,8 @@ export default function useToast(): UseToastProps {
         },
         options?: ToastOptions
     ): Promise<T> => {
-        const defaultOptions: ToastOptions = {
+        const baseOptions: ToastOptions = {
             position: 'top-right',
-            style: defaultStyles,
             ...options,
         };
 
@@ -90,15 +100,16 @@ export default function useToast(): UseToastProps {
             },
             {
                 loading: {
-                    ...defaultOptions,
+                    ...baseOptions,
+                    style: { ...defaultStyles, ...(options?.style || {}) },
                 },
                 success: {
-                    ...defaultOptions,
-                    style: successStyles,
+                    ...baseOptions,
+                    style: { ...successStyles, ...(options?.style || {}) },
                 },
                 error: {
-                    ...defaultOptions,
-                    style: errorStyles
+                    ...baseOptions,
+                    style: { ...errorStyles, ...(options?.style || {}) },
                 },
             }
         );

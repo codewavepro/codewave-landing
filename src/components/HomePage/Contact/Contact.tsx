@@ -3,6 +3,7 @@
 import { useState, FormEvent } from 'react';
 import type { ReactNode } from 'react';
 import styles from './Contact.module.scss';
+import { validateContactDetails, validateDate, ContactMethod } from "@/shared/validation";
 import useDictionary from '../../../hooks/useDictionary';
 import DOMPurify from 'dompurify';
 import useToast from '@/hooks/useToast';
@@ -13,13 +14,12 @@ import { BiLogoTelegram } from "react-icons/bi";
 import { BsTwitterX, BsWhatsapp } from "react-icons/bs";
 import { FaDiscord, FaLinkedin } from "react-icons/fa";
 import useReCaptcha from '@/hooks/useReCaptcha';
+import Image from "next/image";
 
 type FormState = {
-  success: boolean;
-  message: string;
+    success: boolean;
+    message: string;
 };
-
-type ContactMethod = 'email' | 'telegram' | 'twitter' | 'discord' | 'linkedin' | 'whatsapp';
 
 const Contact = () => {
     const { loading, dictionary } = useDictionary();
@@ -50,39 +50,6 @@ const Contact = () => {
         { id: 'whatsapp', icon: <BsWhatsapp />, label: 'WhatsApp' }
     ];
 
-    const validateContactDetails = (method: ContactMethod, details: string): boolean => {
-        if (!details.trim()) return false;
-
-        switch (method) {
-            case 'email':
-                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(details);
-            case 'telegram':
-                return /^@[a-zA-Z0-9_]{5,}$/.test(details) ||
-                    /^(https?:\/\/)?(t\.me\/)[a-zA-Z0-9_]{5,}$/.test(details);
-            case 'twitter':
-                return /^@[a-zA-Z0-9_]{1,15}$/.test(details) ||
-                    /^(https?:\/\/)?(twitter\.com|x\.com)\/[a-zA-Z0-9_]{1,15}$/.test(details);
-            case 'discord':
-                return /^[a-zA-Z0-9_-]{2,32}$/.test(details) ||
-                    /^(https?:\/\/)?(discord\.gg|discord\.com\/invite)\/[a-zA-Z0-9_-]+$/.test(details);
-            case 'linkedin':
-                return /^(https?:\/\/)?(www\.)?linkedin\.com\/(in|company)\/[a-zA-Z0-9_-]+\/?$/.test(details);
-            case 'whatsapp':
-                return /^\+[0-9]{7,15}$/.test(details) ||
-                    /^(https?:\/\/)?(wa\.me)\/[0-9]{7,15}$/.test(details);
-            default:
-                return true;
-        }
-    };
-
-    const validateDate = (dateStr: string): boolean => {
-        if (!dateStr) return true;
-        const selectedDate = new Date(dateStr);
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        return selectedDate >= today;
-    };
-
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setSubmitAttempted(true);
@@ -109,7 +76,7 @@ const Contact = () => {
         setFieldErrors(errors);
 
         if (Object.values(errors).some(Boolean)) {
-            showToast(contactData.toast.fill, 'error');
+            showToast(contactData.toast['form.fillRequiredFields'], 'error');
             return;
         }
 
@@ -117,14 +84,14 @@ const Contact = () => {
 
         try {
             if (!captchaReady) {
-                showToast(contactData.toast.init, 'error');
+                showToast(contactData.toast['form.recaptchaNotReady'], 'error');
                 setIsSubmitting(false);
                 return;
             }
 
             const recaptchaToken = await getReCaptchaToken();
             if (!recaptchaToken) {
-                showToast(contactData.toast.verify, 'error');
+                showToast(contactData.toast['form.recaptchaMissing'], 'error');
                 setIsSubmitting(false);
                 return;
             }
@@ -150,7 +117,7 @@ const Contact = () => {
                 const result = await response.json();
 
                 if (!response.ok) {
-                    throw new Error(result.message || 'Failed to send message');
+                    throw new Error(result.message || contactData.toast['form.recaptchaFail']);
                 }
 
                 return result;
@@ -159,14 +126,18 @@ const Contact = () => {
             const result = await showPromiseToast(
                 sendRequest(),
                 {
-                    loading: contactData.toast.sending,
+                    loading: contactData.toast['form.sending'],
                     success: (result: FormState) => {
                         if (!result.success) {
-                            throw new Error(result.message || 'Failed to send message');
+                            throw new Error(result.message || contactData.toast['form.recaptchaFail']);
                         }
-                        return contactData.toast.success;
+                        return contactData.toast['form.success'];
                     },
-                    error: () => contactData.toast.success
+                    error: (err: unknown) => {
+                        const key = err instanceof Error ? err.message : 'form.error';
+                        return contactData.toast[key] || contactData.toast['form.error'];
+                    }
+
                 }
             );
 
@@ -210,7 +181,8 @@ const Contact = () => {
     };
 
     return (
-        <section className={styles.contact}>
+        <section className={styles.contact} id="contact">
+            <Image className={styles.blocks} src="/blocks3.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.contactWrapper}>
                     <div className={styles.contactInfo}>
@@ -292,7 +264,7 @@ const Contact = () => {
                                         ))}
                                     </div>
                                     <div className={`${styles.contactDetailsInput} ${styles.required} ${(submitAttempted && fieldErrors.contactDetails) ? styles.error : ''}`}>
-                                    <input
+                                        <input
                                             type="text"
                                             name="contactDetails"
                                             placeholder={getPlaceholderForMethod(selectedMethod)}
@@ -322,7 +294,7 @@ const Contact = () => {
                         </fieldset>
 
                         <Button
-                            text={isSubmitting || captchaLoading ? 'Sending...' : contactData.form.button}
+                            text={isSubmitting || captchaLoading ? contactData.toast['form.sending'] : contactData.form.button}
                             size="large"
                             color="light"
                             type="submit"

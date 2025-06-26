@@ -4,31 +4,11 @@
   width: 100%;
   margin-top: auto;
   padding: 40px 0;
+  background-color: v.$black;
   border-top: 1px solid v.$accent;
-  position: relative;
 
   @media(min-width: v.$lg) {
     padding: 60px 0;
-  }
-
-  .blocks {
-    position: absolute;
-    right: -100%;
-    top: -50%;
-    width: 100%;
-    min-width: 1400px;
-    min-height: 1400px;
-    z-index: -1;
-
-    @media(min-width: v.$md) {
-      top: -60%;
-      right: -50%;
-    }
-
-    @media(min-width: v.$xl) {
-      right: 0;
-      top: -170%;
-    }
   }
 
   &Wrapper {

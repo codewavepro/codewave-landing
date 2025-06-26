@@ -18,7 +18,7 @@ const About = () => {
     const aboutData = dictionary.home.about;
 
     return (
-        <section className={styles.about}>
+        <section className={styles.about} id="about">
             <Image className={styles.blocks} src="/blocks1.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.aboutWrapper}>
@@ -34,12 +34,12 @@ const About = () => {
                         </div>
                         <div className={styles.aboutImages}>
                             <div className={styles.aboutImagesLeft}>
-                                <Image src="/cwp.jpg" width={300} height={300} alt="desc" />
-                                <Image src="/cwp.jpg" width={300} height={300} alt="desc" />
+                                <Image src="/images/arch.svg" width={300} height={300} alt="desc" />
+                                <Image src="/images/ui.svg" width={300} height={300} alt="desc" />
                             </div>
                             <div className={styles.aboutImagesRight}>
-                                <Image src="/cwp.jpg" width={300} height={300} alt="desc" />
-                                <Image src="/cwp.jpg" width={300} height={300} alt="desc" />
+                                <Image src="/images/backend.svg" width={300} height={300} alt="desc" />
+                                <Image src="/images/deploy.svg" width={300} height={300} alt="desc" />
                             </div>
                         </div>
                     </div>

@@ -70,15 +70,17 @@ export default function Header({ lang }: HeaderProps) {
   const menuItems = useMemo(() => {
     if (!dictionary) return [];
     return [
-      { name: dictionary.common.header.navigation.expertise, path: `/${lang}/#` },
-      { name: dictionary.common.header.navigation.cases, path: `/${lang}/#` },
-      { name: dictionary.common.header.navigation.testimonials, path: `/${lang}/#` },
-      { name: dictionary.common.header.navigation.about, path: `/${lang}/#` },
-      { name: dictionary.common.header.navigation.contact, path: `/${lang}/#` },
+      { name: dictionary.common.header.navigation.expertise, path: `/#expertise` },
+      { name: dictionary.common.header.navigation.cases, path: `/#portfolio` },
+      { name: dictionary.common.header.navigation.testimonials, path: `/#testimonials` },
+      { name: dictionary.common.header.navigation.about, path: `/#about` },
+      { name: dictionary.common.header.navigation.contact, path: `/#contact` },
     ];
   }, [dictionary, lang]);
 
   if (loading || !dictionary) return null;
+
+  const headerData = dictionary.common.header;
 
   return (
     <header className={styles.header}>
@@ -86,7 +88,7 @@ export default function Header({ lang }: HeaderProps) {
         <div className={`${styles.headerWrapper} ${isMobileMenuOpen ? styles.opened : ''}`}>
           <Link href={`/${lang}`} className={styles.logo}>
             <Image 
-              src="/logo.svg"
+              src="/images/logo.svg"
               alt="White logo" 
               width={200}
               height={40}
@@ -108,8 +110,8 @@ export default function Header({ lang }: HeaderProps) {
               </nav>
               <div className={styles.headerRight}>
                 <LangBtn/>
-                <Link href={`/${lang}/contact`} className={styles.ctaBtn}>
-                  Let's Talk
+                <Link href={`/#contact`} className={styles.ctaBtn}>
+                  {headerData.cta}
                   <div className={styles.glow}></div>
                   <div className={styles.box}></div>
                 </Link>
@@ -144,8 +146,8 @@ export default function Header({ lang }: HeaderProps) {
                 </nav>
                 <div className={styles.mobileBottom}>
                   <LangBtn isMobile={true} />
-                  <Link href={`/${lang}/contact`} className={styles.ctaBtn} onClick={handleMenuItemClick}>
-                    Let's Talk
+                  <Link href={`/contact`} className={styles.ctaBtn} onClick={handleMenuItemClick}>
+                    {headerData.cta}
                     <div className={styles.glow}></div>
                     <div className={styles.box}></div>
                   </Link>

@@ -2,8 +2,12 @@
 @use '../../../scss/mixins/typography' as m;
 
 .hero {
-  padding-top: 80px;
+  padding-top: 64px;
   position: relative;
+
+  @media(min-width: v.$xl) {
+    padding-top: 90px;
+  }
 
   .blocks {
     position: absolute;

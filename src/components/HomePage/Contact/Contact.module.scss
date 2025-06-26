@@ -3,9 +3,29 @@
 
 .contact {
   padding: 60px 0;
+  position: relative;
+  overflow: hidden;
 
   @media(min-width: v.$xl) {
     padding: 120px 0;
+  }
+
+  .blocks {
+    position: absolute;
+    left: -50%;
+    top: -10%;
+    min-width: 1400px;
+    min-height: 1400px;
+    z-index: -1;
+
+    @media(min-width: v.$md) {
+      top: 0;
+      left: -10%;
+    }
+
+    @media(min-width: v.$xl) {
+      top: 20%;
+    }
   }
 
   &Wrapper {
