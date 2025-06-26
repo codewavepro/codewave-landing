@@ -15,7 +15,11 @@
       }
 
       p {
-        text-align: center;
+        text-align: left;
+
+        @media(min-width: v.$md) {
+          text-align: center;
+        }
       }
     }
   }
