@@ -18,7 +18,7 @@ export default function Hero() {
             className={styles.hero}
             role="region"
         >
-            <Image className={styles.blocks} src="/blocks1.svg" width={1000} height={1000} alt="Vector blocks" />
+            <Image className={styles.blocks} src="/images/blocks1.svg" width={1000} height={1000} alt="Vector blocks" />
             <LayoutContainer>
                 <div className={styles.heroWrapper}>
                     <div className={styles.heroDesc}>

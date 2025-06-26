@@ -177,7 +177,7 @@ const Contact = () => {
 
     return (
         <section className={styles.contact} id="contact">
-            <Image className={styles.blocks} src="/blocks3.svg" width={1000} height={1000} alt="Vector blocks" />
+            <Image className={styles.blocks} src="/images/blocks3.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.contactWrapper}>
                     <div className={styles.contactInfo}>

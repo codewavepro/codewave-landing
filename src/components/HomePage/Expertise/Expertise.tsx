@@ -50,7 +50,7 @@ const Expertise = () => {
 
     return (
         <section className={styles.expertise} id="expertise">
-            <Image className={styles.blocks} src="/blocks2.svg" width={1000} height={1000} alt="Vector blocks" />
+            <Image className={styles.blocks} src="/images/blocks2.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.expertiseWrapper}>
                     <Titlebox

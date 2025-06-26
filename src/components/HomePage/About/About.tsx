@@ -19,7 +19,7 @@ const About = () => {
 
     return (
         <section className={styles.about} id="about">
-            <Image className={styles.blocks} src="/blocks1.svg" width={1000} height={1000} alt="Vector blocks" />
+            <Image className={styles.blocks} src="/images/blocks1.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.aboutWrapper}>
                     <Titlebox title={t.h2} text={t.subtext} direction="center" />
