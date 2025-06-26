@@ -30,7 +30,6 @@ const Contact = () => {
     const [submitAttempted, setSubmitAttempted] = useState(false);
     const [fieldErrors, setFieldErrors] = useState({
         name: false,
-        surname: false,
         message: false,
         contactDetails: false,
         privacyAccepted: false,
@@ -57,7 +56,6 @@ const Contact = () => {
         const form = e.currentTarget;
         const formValues = {
             name: DOMPurify.sanitize((form.elements.namedItem('name') as HTMLInputElement)?.value || ''),
-            surname: DOMPurify.sanitize((form.elements.namedItem('surname') as HTMLInputElement)?.value || ''),
             message: DOMPurify.sanitize((form.elements.namedItem('message') as HTMLTextAreaElement)?.value || ''),
             contactDetails: DOMPurify.sanitize((form.elements.namedItem('contactDetails') as HTMLInputElement)?.value || ''),
             privacyAccepted: (form.elements.namedItem('privacyAccepted') as HTMLInputElement)?.checked || false,
@@ -66,7 +64,6 @@ const Contact = () => {
 
         const errors = {
             name: !formValues.name,
-            surname: !formValues.surname,
             message: !formValues.message || formValues.message.length < 30,
             contactDetails: !formValues.contactDetails || !validateContactDetails(selectedMethod, formValues.contactDetails),
             privacyAccepted: !formValues.privacyAccepted,
@@ -98,7 +95,6 @@ const Contact = () => {
 
             const formData = new FormData();
             formData.append('name', formValues.name);
-            formData.append('surname', formValues.surname);
             formData.append('company', DOMPurify.sanitize((form.elements.namedItem('company') as HTMLInputElement)?.value || ''));
             formData.append('budget', DOMPurify.sanitize((form.elements.namedItem('budget') as HTMLInputElement)?.value || ''));
             formData.append('deadline', formValues.deadline);
@@ -147,7 +143,6 @@ const Contact = () => {
                 setSubmitAttempted(false);
                 setFieldErrors({
                     name: false,
-                    surname: false,
                     message: false,
                     contactDetails: false,
                     privacyAccepted: false,
@@ -192,7 +187,6 @@ const Contact = () => {
 
                     <form className={styles.contactForm} onSubmit={handleSubmit}>
                         <fieldset>
-                            <div className={styles.halfWidth}>
                                 <div
                                     className={`${styles.inputRow} ${styles.required} ${(submitAttempted && fieldErrors.name) ? styles.error : ''}`}>
                                     <input
@@ -202,15 +196,6 @@ const Contact = () => {
                                         disabled={isSubmitting}
                                     />
                                 </div>
-                                <div className={`${styles.inputRow} ${styles.required} ${(submitAttempted && fieldErrors.surname) ? styles.error : ''}`}>
-                                    <input
-                                        type="text"
-                                        placeholder={contactData.form.surname}
-                                        name="surname"
-                                        disabled={isSubmitting}
-                                    />
-                                </div>
-                            </div>
                             <div className={styles.halfWidth}>
                                 <div className={styles.inputRow}>
                                     <input

@@ -750,8 +750,7 @@
       "h2": "Send us a message",
       "subtext": "Have a question or want to discuss your project? Fill out the form — we’ll reply shortly via Telegram.\nYour message will be sent directly to our us. No spam. No bots. Just real humans.",
       "form": {
-        "name": "First name",
-        "surname": "Surname",
+        "name": "Name",
         "company": "Company",
         "budget": "Project Budget",
         "deadline": "Deadline",
