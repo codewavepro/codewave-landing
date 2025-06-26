@@ -207,106 +207,277 @@
       ],
       "tabs": [
         {
+          "id": 1,
           "label": "WordPress",
-          "img": "/portfolio.jpg",
-          "h3": "3D Solar System Planets to Explore",
-          "desc": "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+          "images": [
+            "/cases/creolytix/1.jpg",
+            "/cases/creolytix/2.jpg",
+            "/cases/creolytix/3.jpg",
+            "/cases/creolytix/4.jpg",
+            "/cases/creolytix/5.jpg"
+          ],
+          "h3": "Intelligent Business Platform Built on Laravel, WordPress & JavaScript",
+          "desc": "Creolytix is a cutting-edge platform for intelligent business solutions, built on a robust tech stack combining JavaScript for dynamic interfaces, PHP  with Laravel framework for complex backend logic, WordPress with custom  Sage theme for seamless content management, and MySQL for reliable  structured data storage. This powerful technological foundation enables  the platform to handle diverse challenges - from enterprise systems to  AI-powered analytical platforms - while maintaining architectural  flexibility and scalability for growing business needs. The solution  demonstrates effective integration of modern web technologies with  practical business automation capabilities.",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/laravel.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" }
+          ],
+          "link": "https://creolytix.io/"
+        },
+        {
+          "id": 2,
+          "label": "WordPress",
+          "images": [
+            "/cases/foxit/1.jpg",
+            "/cases/foxit/2.jpg",
+            "/cases/foxit/3.jpg",
+            "/cases/foxit/4.jpg",
+            "/cases/foxit/5.jpg"
+          ],
+          "h3": "Foxit Developer Platform: PDF SDK Hub for Web Developers",
+          "desc": "Foxit Developer Platform is a professional hub offering comprehensive PDF processing solutions  powered by Foxit SDK. Built with JavaScript, jQuery, PHP and MySQL using a custom WordPress theme, this developer portal showcases seamless  integration of advanced PDF technologies with an optimized web  interface.\nThe platform delivers  robust documentation, code samples and technical resources through its  high-performance architecture, supporting the complete PDF development  lifecycle. Clean, developer-centric design combines with powerful  backend functionality to create an efficient technical resource center.",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/laravel.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" }
+          ],
+          "link": "https://developers.foxit.com/"
+        },
+        {
+          "id": 3,
+          "label": "WordPress",
+          "images": [
+            "/cases/fffbayern-filmnews/1.jpg",
+            "/cases/fffbayern-filmnews/2.jpg",
+            "/cases/fffbayern-filmnews/3.jpg",
+            "/cases/fffbayern-filmnews/4.jpg",
+            "/cases/fffbayern-filmnews/5.jpg"
+          ],
+          "h3": "Film News Bayern – Media Outlet for Bavaria’s Film Industry",
+          "desc": "Film News Bayern is a  high-performance media platform for FilmFernsehFonds Bayern (FFF Bayern) built on a sophisticated WordPress and Laravel architecture. The  solution delivers a seamless content experience for film industry  professionals, combining the editorial flexibility of WordPress with the robust data handling of Laravel through a custom Sage theme  implementation.\nThe platform  efficiently manages diverse media content including festival coverage,  funding announcements, and project showcases while maintaining optimal  loading speeds through advanced caching strategies. Its technical  foundation features JavaScript-powered interactive elements, a optimized MySQL database structure, and responsive templates that adapt to all  modern devices.\nKey technical  differentiators include custom WordPress plugins for specialized content types, Laravel-powered data processing for complex queries, and a  performance-optimized frontend architecture using the Sage theme  framework. The implementation demonstrates particular strength in  handling high-traffic media content while maintaining editorial workflow efficiency.",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/laravel.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" }
+          ],
+          "link": "https://fffbayern-filmnews.com/"
+        },
+        {
+          "id": 4,
+          "label": "WordPress",
+          "images": [
+            "/cases/industrialcyber/1.jpg",
+            "/cases/industrialcyber/2.jpg",
+            "/cases/industrialcyber/3.jpg",
+            "/cases/industrialcyber/4.jpg",
+            "/cases/industrialcyber/5.jpg"
+          ],
+          "h3": "IndustrialCyber - Specialized Cybersecurity Media Platform Powered by Custom WordPress Infrastructure",
+          "desc": "IndustrialCyber - is an industry-leading media platform focused on industrial  cybersecurity, built on a robust WordPress infrastructure with a custom  theme. The platform effectively combines jQuery-powered interactivity  with PHP backend processing to deliver specialized content covering  threat analysis, regulatory compliance, and critical infrastructure  protection.\nThe solution  demonstrates advanced WordPress customization capabilities, handling  complex technical documentation and analytical content through an  optimized MySQL database structure. The implementation ensures instant  loading of resource-intensive materials while maintaining intuitive  navigation through sophisticated cybersecurity topics.",
           "stack": [
             { "icon": "/icons/wordpress.svg" },
             { "icon": "/icons/php.svg" },
             { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" },
-            { "icon": "/icons/tailwind.svg" }
+            { "icon": "/icons/sql.svg" }
           ],
-          "link": "https://example.com"
+          "link": "https://industrialcyber.co/"
         },
         {
+          "id": 5,
           "label": "WordPress",
-          "img": "/portfolio.jpg",
-          "h3": "Project A",
-          "desc": "Description",
-          "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" }
+          "images": [
+            "/cases/maximumstudio/1.jpg",
+            "/cases/maximumstudio/2.jpg",
+            "/cases/maximumstudio/3.jpg",
+            "/cases/maximumstudio/4.jpg",
+            "/cases/maximumstudio/5.jpg"
           ],
-          "link": "https://example.com"
-        },
-        {
-          "label": "WordPress",
-          "img": "/portfolio.jpg",
-          "h3": "3D Solar System Planets to Explore",
-          "desc": "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+          "h3": "MAXIMUM – Premium Furniture Studio with Custom E-Commerce and Project Features",
+          "desc": "MAXIMUM | Furniture Studio - a comprehensive web solution for a premium furniture manufacturer,  seamlessly integrating exclusive project showcases with e-commerce  functionality. The platform is built on a heavily customized WordPress  core with a bespoke theme, enabling sophisticated features from  interactive galleries to order management systems.\nThis implementation delivers a complete customer journey: detailed portfolio filtering by room type (living rooms, kitchens, wardrobes), catalog of  serial collections with finish variations, and a design trends blog.  Performance optimization ensures smooth loading of high-resolution  furniture imagery through custom jQuery solutions and advanced caching  mechanisms.\nThe technical  architecture demonstrates extensive CMS customization for furniture  production specifics: project management tied to production stages,  bespoke order calculators, and moderated review systems. The PHP backend handles complex catalog queries while maintaining performance with  extensive media content.",
           "stack": [
             { "icon": "/icons/wordpress.svg" },
             { "icon": "/icons/php.svg" },
             { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" },
-            { "icon": "/icons/tailwind.svg" }
+            { "icon": "/icons/sql.svg" }
           ],
-          "link": "https://example.com"
+          "link": "https://maximumstudio.ru/"
         },
         {
+          "id": 6,
           "label": "WordPress",
-          "img": "/portfolio.jpg",
-          "h3": "Project A",
-          "desc": "Description",
-          "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" }
+          "images": [
+            "/cases/mercifultowing/1.jpg",
+            "/cases/mercifultowing/2.jpg",
+            "/cases/mercifultowing/3.jpg",
+            "/cases/mercifultowing/4.jpg",
+            "/cases/mercifultowing/5.jpg"
           ],
-          "link": "https://example.com"
-        },
-        {
-          "label": "WordPress",
-          "img": "/portfolio.jpg",
-          "h3": "3D Solar System Planets to Explore",
-          "desc": "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+          "h3": "MercifulTowing – Fast, Responsive Website for 24/7 Roadside Assistance",
+          "desc": "MercifulTowing — a performance-optimized web platform for towing and roadside assistance  services in Oak Grove, Kentucky. Built on WordPress with custom theme  architecture, the solution delivers 24/7 service visibility through  responsive design and instant tow request forms.\nThe implementation features emergency service-specific adaptations: call  prioritization system, jQuery-powered service area map, and real-time  cost estimation module. Optimized MySQL database ensures instant page  loads during peak traffic - crucial for emergency response operations.",
           "stack": [
             { "icon": "/icons/wordpress.svg" },
             { "icon": "/icons/php.svg" },
             { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" },
-            { "icon": "/icons/tailwind.svg" }
+            { "icon": "/icons/sql.svg" }
           ],
-          "link": "https://example.com"
+          "link": "https://mercifultowing.com/"
         },
         {
+          "id": 7,
           "label": "WordPress",
-          "img": "/portfolio.jpg",
-          "h3": "Project A",
-          "desc": "Description",
-          "stack": [
-            { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" }
+          "images": [
+            "/cases/centrysec/1.jpg",
+            "/cases/centrysec/2.jpg",
+            "/cases/centrysec/3.jpg",
+            "/cases/centrysec/4.jpg",
+            "/cases/centrysec/5.jpg"
           ],
-          "link": "https://example.com"
-        },
-        {
-          "label": "WordPress",
-          "img": "/portfolio.jpg",
-          "h3": "3D Solar System Planets to Explore",
-          "desc": "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+          "h3": "SentrySecurity – Corporate Security Website with Service Filters and Client Tools",
+          "desc": "SentrySecurity — a corporate security solutions platform built on customized WordPress  architecture. The project merges professional design with functional  elements for showcasing protection services and client interaction  tools.\nTechnical implementation  features adaptive multi-level navigation, security service filtering  system, and service coverage maps integration. jQuery powers section  transitions, PHP handles service request forms, while optimized MySQL  structure ensures instant access to security solution pages.",
           "stack": [
             { "icon": "/icons/wordpress.svg" },
             { "icon": "/icons/php.svg" },
             { "icon": "/icons/js.svg" },
-            { "icon": "/icons/sql.svg" },
-            { "icon": "/icons/tailwind.svg" }
+            { "icon": "/icons/sql.svg" }
           ],
-          "link": "https://example.com"
+          "link": "https://sentrysecurity.com/"
         },
         {
+          "id": 8,
           "label": "WooCommerce",
-          "img": "/portfolio.jpg",
-          "h3": "Project A",
-          "desc": "Description",
+          "images": [
+            "/cases/takepoint/1.jpg",
+            "/cases/takepoint/2.jpg",
+            "/cases/takepoint/3.jpg",
+            "/cases/takepoint/4.jpg",
+            "/cases/takepoint/5.jpg"
+          ],
+          "h3": "Takepoint – Digital Sales Site with Auto Delivery and License Generation",
+          "desc": "Takepoint — a  digital commerce platform powered by WordPress and WooCommerce,  engineered for secure online sales of electronic products. The solution  features seamless payment gateway integration with automated digital  content delivery systems.\nKey  technical differentiators include custom PHP-based license generation,  instant file distribution mechanisms, and MySQL-optimized transaction  processing. The responsive theme ensures flawless purchasing experience  across all devices while maintaining robust security standards for  digital goods.",
           "stack": [
             { "icon": "/icons/wordpress.svg" },
-            { "icon": "/icons/php.svg" }
+            { "icon": "/icons/woo.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" },
+            { "icon": "/icons/payment.svg" }
           ],
-          "link": "https://example.com"
+          "link": "https://takepoint.co/"
+        },
+        {
+          "id": 9,
+          "label": "WordPress",
+          "images": [
+            "/cases/tesidea/1.jpg",
+            "/cases/tesidea/2.jpg",
+            "/cases/tesidea/3.jpg",
+            "/cases/tesidea/4.jpg",
+            "/cases/tesidea/5.jpg"
+          ],
+          "h3": "Tesidea – Corporate IT Website with Smart Content and Service Filtering",
+          "desc": "Tesidea — a  corporate WordPress-based platform showcasing advanced IT solutions and  technology services. The implementation combines professional design  with functional presentation layers for technical content.\nThe architecture employs jQuery-powered dynamic components, service  filtering systems and adaptive content layouts. PHP handles complex  business inquiry forms while optimized MySQL structure ensures  performance with rich media content.",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" }
+          ],
+          "link": "https://tesidea.com/"
+        },
+        {
+          "id": 10,
+          "label": "WordPress",
+          "images": [
+            "/cases/tsh-system/1.jpg",
+            "/cases/tsh-system/2.jpg",
+            "/cases/tsh-system/3.jpg",
+            "/cases/tsh-system/4.jpg",
+            "/cases/tsh-system/5.jpg"
+          ],
+          "h3": "Tsh-system – Medical Locator with Google Maps and Smart Filters",
+          "desc": "Tsh-system is an innovative healthcare management platform built on WordPress  using the Sage theme and Laravel framework. The site serves as a  comprehensive system for locating and filtering medical centers and  specialists through seamless Google Maps API integration.\nThe project showcases cutting-edge solutions in medical search technology,  featuring an interactive map with custom filters for specialties,  ratings, and service availability—powered by deep JavaScript and Google  Maps API integration. On the backend, Laravel handles complex MySQL  database queries, including geospatial data and filtering parameters,  while the optimized Sage theme ensures instant content loading for  optimal performance.",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/laravel.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" },
+            { "icon": "/icons/maps.svg" }
+          ],
+          "link": "https://tsh-system.de/"
+        },
+        {
+          "id": 11,
+          "label": "WordPress",
+          "images": [
+            "/cases/jamtal/1.jpg",
+            "/cases/jamtal/2.jpg",
+            "/cases/jamtal/3.jpg",
+            "/cases/jamtal/4.jpg",
+            "/cases/jamtal/5.jpg"
+          ],
+          "h3": "Alpine Hut Site with Animations and Booking Logic",
+          "desc": "Jamtalhuette – an alpine tourism portal with  interactive interface built on WordPress (Sage) and Laravel. The  implementation features GSAP animations for seamless section transitions coupled with robust booking processing logic. Custom mountain hut  management integration via Laravel REST API works in tandem with  optimized MySQL database to ensure reliability in low-connectivity  alpine environments.",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/laravel.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" },
+            { "icon": "/icons/maps.svg" }
+          ],
+          "link": "https://www.jamtalhuette.at/en/"
+        },
+        {
+          "id": 12,
+          "label": "WordPress",
+          "images": [
+            "/cases/kicknote/1.jpg",
+            "/cases/kicknote/2.jpg",
+            "/cases/kicknote/3.jpg",
+            "/cases/kicknote/4.jpg",
+            "/cases/kicknote/5.jpg"
+          ],
+          "h3": "Kicknote – Custom Video Service with Distributed Storage",
+          "desc": "Kicknote — a video processing platform developed on customized WordPress architecture. The solution features proprietary multi-step upload workflow with  subsequent distributed storage across remote servers.\nThe technical implementation demonstrates advanced video stream handling  through JavaScript interface coupled with PHP-based format conversion  logic. Optimized MySQL structure reliably manages media metadata for  large-scale content operations. Custom WordPress theme delivers tailored UI for upload and preview functionalities.",
+          "stack": [
+            { "icon": "/icons/wordpress.svg" },
+            { "icon": "/icons/php.svg" },
+            { "icon": "/icons/js.svg" },
+            { "icon": "/icons/sql.svg" }
+          ],
+          "link": "https://www.kicknote.net/"
+        },
+        {
+          "id": 13,
+          "label": "WordPress",
+          "images": [
+            "/cases/cryptomatcha/1.jpg",
+            "/cases/cryptomatcha/2.jpg",
+            "/cases/cryptomatcha/3.jpg",
+            "/cases/cryptomatcha/4.jpg",
+            "/cases/cryptomatcha/5.jpg"
+          ],
+          "h3": "Cutting-Edge CMS with Web3 Integration and Data Visualization",
+          "desc": "Cutting-edge content management system with Web3 technology  integration. The solution merges advanced publishing tools with  blockchain application support and data visualization capabilities.\nThe frontend leverages React with TypeScript for type-safe development,  featuring Cosmos SDK integration (CosmJS, Stargate) for wallet  operations and GraphQL for efficient data fetching. Chart.js  visualizations and Quill rich text editor provide superior content  creation experience.\nThe backend  utilizes Node.js and Express to deliver scalable content processing and  storage architecture. The platform natively supports decentralized  applications through Web3 integrations.",
+          "stack": [
+            { "icon": "/icons/next.svg" },
+            { "icon": "/icons/ts.svg" },
+            { "icon": "/icons/node.svg" },
+            { "icon": "/icons/chart.svg" },
+            { "icon": "/icons/graphql.svg" }
+          ],
+          "link": ""
         }
       ],
+      "visit": "Visit website",
       "load": "Load More"
     },
     "testimonials": {
