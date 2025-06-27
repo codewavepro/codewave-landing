@@ -114,7 +114,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<FormRespo
     }
 
     const name = formData.get('name') as string;
-    const surname = formData.get('surname') as string;
     const company = formData.get('company') as string;
     const budget = formData.get('budget') as string;
     const deadline = formData.get('deadline') as string;
@@ -123,7 +122,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<FormRespo
     const contactDetails = formData.get('contactDetails') as string;
     const privacyAccepted = formData.get('privacyAccepted') === 'on';
 
-    if (!name || !surname || !message || !contactMethod || !contactDetails || !privacyAccepted) {
+    if (!name || !message || !contactMethod || !contactDetails || !privacyAccepted) {
       return NextResponse.json({
         success: false,
         message: 'form.fillRequiredFields',
@@ -167,7 +166,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<FormRespo
 <b>Страна:</b> ${country}
 <b>IP:</b> ${ip}
 
-👤 <b>Имя:</b> ${name} ${surname}
+👤 <b>Имя:</b> ${name}
 🏢 <b>Компания:</b> ${company || 'не указана'}
 💰 <b>Бюджет:</b> ${budget || 'не указан'}
 ⏰ <b>Дедлайн:</b> ${deadline || 'не указан'}

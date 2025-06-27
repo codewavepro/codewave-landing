@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import useDictionary from "@/hooks/useDictionary";
+import useIsMobile from "@/hooks/useIsMobile";
 import SectionContainer from "@/components/common/Container/SectionContainer";
 import Titlebox from "@/components/TitleBox/Titlebox";
 import TabButton from "@/components/buttons/TabButton/TabButton";
@@ -22,6 +23,7 @@ interface Tab {
 
 const Expertise = () => {
     const { loading, dictionary } = useDictionary();
+    const isMobile = useIsMobile(992)
     const [activeTab, setActiveTab] = useState(0);
 
     const tabs: Tab[] = dictionary?.home?.expertise?.tabs || [];
@@ -44,16 +46,16 @@ const Expertise = () => {
 
     if (loading || !dictionary) return null;
 
-    const expertiseData = dictionary.home.expertise;
+    const t = dictionary.home.expertise;
 
     return (
         <section className={styles.expertise} id="expertise">
-            <Image className={styles.blocks} src="/blocks2.svg" width={1000} height={1000} alt="Vector blocks" />
+            <Image className={styles.blocks} src="/images/blocks2.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.expertiseWrapper}>
                     <Titlebox
-                        title={expertiseData.h2}
-                        text={expertiseData.subtext}
+                        title={t.h2}
+                        text={t.subtext}
                         direction="center"
                     />
                     <div className={styles.tabs}>
@@ -78,6 +80,16 @@ const Expertise = () => {
                             <div className={styles.tabContentInner}>
                                 <div className={styles.tabContentInfo}>
                                     <h3>{currentTab.title}</h3>
+                                    {isMobile && (
+                                        <div className={styles.tabContentImg}>
+                                            <Image
+                                                src={currentTab.image}
+                                                alt={currentTab.title}
+                                                width={702}
+                                                height={501}
+                                            />
+                                        </div>
+                                    )}
                                     <p>{currentTab.description}</p>
                                     <div className={styles.tabContentStack}>
                                         {currentTab.stack.map((item: StackItem, idx: number) => (
@@ -93,14 +105,16 @@ const Expertise = () => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className={styles.tabContentImg}>
-                                    <Image
-                                        src={currentTab.image}
-                                        alt={currentTab.title}
-                                        width={702}
-                                        height={501}
-                                    />
-                                </div>
+                                {!isMobile && (
+                                    <div className={styles.tabContentImg}>
+                                        <Image
+                                            src={currentTab.image}
+                                            alt={currentTab.title}
+                                            width={702}
+                                            height={501}
+                                        />
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

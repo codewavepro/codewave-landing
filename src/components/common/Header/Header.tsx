@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { useLocaleStore } from '@/store/useLocaleStore';
 import useDictionary from '@/hooks/useDictionary';
+import useIsMobile from '@/hooks/useIsMobile';
 import { type Locale } from '@/config/i18n-config';
 import LayoutContainer from '@/components/common/Container/SectionContainer';
 import LangBtn from '@/components/buttons/LangBtn/LangBtn';
@@ -18,8 +19,8 @@ interface HeaderProps {
 export default function Header({ lang }: HeaderProps) {
   const { setLocale } = useLocaleStore();
   const { dictionary, loading } = useDictionary();
+  const isMobile = useIsMobile(1200)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(prev => !prev);
@@ -30,18 +31,6 @@ export default function Header({ lang }: HeaderProps) {
       setIsMobileMenuOpen(false);
     }
   };
-
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 1200);
-    };
-
-    checkIfMobile();
-
-    window.addEventListener('resize', checkIfMobile);
-
-    return () => window.removeEventListener('resize', checkIfMobile);
-  }, []);
 
   useEffect(() => {
     if (!isMobile && isMobileMenuOpen) {
@@ -80,7 +69,7 @@ export default function Header({ lang }: HeaderProps) {
 
   if (loading || !dictionary) return null;
 
-  const headerData = dictionary.common.header;
+  const t = dictionary.common.header;
 
   return (
     <header className={styles.header}>
@@ -111,7 +100,7 @@ export default function Header({ lang }: HeaderProps) {
               <div className={styles.headerRight}>
                 <LangBtn/>
                 <Link href={`/#contact`} className={styles.ctaBtn}>
-                  {headerData.cta}
+                  {t.cta}
                   <div className={styles.glow}></div>
                   <div className={styles.box}></div>
                 </Link>
@@ -147,7 +136,7 @@ export default function Header({ lang }: HeaderProps) {
                 <div className={styles.mobileBottom}>
                   <LangBtn isMobile={true} />
                   <Link href={`/contact`} className={styles.ctaBtn} onClick={handleMenuItemClick}>
-                    {headerData.cta}
+                    {t.cta}
                     <div className={styles.glow}></div>
                     <div className={styles.box}></div>
                   </Link>

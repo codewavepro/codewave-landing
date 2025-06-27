@@ -30,7 +30,7 @@ const Portfolio = () => {
     const [visibleItems, setVisibleItems] = useState(4);
 
     const allItems: TabContent[] = dictionary?.home?.portfolio?.tabs || [];
-    const portfolioData = dictionary?.home?.portfolio;
+    const t = dictionary?.home?.portfolio;
 
     const loadMoreItems = () => setVisibleItems(prev => prev + 4);
 
@@ -41,16 +41,16 @@ const Portfolio = () => {
         };
     }, [allItems]);
 
-    if (loading || !portfolioData) return null;
+    if (loading || !t) return null;
 
     return (
         <section className={styles.portfolio} id="portfolio">
-            <Image className={styles.blocks} src="/blocks3.svg" width={1000} height={1000} alt="Vector blocks"/>
+            <Image className={styles.blocks} src="/images/blocks3.svg" width={1000} height={1000} alt="Vector blocks"/>
             <SectionContainer>
                 <div className={styles.portfolioWrapper}>
                     <Titlebox
-                        title={portfolioData.h2}
-                        text={portfolioData.subtext}
+                        title={t.h2}
+                        text={t.subtext}
                         direction="center"
                     />
 
@@ -64,7 +64,7 @@ const Portfolio = () => {
                                 desc={tab.desc}
                                 stack={tab.stack}
                                 link={tab.link}
-                                visit={portfolioData.visit}
+                                visit={t.visit}
                                 reverse={index % 2 === 1}
                             />
                         ))}
@@ -72,7 +72,7 @@ const Portfolio = () => {
 
                     {allItems.length > visibleItems && (
                         <Button
-                            text={portfolioData.load}
+                            text={t.load}
                             size="large"
                             color="light"
                             onClick={loadMoreItems}

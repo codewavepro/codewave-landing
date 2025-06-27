@@ -49,7 +49,7 @@ const Cta = () => {
 
     if (loading || !dictionary) return null;
 
-    const ctaData = dictionary.home.cta;
+    const t = dictionary.home.cta;
 
     return (
         <section className={styles.cta} id="cta">
@@ -57,13 +57,13 @@ const Cta = () => {
                 <div className={styles.ctaWrapper}>
                     <div className={styles.ctaInner}>
                         <div className={styles.ctaInfo}>
-                            <h2>{parseSafeHtml(ctaData.h2)}</h2>
-                            <p>{ctaData.subtext}</p>
-                            <CtaLink href="/" text={ctaData.btn}/>
+                            <h2>{parseSafeHtml(t.h2)}</h2>
+                            <p>{t.subtext}</p>
+                            <CtaLink href="/" text={t.btn}/>
                         </div>
                         <div className={styles.ctaContacts}>
                             <p>
-                                {ctaData.desc}
+                                {t.desc}
                             </p>
                             <ul className={styles.contactsList}>
                                 {links.map((link) => (

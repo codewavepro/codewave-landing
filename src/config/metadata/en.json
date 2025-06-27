@@ -2,5 +2,17 @@
   "home": {
     "title": "Codewave - Innovative Digital Solutions",
     "description": "We create cutting-edge web applications that transform businesses"
+  },
+  "privacyPolicy": {
+    "title": "Codewave TEST PRIVACY - Innovative Digital Solutions",
+    "description": "We create cutting-edge web applications that transform businesses"
+  },
+  "termsOfServices": {
+    "title": "Codewave TEST PRIVACY - Innovative Digital Solutions",
+    "description": "We create cutting-edge web applications that transform businesses"
+  },
+  "termsOfUse": {
+    "title": "Codewave TEST PRIVACY - Innovative Digital Solutions",
+    "description": "We create cutting-edge web applications that transform businesses"
   }
 }

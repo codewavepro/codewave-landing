@@ -70,19 +70,15 @@
           "items": [
             {
               "text": "Privacy Policy",
-              "href": "/privacy"
+              "href": "/privacy-policy"
             },
             {
               "text": "Terms & Services",
-              "href": "#"
+              "href": "/terms-of-services"
             },
             {
               "text": "Terms Of Use",
-              "href": "#"
-            },
-            {
-              "text": "Refund Policy",
-              "href": "#"
+              "href": "/terms-of-use"
             }
           ]
         },
@@ -229,17 +225,9 @@
     "portfolio": {
       "h2": "Case studies",
       "subtext": "Explore real-world projects where our team delivered tailored web solutions to meet complex business needs.\u2028 From e-commerce platforms and custom CMS features to high-performance frontend applications — each case highlights our process, tech stack, and the value delivered.\u2028 These examples demonstrate our ability to solve technical challenges, optimize user experience, and drive measurable results.",
-      "tabButtons": [
-        "WordPress",
-        "WooCommerce",
-        "React",
-        "Web3",
-        "test"
-      ],
       "tabs": [
         {
           "id": 1,
-          "label": "WordPress",
           "images": [
             "/cases/creolytix/1.jpg",
             "/cases/creolytix/2.jpg",
@@ -270,7 +258,6 @@
         },
         {
           "id": 2,
-          "label": "WordPress",
           "images": [
             "/cases/foxit/1.jpg",
             "/cases/foxit/2.jpg",
@@ -301,7 +288,6 @@
         },
         {
           "id": 3,
-          "label": "WordPress",
           "images": [
             "/cases/fffbayern-filmnews/1.jpg",
             "/cases/fffbayern-filmnews/2.jpg",
@@ -332,7 +318,39 @@
         },
         {
           "id": 4,
-          "label": "WordPress",
+          "images": [
+            "/cases/builder/1.jpg",
+            "/cases/builder/2.jpg",
+            "/cases/builder/3.jpg",
+            "/cases/builder/4.jpg",
+            "/cases/builder/5.jpg"
+          ],
+          "h3": "High-performance NFT factory platform",
+          "desc": "CRMH Builder — a  high-performance NFT factory platform powered by Go 1.24 and Gin  framework. The architecture orchestrates digital asset generation  through distributed goroutine-based processing with dynamic resource  allocation, where specialized modules handle each NFT lifecycle stage  from layer composition to final rendering.\nThe integration with Groq Cloud's llama3-8b model enables AI-assisted  metadata generation, automatically producing unique trait descriptions.  The platform employs hybrid security architecture combining JWT  authentication with anti-brute force mechanisms, while transactional  media processing ensures data consistency throughout all operations.",
+          "stack": [
+            {
+              "icon": "/icons/next.svg"
+            },
+            {
+              "icon": "/icons/ts.svg"
+            },
+            {
+              "icon": "/icons/node.svg"
+            },
+            {
+              "icon": "/icons/go.svg"
+            },
+            {
+              "icon": "/icons/postgres.svg"
+            },
+            {
+              "icon": "/icons/ai.svg"
+            }
+          ],
+          "link": "https://builder.crmh.xyz"
+        },
+        {
+          "id": 5,
           "images": [
             "/cases/industrialcyber/1.jpg",
             "/cases/industrialcyber/2.jpg",
@@ -359,8 +377,7 @@
           "link": "https://industrialcyber.co/"
         },
         {
-          "id": 5,
-          "label": "WordPress",
+          "id": 6,
           "images": [
             "/cases/maximumstudio/1.jpg",
             "/cases/maximumstudio/2.jpg",
@@ -387,8 +404,7 @@
           "link": "https://maximumstudio.ru/"
         },
         {
-          "id": 6,
-          "label": "WordPress",
+          "id": 7,
           "images": [
             "/cases/mercifultowing/1.jpg",
             "/cases/mercifultowing/2.jpg",
@@ -415,8 +431,7 @@
           "link": "https://mercifultowing.com/"
         },
         {
-          "id": 7,
-          "label": "WordPress",
+          "id": 8,
           "images": [
             "/cases/centrysec/1.jpg",
             "/cases/centrysec/2.jpg",
@@ -443,8 +458,7 @@
           "link": "https://sentrysecurity.com/"
         },
         {
-          "id": 8,
-          "label": "WooCommerce",
+          "id": 9,
           "images": [
             "/cases/takepoint/1.jpg",
             "/cases/takepoint/2.jpg",
@@ -477,8 +491,7 @@
           "link": "https://takepoint.co/"
         },
         {
-          "id": 9,
-          "label": "WordPress",
+          "id": 10,
           "images": [
             "/cases/tesidea/1.jpg",
             "/cases/tesidea/2.jpg",
@@ -505,8 +518,7 @@
           "link": "https://tesidea.com/"
         },
         {
-          "id": 10,
-          "label": "WordPress",
+          "id": 11,
           "images": [
             "/cases/tsh-system/1.jpg",
             "/cases/tsh-system/2.jpg",
@@ -539,8 +551,7 @@
           "link": "https://tsh-system.de/"
         },
         {
-          "id": 11,
-          "label": "WordPress",
+          "id": 12,
           "images": [
             "/cases/jamtal/1.jpg",
             "/cases/jamtal/2.jpg",
@@ -573,8 +584,7 @@
           "link": "https://www.jamtalhuette.at/en/"
         },
         {
-          "id": 12,
-          "label": "WordPress",
+          "id": 13,
           "images": [
             "/cases/kicknote/1.jpg",
             "/cases/kicknote/2.jpg",
@@ -601,8 +611,7 @@
           "link": "https://www.kicknote.net/"
         },
         {
-          "id": 13,
-          "label": "WordPress",
+          "id": 14,
           "images": [
             "/cases/cryptomatcha/1.jpg",
             "/cases/cryptomatcha/2.jpg",
@@ -610,8 +619,8 @@
             "/cases/cryptomatcha/4.jpg",
             "/cases/cryptomatcha/5.jpg"
           ],
-          "h3": "Cutting-Edge CMS with Web3 Integration and Data Visualization",
-          "desc": "Cutting-edge content management system with Web3 technology  integration. The solution merges advanced publishing tools with  blockchain application support and data visualization capabilities.\nThe frontend leverages React with TypeScript for type-safe development,  featuring Cosmos SDK integration (CosmJS, Stargate) for wallet  operations and GraphQL for efficient data fetching. Chart.js  visualizations and Quill rich text editor provide superior content  creation experience.\nThe backend  utilizes Node.js and Express to deliver scalable content processing and  storage architecture. The platform natively supports decentralized  applications through Web3 integrations.",
+          "h3": "Web3 Integration and Data Visualization Platform",
+          "desc": "A custom platform integrating Web3 technologies, data visualization, and content tools. It combines blockchain wallet functionality with modern publishing capabilities and interactive dashboards.\nThe frontend is built with React and TypeScript, featuring Cosmos SDK integration (CosmJS, Stargate) for wallet operations and GraphQL for optimized data fetching. Visualizations are powered by Chart.js, and content editing uses the Quill rich text editor.\nThe backend is developed with Node.js and Express, providing a scalable architecture for handling data and content. Web3 support is built-in, enabling seamless decentralized application integration.",
           "stack": [
             {
               "icon": "/icons/next.svg"
@@ -737,8 +746,7 @@
       "h2": "Send us a message",
       "subtext": "Have a question or want to discuss your project? Fill out the form — we’ll reply shortly via Telegram.\nYour message will be sent directly to our us. No spam. No bots. Just real humans.",
       "form": {
-        "name": "First name",
-        "surname": "Surname",
+        "name": "Name",
         "company": "Company",
         "budget": "Project Budget",
         "deadline": "Deadline",
@@ -762,6 +770,94 @@
         "form.sending": "Sending..."
       }
     }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: June 27, 2025",
+    "introTitle": "Introduction",
+    "introText": "Welcome to codeWavePro's Privacy Policy. This document explains how we collect, use, and protect your personal information when you use our website and services.",
+    "infoTitle": "Information We Collect",
+    "infoText": "We collect several different types of information for various purposes to provide and improve our service to you.",
+    "personalTitle": "Personal Data",
+    "personalText": "While using our service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you.",
+    "usageTitle": "Usage Data",
+    "usageText": "We may also collect information on how the service is accessed and used.",
+    "trackingTitle": "Tracking & Cookies Data",
+    "trackingText": "We use cookies and similar tracking technologies to track activity on our service.",
+    "useTitle": "Use of Data",
+    "useText": "codeWavePro uses the collected data for various purposes:",
+    "list": [
+      "To provide and maintain our service",
+      "To notify you about changes to our service",
+      "To allow you to participate in interactive features of our service",
+      "To provide customer support",
+      "To gather analysis or valuable information so that we can improve our service",
+      "To monitor the usage of our service",
+      "To detect, prevent and address technical issues"
+    ],
+    "securityTitle": "Data Security",
+    "securityText": "The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure.",
+    "rightsTitle": "Your Data Protection Rights",
+    "rightsText": "You have the right to access, update or delete your information.",
+    "contactTitle": "Contact Us",
+    "contactText": "If you have any questions about this Privacy Policy, please contact us at:"
+  },
+  "termsOfServices": {
+    "title": "Terms of Service",
+    "updated": "Last updated: June 27, 2025",
+    "introTitle": "Introduction",
+    "introText": "Welcome to codeWavePro's Terms of Service. These Terms govern your use of our website and the services we provide.",
+    "servicesTitle": "Services",
+    "servicesText": "codeWavePro offers web development, design, and consulting services. The specific services we provide will be outlined in a separate agreement or technical specification.",
+    "ipTitle": "Intellectual Property",
+    "ourContentTitle": "Our Content",
+    "ourContentText": "All content on our website, including text, graphics, logos, and software, is our property or the property of our licensors and is protected by copyright laws.",
+    "yourContentTitle": "Your Content",
+    "yourContentText": "You retain ownership of any content you provide to us. By submitting content, you grant us a non-exclusive, worldwide, royalty-free license to use, modify, and display such content in connection with our services.",
+    "liabilityTitle": "Limitation of Liability",
+    "liabilityText": "In no event shall codeWavePro be liable for any indirect, incidental, special, punitive, or consequential damages arising out of your use of our services.",
+    "terminationTitle": "Termination",
+    "terminationText": "We reserve the right to terminate or suspend your access to our services immediately, without prior notice or liability, for any reason including your breach of these Terms.",
+    "changesTitle": "Changes to Terms",
+    "changesText": "We reserve the right to modify or replace these Terms at any time at our sole discretion. We will notify you of any changes by posting the new Terms on this page.",
+    "contactTitle": "Contact Us",
+    "contactText": "If you have any questions about these Terms of Service, please contact us at:"
+  },
+  "termsOfUse": {
+    "title": "Terms of Use",
+    "updated": "Last updated: June 27, 2025",
+    "acceptanceTitle": "Acceptance of Terms",
+    "acceptanceText": "By using the codewave.pro website, you agree to comply with these Terms of Use and our Privacy Policy.",
+    "licenseTitle": "License to Use",
+    "licenseText": "You are granted a limited, non-exclusive, non-transferable license to access and use the website for personal, non-commercial purposes.",
+    "licenseProhibited": "You are prohibited from:",
+    "licenseList": [
+      "Modifying or copying site materials",
+      "Using materials for commercial purposes",
+      "Attempting to decompile or reverse engineer any software",
+      "Removing copyright notices"
+    ],
+    "conductTitle": "User Conduct",
+    "conductText": "You agree not to use the website in any way that:",
+    "conductList": [
+      "Violates applicable law",
+      "Infringes intellectual property rights",
+      "Contains malicious software",
+      "Disrupts the site or related servers"
+    ],
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerText": "The website is provided \"as is\". codewave.pro makes no warranties, express or implied.",
+    "linksTitle": "Links to Other Websites",
+    "linksText": "Our website may contain links to third-party websites that are not controlled by us.",
+    "contactTitle": "Contact Us",
+    "contactText": "If you have any questions about these Terms of Use, please contact us at:"
+  },
+  "cookieBanner": {
+    "text": "We use cookies to improve your experience. Read our",
+    "privacyPolicy": "Privacy Policy",
+    "acceptButton": "Accept",
+    "declineButton": "Decline",
+    "description": "By accepting, you consent to the use of cookies to enhance site functionality. If you decline, some features may be limited."
   },
   "notFound": {
     "info": {

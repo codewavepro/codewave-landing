@@ -1,0 +1,33 @@
+@use '../../scss/vars/vars' as v;
+@use '../../scss/mixins/typography' as t;
+@use '../../scss/placeholders/button' as *;
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background-color: v.$dark;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  z-index: 100;
+  border-top: 1px solid v.$gray;
+
+  p {
+    text-align: center;
+    @include t.body(white)
+  }
+
+  a {
+    color: v.$accent;
+    text-decoration: underline;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 8px;
+  }
+}
