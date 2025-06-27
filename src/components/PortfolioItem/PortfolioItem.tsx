@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { BiWorld } from 'react-icons/bi';
+import { FaEye } from "react-icons/fa";
 import styles from './PortfolioItem.module.scss';
 
 interface StackItem {
@@ -43,6 +44,9 @@ const PortfolioItem = ({ id, images, h3, desc, stack, link, visit, reverse }: po
                             )}
                         </a>
                     ))}
+                    <div className={styles.view}>
+                        <FaEye />
+                    </div>
                 </div>
                 <div className={styles.portfolioItemInfo}>
                     <h3>{h3}</h3>

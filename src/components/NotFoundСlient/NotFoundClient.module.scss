@@ -1,0 +1,90 @@
+@use '../../scss/vars/vars' as v;
+@use '../../scss/mixins/typography' as t;
+@use '../../scss/keyframes/keyframes' as *;
+@use '../../scss/placeholders/button' as *;
+
+.notFound {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-size: cover;
+  background: url("/images/blocks1.svg") no-repeat center;
+  position: relative;
+  overflow: hidden;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  h1 {
+    font-family: v.$ff-r;
+    color: v.$gray;
+    font-size: 120px;
+    margin-bottom: 32px;
+
+    @media (min-width: v.$md) {
+      font-size: 180px;
+    }
+
+    @media (min-width: v.$xl) {
+      font-size: 250px;
+    }
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 64px;
+    @include t.body(white)
+  }
+
+  .backButton {
+    @extend %btn-base;
+    background-color: v.$accent;
+    padding: 16px 32px;
+    font-weight: v.$fw-bold;
+    border-radius: v.$br;
+    text-align: center;
+    font-size: v.$fs-xl;
+    color: v.$dark;
+    transition: opacity ease v.$tr;
+
+    &:hover {
+      opacity: v.$op;
+    }
+
+    @media(min-width: v.$md) {
+      padding: 20px 60px;
+      font-size: v.$fs-lg;
+    }
+
+    @media(min-width: v.$xl) {
+      font-size: v.$fs-xl;
+    }
+  }
+
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    background: v.$accent;
+    border-radius: v.$br;
+    pointer-events: none;
+    animation: float 15s infinite ease-in-out;
+    will-change: transform;
+  }
+}
+

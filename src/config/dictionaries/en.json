@@ -751,8 +751,10 @@
         "budget": "Project Budget",
         "deadline": "Deadline",
         "message": "Message",
+        "selectDate": "Select Date",
         "preferred": "Preferred contact method",
-        "privacy": "I agree to share my contact details so you can reach out.",
+        "privacy": "I agree to share my contact details so you can contact me regarding my inquiry. I understand that my data will be processed in accordance with the",
+        "privacyText": "Privacy Policy",
         "button": "Send"
       },
       "toast": {
@@ -861,7 +863,6 @@
   },
   "notFound": {
     "info": {
-      "title": "404 - Page Not Found",
       "description": "Sorry, the requested page does not exist",
       "backButton": "Back to Home"
     }

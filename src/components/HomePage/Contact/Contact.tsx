@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useRef } from 'react';
 import type { ReactNode } from 'react';
 import styles from './Contact.module.scss';
 import { validateContactDetails, validateDate, ContactMethod } from "@/shared/validation";
@@ -11,10 +11,11 @@ import SectionContainer from "@/components/common/Container/SectionContainer";
 import Button from "@/components/buttons/Button/Button";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiLogoTelegram } from "react-icons/bi";
-import { BsTwitterX, BsWhatsapp } from "react-icons/bs";
+import { BsTwitterX, BsWhatsapp, BsCalendar3 } from "react-icons/bs";
 import { FaDiscord, FaLinkedin } from "react-icons/fa";
 import useReCaptcha from '@/hooks/useReCaptcha';
 import Image from "next/image";
+import Link from "next/link";
 
 type FormState = {
     success: boolean;
@@ -28,6 +29,7 @@ const Contact = () => {
     const [selectedMethod, setSelectedMethod] = useState<ContactMethod>('email');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitAttempted, setSubmitAttempted] = useState(false);
+    const [selectedDate, setSelectedDate] = useState('');
     const [fieldErrors, setFieldErrors] = useState({
         name: false,
         message: false,
@@ -35,6 +37,7 @@ const Contact = () => {
         privacyAccepted: false,
         deadline: false
     });
+    const dateInputRef = useRef<HTMLInputElement>(null);
 
     if (loading || !dictionary) return null;
 
@@ -156,6 +159,10 @@ const Contact = () => {
         }
     };
 
+    const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSelectedDate(e.target.value);
+    };
+
     const getPlaceholderForMethod = (method: ContactMethod): string => {
         switch (method) {
             case 'email':
@@ -214,14 +221,33 @@ const Contact = () => {
                                     />
                                 </div>
                             </div>
-                            <div className={styles.deadline}>
+                            <div 
+                                className={styles.deadline} 
+                                onClick={() => dateInputRef.current?.showPicker()}
+                                role="button"
+                                tabIndex={0}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        dateInputRef.current?.showPicker();
+                                    }
+                                }}
+                            >
                                 <span>{t.form.deadline}</span>
-                                <input
-                                    type="date"
-                                    name="deadline"
-                                    disabled={isSubmitting}
-                                    className={submitAttempted && fieldErrors.deadline ? styles.error : ''}
-                                />
+                                <div className={styles.dateInputWrapper}>
+                                    <input
+                                        type="date"
+                                        name="deadline"
+                                        ref={dateInputRef}
+                                        disabled={isSubmitting}
+                                        onChange={handleDateChange}
+                                        className={`${submitAttempted && fieldErrors.deadline ? styles.error : ''} ${styles.dateInput}`}
+                                    />
+                                    <BsCalendar3 className={styles.calendarIcon} />
+                                    <div className={styles.dateDisplay} data-placeholder="Select date">
+                                        {selectedDate || t.form.selectDate}
+                                    </div>
+                                </div>
                             </div>
                             <div className={`${styles.inputRow} ${styles.required} ${(submitAttempted && fieldErrors.message) ? styles.error : ''}`}>
                                 <textarea
@@ -272,8 +298,10 @@ const Contact = () => {
                                         value="on"
                                         disabled={isSubmitting}
                                     />
-                                    <span></span>
-                                    {t.form.privacy}
+                                    <span className={styles.square}></span>
+                                    <div className={styles.privacyText}>
+                                        {t.form.privacy} <Link href="/privacy-policy">{t.form.privacyText}</Link>
+                                    </div>
                                 </label>
                             </div>
                         </fieldset>
