@@ -863,7 +863,6 @@
   },
   "notFound": {
     "info": {
-      "title": "404 - Page Not Found",
       "description": "Sorry, the requested page does not exist",
       "backButton": "Back to Home"
     }
