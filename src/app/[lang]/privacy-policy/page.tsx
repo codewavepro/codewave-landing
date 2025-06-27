@@ -5,13 +5,15 @@ import PrivacyPolicyClient from "@/app/[lang]/privacy-policy/client/PrivacyPolic
 import { generateMetadata as createMetadata } from '@/lib/metadata';
 
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const locale = params.lang as Locale;
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
   return createMetadata(locale, 'privacyPolicy');
 }
 
-export default async function PrivacyPolicyPage({ params }: { params: { lang: string } }) {
-  const locale = params.lang as Locale;
+export default async function PrivacyPolicyPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const locale = lang as Locale;
   const dictionary = await getDictionary(locale);
 
   return <PrivacyPolicyClient dictionary={dictionary} lang={locale} />;

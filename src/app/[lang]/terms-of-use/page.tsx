@@ -1,12 +1,19 @@
-import { Metadata } from 'next';
-import TermsOfUse from '@/components/Legal/TermsOfUse/TermsOfUse';
+import { type Metadata } from 'next';
+import { type Locale } from '@/config/i18n-config';
+import { getDictionary } from '@/lib/dictionary';
+import TermsOfUseClient from './client/TermsOfUseClient';
+import { generateMetadata as createMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Terms of Use - codeWavePro',
-  description: 'Understand the terms and conditions for using the codeWavePro website.',
-  keywords: 'terms of use, website terms, user agreement, legal terms',
-};
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as Locale;
+  return createMetadata(locale, 'termsOfUse');
+}
 
-export default function TermsOfUsePage() {
-  return <TermsOfUse />;
+export default async function TermsOfUsePage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const locale = lang as Locale;
+  const dictionary = await getDictionary(locale);
+
+  return <TermsOfUseClient dictionary={dictionary} lang={locale} />;
 }
