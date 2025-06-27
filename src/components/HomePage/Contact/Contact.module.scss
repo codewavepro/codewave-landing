@@ -312,7 +312,7 @@
 
     .checkWrapper {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 8px;
       position: relative;
 
@@ -336,7 +336,7 @@
       }
 
       &.error {
-        label span {
+        label .square {
           border-color: v.$accent;
         }
       }
@@ -354,7 +354,7 @@
         cursor: pointer;
         position: relative;
 
-        span {
+        .square {
           position: relative;
           width: 20px;
           height: 20px;
@@ -407,6 +407,19 @@
       .errorMessage {
         margin-left: 36px;
         margin-top: 4px;
+      }
+    }
+
+    .privacyText {
+      display: inline-block;
+
+      a {
+        color: v.$accent;
+        text-decoration: underline;
+
+        &:hover{
+          text-decoration: none;
+        }
       }
     }
 

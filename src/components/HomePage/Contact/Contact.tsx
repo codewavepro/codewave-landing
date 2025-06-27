@@ -15,6 +15,7 @@ import { BsTwitterX, BsWhatsapp } from "react-icons/bs";
 import { FaDiscord, FaLinkedin } from "react-icons/fa";
 import useReCaptcha from '@/hooks/useReCaptcha';
 import Image from "next/image";
+import Link from "next/link";
 
 type FormState = {
     success: boolean;
@@ -272,8 +273,10 @@ const Contact = () => {
                                         value="on"
                                         disabled={isSubmitting}
                                     />
-                                    <span></span>
-                                    {t.form.privacy}
+                                    <span className={styles.square}></span>
+                                    <div className={styles.privacyText}>
+                                        {t.form.privacy} <Link href="/privacy-policy">{t.form.privacyText}</Link>
+                                    </div>
                                 </label>
                             </div>
                         </fieldset>
