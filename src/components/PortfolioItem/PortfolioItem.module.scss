@@ -36,40 +36,20 @@
     overflow: hidden;
     position: relative;
 
-    &:before {
-      content: 'View more';
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      padding: 16px;
-      background-color: v.$dark;
-      color: v.$white;
-      font-family: v.$ff-r;
-      box-shadow: v.$bs-type1;
-      opacity: 0;
-      scale: 0.9;
-      text-transform:  uppercase;
-      border-radius: v.$br;
-      pointer-events: none;
-      z-index: 1;
-      transition: opacity ease v.$tr, scale ease v.$tr;
+    &:hover {
+      img {
+        scale: 1.1;
+      }
+
+      .view {
+        opacity: 1;
+        visibility: visible;
+      }
     }
 
     @media(min-width: v.$md) {
       height: 340px;
       margin-bottom: 36px;
-    }
-
-    &:hover {
-      &:before {
-        opacity: 1;
-        scale: 1;
-      }
-
-      img {
-        scale: 1.1;
-      }
     }
 
     @media(min-width: v.$lg) {
@@ -83,6 +63,35 @@
       border-radius: v.$br;
       box-shadow: v.$bs-type1;
       transition: scale ease v.$tr;
+    }
+
+    .view {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      visibility:  hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(17, 17, 17, 0.58);
+      backdrop-filter: blur(4px);
+      z-index: 1;
+      pointer-events: none;
+      transition: opacity ease v.$tr, visibility ease v.$tr, background-color ease v.$tr;
+
+      svg {
+        width: 50px;
+        height: 50px;
+        color: v.$gray;
+
+        @media(min-width: v.$xl) {
+          width: 100px;
+          height: 100px;
+        }
+      }
     }
   }
 
