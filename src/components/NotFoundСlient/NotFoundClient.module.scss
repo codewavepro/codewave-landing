@@ -45,7 +45,7 @@
 
   .backButton {
     @extend %btn-base;
-    background-color: v.$accent;
+    background-color: v.$gray;
     padding: 16px 32px;
     font-weight: v.$fw-bold;
     border-radius: v.$br;
