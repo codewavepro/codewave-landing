@@ -2,12 +2,14 @@ import styles from './Hero.module.scss';
 import Image from 'next/image';
 import circles from './Blobs.module.scss';
 import useDictionary from '@/hooks/useDictionary';
+import {useLocaleStore} from "@/store/useLocaleStore";
 import LayoutContainer from "@/components/common/Container/SectionContainer";
 import CtaLink from "@/components/buttons/CtaLink/CtaLink";
 import TerminalAnimation from "@/components/TerminalAnimation/TerminalAnimation";
 
 export default function Hero() {
     const { dictionary, loading } = useDictionary();
+    const lang = useLocaleStore((state) => state.locale);
 
     if (loading || !dictionary) return null;
     
@@ -38,7 +40,7 @@ export default function Hero() {
                                 {t.desc}
                             </p>
                         </div>
-                        <CtaLink text={t.cta} href="/#stats"></CtaLink>
+                        <CtaLink text={t.cta} href={`/${lang}#stats`}></CtaLink>
                     </div>
                     <TerminalAnimation />
                 </div>
