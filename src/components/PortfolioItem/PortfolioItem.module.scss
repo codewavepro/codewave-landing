@@ -35,7 +35,10 @@
     min-height: 240px;
     overflow: hidden;
     position: relative;
-    aspect-ratio: 16/9;
+
+    a {
+      aspect-ratio: 16/9;
+    }
 
     &:hover {
       img {
