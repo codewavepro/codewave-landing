@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /api/
+
+Sitemap: https://codewave.pro/sitemap.xml
