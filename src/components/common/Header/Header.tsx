@@ -99,7 +99,7 @@ export default function Header({ lang }: HeaderProps) {
               </nav>
               <div className={styles.headerRight}>
                 <LangBtn/>
-                <Link href={`/#contact`} className={styles.ctaBtn}>
+                <Link href={`/${lang}/#contact`} className={styles.ctaBtn}>
                   {t.cta}
                   <div className={styles.glow}></div>
                   <div className={styles.box}></div>
@@ -135,7 +135,7 @@ export default function Header({ lang }: HeaderProps) {
                 </nav>
                 <div className={styles.mobileBottom}>
                   <LangBtn isMobile={true} />
-                  <Link href={`/contact`} className={styles.ctaBtn} onClick={handleMenuItemClick}>
+                  <Link href={`/${lang}/#contact}`} className={styles.ctaBtn} onClick={handleMenuItemClick}>
                     {t.cta}
                     <div className={styles.glow}></div>
                     <div className={styles.box}></div>
