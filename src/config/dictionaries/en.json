@@ -44,23 +44,23 @@
           "items": [
             {
               "text": "Expertise",
-              "href": "/#expertise"
+              "href": "/en/#expertise"
             },
             {
               "text": "Case Studies",
-              "href": "/#portfolio"
+              "href": "/en/#portfolio"
             },
             {
               "text": "Testimonials",
-              "href": "/#testimonials"
+              "href": "/en/#testimonials"
             },
             {
               "text": "About Us",
-              "href": "/#about"
+              "href": "/en/#about"
             },
             {
               "text": "Contact",
-              "href": "/#contact"
+              "href": "/en/#contact"
             }
           ]
         },
@@ -70,15 +70,15 @@
           "items": [
             {
               "text": "Privacy Policy",
-              "href": "/privacy-policy"
+              "href": "/en/privacy-policy"
             },
             {
               "text": "Terms & Services",
-              "href": "/terms-of-services"
+              "href": "/en/terms-of-services"
             },
             {
               "text": "Terms Of Use",
-              "href": "/terms-of-use"
+              "href": "/en/terms-of-use"
             }
           ]
         },

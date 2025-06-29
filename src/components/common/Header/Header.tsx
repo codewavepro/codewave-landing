@@ -59,11 +59,11 @@ export default function Header({ lang }: HeaderProps) {
   const menuItems = useMemo(() => {
     if (!dictionary) return [];
     return [
-      { name: dictionary.common.header.navigation.expertise, path: `/#expertise` },
-      { name: dictionary.common.header.navigation.cases, path: `/#portfolio` },
-      { name: dictionary.common.header.navigation.testimonials, path: `/#testimonials` },
-      { name: dictionary.common.header.navigation.about, path: `/#about` },
-      { name: dictionary.common.header.navigation.contact, path: `/#contact` },
+      { name: dictionary.common.header.navigation.expertise, path: `/${lang}/#expertise` },
+      { name: dictionary.common.header.navigation.cases, path: `/${lang}/#portfolio` },
+      { name: dictionary.common.header.navigation.testimonials, path: `/${lang}/#testimonials` },
+      { name: dictionary.common.header.navigation.about, path: `/${lang}/#about` },
+      { name: dictionary.common.header.navigation.contact, path: `/${lang}/#contact` },
     ];
   }, [dictionary, lang]);
 
@@ -99,7 +99,7 @@ export default function Header({ lang }: HeaderProps) {
               </nav>
               <div className={styles.headerRight}>
                 <LangBtn/>
-                <Link href={`/#contact`} className={styles.ctaBtn}>
+                <Link href={`/${lang}/#contact`} className={styles.ctaBtn}>
                   {t.cta}
                   <div className={styles.glow}></div>
                   <div className={styles.box}></div>
@@ -135,7 +135,7 @@ export default function Header({ lang }: HeaderProps) {
                 </nav>
                 <div className={styles.mobileBottom}>
                   <LangBtn isMobile={true} />
-                  <Link href={`/contact`} className={styles.ctaBtn} onClick={handleMenuItemClick}>
+                  <Link href={`/${lang}/#contact}`} className={styles.ctaBtn} onClick={handleMenuItemClick}>
                     {t.cta}
                     <div className={styles.glow}></div>
                     <div className={styles.box}></div>
