@@ -59,11 +59,11 @@ export default function Header({ lang }: HeaderProps) {
   const menuItems = useMemo(() => {
     if (!dictionary) return [];
     return [
-      { name: dictionary.common.header.navigation.expertise, path: `/#expertise` },
-      { name: dictionary.common.header.navigation.cases, path: `/#portfolio` },
-      { name: dictionary.common.header.navigation.testimonials, path: `/#testimonials` },
-      { name: dictionary.common.header.navigation.about, path: `/#about` },
-      { name: dictionary.common.header.navigation.contact, path: `/#contact` },
+      { name: dictionary.common.header.navigation.expertise, path: `/${lang}/#expertise` },
+      { name: dictionary.common.header.navigation.cases, path: `/${lang}/#portfolio` },
+      { name: dictionary.common.header.navigation.testimonials, path: `/${lang}/#testimonials` },
+      { name: dictionary.common.header.navigation.about, path: `/${lang}/#about` },
+      { name: dictionary.common.header.navigation.contact, path: `/${lang}/#contact` },
     ];
   }, [dictionary, lang]);
 
