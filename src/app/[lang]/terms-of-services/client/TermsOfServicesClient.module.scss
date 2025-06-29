@@ -1,0 +1,11 @@
+@use '../../../../scss/vars/vars' as v;
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @media(min-width: v.$xl) {
+    gap: 120px;
+  }
+}

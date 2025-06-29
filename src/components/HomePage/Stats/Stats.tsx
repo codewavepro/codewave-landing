@@ -18,7 +18,7 @@ const Stats = () => {
     }));
 
     return (
-        <section className={styles.stats}>
+        <section className={styles.stats} id="stats">
             <SectionContainer>
                 <div className={styles.statsWrapper} role="list">
                     <h2 className={styles.hiddenHeading}>

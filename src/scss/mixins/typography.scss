@@ -17,6 +17,26 @@
   }
 }
 
+@mixin h1() {
+  max-width: 750px;
+  color: v.$white;
+  font-family: v.$ff-r;
+  font-size: v.$fs-3xl;
+  font-style: normal;
+  font-weight: v.$fw-bold;
+  line-height: v.$lh-title;
+  text-transform: uppercase;
+  word-break: keep-all;
+
+  @media(min-width: v.$md) {
+    font-size: v.$fs-4xl;
+  }
+
+  @media(min-width: v.$xl) {
+    font-size: v.$fs-5xl;
+  }
+}
+
 @mixin h2() {
   color: v.$white;
   font-family: v.$ff-r;

@@ -122,20 +122,23 @@
     @extend %btn-base;
     padding: 8px 36px;
     border-radius: v.$br;
-    background-color: v.$dark;
-    color: v.$gray;
+    background-color: rgba(244, 67, 36, 0.62);
+    color: v.$black;
     font-family: v.$ff-r;
     font-size: v.$fs-xl;
     font-weight: v.$fw-regular;
     line-height: v.$lh;
     box-shadow: v.$bs-type1;
     position: relative;
+    transition: background-color ease v.$tr, color ease v.$tr;
 
     &:focus-visible {
       color: v.$accent;
     }
 
     &:active {
+      color: v.$white;
+
       &:before {
         animation-duration: 3s;
       }
@@ -246,19 +249,19 @@
   
   .mobileMenu {
     position: fixed;
-    top: 68px;
+    top: 64px;
     left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100vw;
-    height: calc(100vh - 68px);
+    height: calc(100vh - 64px);
     background-color: v.$black;
     z-index: 15;
     padding: 40px 20px 80px 20px;
     overflow-y: auto;
     transform: translateY(calc(100% + 68px));
-    background-image: url("/blocks1.svg");
+    background-image: url("/images/blocks1.svg");
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: cover;

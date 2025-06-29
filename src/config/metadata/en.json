@@ -1,6 +1,129 @@
 {
   "home": {
-    "title": "Codewave - Innovative Digital Solutions",
-    "description": "We create cutting-edge web applications that transform businesses"
+    "title": "Codewave — Custom Website & Web Application Development",
+    "description": "Professional website development: landing pages, corporate websites, e-commerce solutions. Full-cycle development with guaranteed results.",
+    "keywords": "website development, web development agency, custom website, landing page, e-commerce website, corporate website",
+    "canonical": "https://codewave.pro/en",
+    "og": {
+      "title": "Codewave | Professional Web Development",
+      "description": "We build websites that drive business results",
+      "type": "website",
+      "url": "https://codewave.pro/en",
+      "site_name": "Codewave",
+      "locale": "en_US",
+      "image": "https://codewave.pro/images/og/og.jpg",
+      "image:width": "1200",
+      "image:height": "630",
+      "image:alt": "Codewave - Web Development"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@codewave",
+      "creator": "@codewave",
+      "title": "Codewave | Website Development Services",
+      "description": "Web development that delivers real business value",
+      "image": "https://codewave.pro/images/og/og.jpg",
+      "image:alt": "Codewave - Web Development"
+    },
+    "additionalMeta": [
+      {"name": "robots", "content": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"},
+      {"name": "author", "content": "Codewave"},
+      {"name": "theme-color", "content": "#2563eb"},
+      {"property": "og:locale:alternate", "content": "ru_RU"},
+      {"rel": "alternate", "hreflang": "en", "href": "https://codewave.pro/en"},
+      {"rel": "alternate", "hreflang": "ru", "href": "https://codewave.pro/ru"},
+      {"rel": "alternate", "hreflang": "x-default", "href": "https://codewave.pro/en"},
+      {"name": "yandex-verification", "content": "cc016fa17ab16f69"}
+    ]
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy | Codewave",
+    "description": "How we collect and protect your personal data when you use our services.",
+    "keywords": "privacy policy, data protection",
+    "canonical": "https://codewave.pro/en/privacy-policy",
+    "og": {
+      "title": "Privacy Policy | Codewave",
+      "description": "Protection of our clients' personal data",
+      "type": "article",
+      "url": "https://codewave.pro/en/privacy-policy",
+      "image": "https://codewave.pro/images/og/og.jpg",
+      "image:width": "1200",
+      "image:height": "630",
+      "image:alt": "Privacy Policy"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@codewave",
+      "creator": "@codewave",
+      "title": "Privacy Policy | Codewave",
+      "description": "How we handle your data",
+      "image": "https://codewave.pro/images/og/og.jpg",
+      "image:alt": "Privacy Policy"
+    },
+    "additionalMeta": [
+      {"name": "robots", "content": "index, follow"},
+      {"property": "og:locale:alternate", "content": "ru_RU"},
+      {"name": "yandex-verification", "content": "cc016fa17ab16f69"}
+    ]
+  },
+  "termsOfServices": {
+    "title": "Service Terms | Codewave",
+    "description": "Terms and conditions for website and web application development services.",
+    "keywords": "service terms, development agreement",
+    "canonical": "https://codewave.pro/en/terms-of-service",
+    "og": {
+      "title": "Service Terms | Codewave",
+      "description": "Terms for working with our web development agency",
+      "type": "article",
+      "url": "https://codewave.pro/en/terms-of-service",
+      "image": "https://codewave.pro/images/og/og.jpg",
+      "image:width": "1200",
+      "image:height": "630",
+      "image:alt": "Service Terms"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@codewave",
+      "creator": "@codewave",
+      "title": "Service Terms | Codewave",
+      "description": "Our development service terms",
+      "image": "https://codewave.pro/images/og/og.jpg",
+      "image:alt": "Service Terms"
+    },
+    "additionalMeta": [
+      {"name": "robots", "content": "index, follow"},
+      {"property": "og:locale:alternate", "content": "ru_RU"},
+      {"name": "yandex-verification", "content": "cc016fa17ab16f69"}
+    ]
+  },
+  "termsOfUse": {
+    "title": "Website Terms of Use | Codewave",
+    "description": "Rules for using our website content and services.",
+    "keywords": "website terms of use",
+    "canonical": "https://codewave.pro/en/terms-of-use",
+    "og": {
+      "title": "Website Terms of Use | Codewave",
+      "description": "Rules for using our website",
+      "type": "article",
+      "url": "https://codewave.pro/en/terms-of-use",
+      "image": "https://codewave.pro/images/og/og.jpg",
+      "image:width": "1200",
+      "image:height": "630",
+      "image:alt": "Website Terms of Use"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@codewave",
+      "creator": "@codewave",
+      "title": "Website Terms of Use | Codewave",
+      "description": "How you may use our website content",
+      "image": "https://codewave.pro/images/og/og.jpg",
+      "image:alt": "Website Terms of Use"
+    },
+    "additionalMeta": [
+      {"name": "robots", "content": "index, follow"},
+      {"property": "og:locale:alternate", "content": "ru_RU"},
+      {"name": "yandex-verification", "content": "cc016fa17ab16f69"}
+    ]
   }
 }

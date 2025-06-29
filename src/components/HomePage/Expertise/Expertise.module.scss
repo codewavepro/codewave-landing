@@ -134,15 +134,18 @@
         justify-content: center;
         width: 100%;
         aspect-ratio: 16/9;
+        margin-bottom: 8px;
 
         @media(min-width: v.$lg) {
+          margin-bottom: 0;
           max-width: 702px;
           justify-content: flex-start;
         }
 
         img {
           width: 100%;
-          height: auto;
+          height: 100%;
+          object-fit: cover;
           border-radius: v.$br;
           box-shadow: v.$bs-type1;
         }

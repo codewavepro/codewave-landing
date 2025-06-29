@@ -32,7 +32,6 @@ const Footer = () => {
 
     return (
         <footer className={styles.footer}>
-            <Image className={styles.blocks} src="/blocks3.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.footerWrapper}>
                     <div className={styles.footerCols}>

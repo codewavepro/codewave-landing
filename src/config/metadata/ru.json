@@ -1,6 +1,129 @@
 {
   "home": {
-    "title": "Codewave - Инновационные цифровые решения",
-    "description": "Мы создаем передовые веб-приложения, которые трансформируют бизнес"
+    "title": "Codewave — Разработка сайтов и веб-приложений под ключ",
+    "description": "Профессиональное создание сайтов: лендинги, корпоративные сайты, интернет-магазины. Полный цикл разработки с гарантией.",
+    "keywords": "разработка сайтов, создание сайта, веб-студия, заказать сайт, лендинг, интернет-магазин",
+    "canonical": "https://codewave.pro/ru",
+    "og": {
+      "title": "Codewave | Разработка сайтов",
+      "description": "Создаем продающие сайты для вашего бизнеса",
+      "type": "website",
+      "url": "https://codewave.pro/ru",
+      "site_name": "Codewave",
+      "locale": "ru_RU",
+      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image:width": "1200",
+      "image:height": "630",
+      "image:alt": "Codewave - Веб-разработка"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@codewave_ru",
+      "creator": "@codewave_ru",
+      "title": "Codewave | Профессиональная веб-разработка",
+      "description": "Создание сайтов, которые работают на бизнес",
+      "image": "https://codewave.pro/images/og/og.jpg",
+      "image:alt": "Codewave - Разработка сайтов"
+    },
+    "additionalMeta": [
+      {"name": "robots", "content": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"},
+      {"name": "author", "content": "Codewave"},
+      {"name": "theme-color", "content": "#2563eb"},
+      {"property": "og:locale:alternate", "content": "en_US"},
+      {"rel": "alternate", "hreflang": "en", "href": "https://codewave.pro/en"},
+      {"rel": "alternate", "hreflang": "ru", "href": "https://codewave.pro/ru"},
+      {"rel": "alternate", "hreflang": "x-default", "href": "https://codewave.pro/ru"},
+      {"name": "yandex-verification", "content": "cc016fa17ab16f69"}
+    ]
+  },
+  "privacyPolicy": {
+    "title": "Политика конфиденциальности Codewave",
+    "description": "Как мы собираем и защищаем ваши персональные данные при работе с нашими услугами.",
+    "keywords": "политика конфиденциальности, защита данных",
+    "canonical": "https://codewave.pro/ru/privacy-policy",
+    "og": {
+      "title": "Политика конфиденциальности Codewave",
+      "description": "Защита персональных данных клиентов",
+      "type": "article",
+      "url": "https://codewave.pro/ru/privacy-policy",
+      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image:width": "1200",
+      "image:height": "630",
+      "image:alt": "Политика конфиденциальности"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@codewave_ru",
+      "creator": "@codewave_ru",
+      "title": "Политика конфиденциальности Codewave",
+      "description": "Как мы работаем с вашими данными",
+      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image:alt": "Политика конфиденциальности"
+    },
+    "additionalMeta": [
+      {"name": "robots", "content": "index, follow"},
+      {"property": "og:locale:alternate", "content": "en_US"},
+      {"name": "yandex-verification", "content": "cc016fa17ab16f69"}
+    ]
+  },
+  "termsOfServices": {
+    "title": "Условия оказания услуг Codewave",
+    "description": "Правила и условия разработки сайтов и веб-приложений в нашей компании.",
+    "keywords": "условия оказания услуг, договор разработки",
+    "canonical": "https://codewave.pro/ru/terms-of-service",
+    "og": {
+      "title": "Условия оказания услуг Codewave",
+      "description": "Правила сотрудничества при разработке сайтов",
+      "type": "article",
+      "url": "https://codewave.pro/ru/terms-of-service",
+      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image:width": "1200",
+      "image:height": "630",
+      "image:alt": "Условия оказания услуг"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@codewave_ru",
+      "creator": "@codewave_ru",
+      "title": "Условия оказания услуг Codewave",
+      "description": "Правила работы с нашей студией",
+      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image:alt": "Условия оказания услуг"
+    },
+    "additionalMeta": [
+      {"name": "robots", "content": "index, follow"},
+      {"property": "og:locale:alternate", "content": "en_US"},
+      {"name": "yandex-verification", "content": "cc016fa17ab16f69"}
+    ]
+  },
+  "termsOfUse": {
+    "title": "Условия использования сайта Codewave",
+    "description": "Правила использования материалов и сервисов нашего сайта.",
+    "keywords": "условия использования сайта",
+    "canonical": "https://codewave.pro/ru/terms-of-use",
+    "og": {
+      "title": "Условия использования сайта Codewave",
+      "description": "Правила работы с нашим сайтом",
+      "type": "article",
+      "url": "https://codewave.pro/ru/terms-of-use",
+      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image:width": "1200",
+      "image:height": "630",
+      "image:alt": "Условия использования сайта"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@codewave_ru",
+      "creator": "@codewave_ru",
+      "title": "Условия использования сайта Codewave",
+      "description": "Как можно использовать материалы нашего сайта",
+      "image": "https://codewave.pro/images/og-ru.jpg",
+      "image:alt": "Условия использования сайта"
+    },
+    "additionalMeta": [
+      {"name": "robots", "content": "index, follow"},
+      {"property": "og:locale:alternate", "content": "en_US"},
+      {"name": "yandex-verification", "content": "cc016fa17ab16f69"}
+    ]
   }
 }

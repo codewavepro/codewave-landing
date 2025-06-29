@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 import useDictionary from "@/hooks/useDictionary";
-import 'swiper/css';
+import '../../../../node_modules/swiper/swiper-bundle.min.css';
 import styles from './Testimonials.module.scss';
 import SectionContainer from "@/components/common/Container/SectionContainer";
 import Titlebox from "@/components/TitleBox/Titlebox";
@@ -33,8 +33,8 @@ const Testimonials = () => {
     } = dictionary.home.testimonials;
 
     return (
-        <section className={styles.testimonials}>
-            <Image className={styles.blocks} src="/blocks4.svg" width={1000} height={1000} alt="Vector blocks" />
+        <section className={styles.testimonials} id="testimonials">
+            <Image className={styles.blocks} src="/images/blocks4.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.testimonialsWrapper}>
                     <Titlebox
@@ -52,15 +52,13 @@ const Testimonials = () => {
                         speed={300}
                         pagination={{
                             clickable: true,
-                            dynamicBullets: true
+                            dynamicBullets: true,
+                            dynamicMainBullets: 4
                         }}
                         breakpoints={{
                             768: {
                                 slidesPerView: 2,
                                 spaceBetween: 32,
-                            },
-                            1200: {
-                                slidesPerView: 3,
                             }
                         }}
                     >

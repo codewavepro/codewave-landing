@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useRef } from 'react';
 import type { ReactNode } from 'react';
 import styles from './Contact.module.scss';
+import { validateContactDetails, validateDate, ContactMethod } from "@/shared/validation";
 import useDictionary from '../../../hooks/useDictionary';
 import DOMPurify from 'dompurify';
 import useToast from '@/hooks/useToast';
@@ -10,16 +11,16 @@ import SectionContainer from "@/components/common/Container/SectionContainer";
 import Button from "@/components/buttons/Button/Button";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiLogoTelegram } from "react-icons/bi";
-import { BsTwitterX, BsWhatsapp } from "react-icons/bs";
+import { BsTwitterX, BsWhatsapp, BsCalendar3 } from "react-icons/bs";
 import { FaDiscord, FaLinkedin } from "react-icons/fa";
 import useReCaptcha from '@/hooks/useReCaptcha';
+import Image from "next/image";
+import Link from "next/link";
 
 type FormState = {
-  success: boolean;
-  message: string;
+    success: boolean;
+    message: string;
 };
-
-type ContactMethod = 'email' | 'telegram' | 'twitter' | 'discord' | 'linkedin' | 'whatsapp';
 
 const Contact = () => {
     const { loading, dictionary } = useDictionary();
@@ -28,18 +29,19 @@ const Contact = () => {
     const [selectedMethod, setSelectedMethod] = useState<ContactMethod>('email');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitAttempted, setSubmitAttempted] = useState(false);
+    const [selectedDate, setSelectedDate] = useState('');
     const [fieldErrors, setFieldErrors] = useState({
         name: false,
-        surname: false,
         message: false,
         contactDetails: false,
         privacyAccepted: false,
         deadline: false
     });
+    const dateInputRef = useRef<HTMLInputElement>(null);
 
     if (loading || !dictionary) return null;
 
-    const contactData = dictionary.home.contact;
+    const t = dictionary.home.contact;
 
     const contactMethods: { id: ContactMethod; icon: ReactNode; label: string }[] = [
         { id: 'email', icon: <AiOutlineMail />, label: 'Email' },
@@ -50,39 +52,6 @@ const Contact = () => {
         { id: 'whatsapp', icon: <BsWhatsapp />, label: 'WhatsApp' }
     ];
 
-    const validateContactDetails = (method: ContactMethod, details: string): boolean => {
-        if (!details.trim()) return false;
-
-        switch (method) {
-            case 'email':
-                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(details);
-            case 'telegram':
-                return /^@[a-zA-Z0-9_]{5,}$/.test(details) ||
-                    /^(https?:\/\/)?(t\.me\/)[a-zA-Z0-9_]{5,}$/.test(details);
-            case 'twitter':
-                return /^@[a-zA-Z0-9_]{1,15}$/.test(details) ||
-                    /^(https?:\/\/)?(twitter\.com|x\.com)\/[a-zA-Z0-9_]{1,15}$/.test(details);
-            case 'discord':
-                return /^[a-zA-Z0-9_-]{2,32}$/.test(details) ||
-                    /^(https?:\/\/)?(discord\.gg|discord\.com\/invite)\/[a-zA-Z0-9_-]+$/.test(details);
-            case 'linkedin':
-                return /^(https?:\/\/)?(www\.)?linkedin\.com\/(in|company)\/[a-zA-Z0-9_-]+\/?$/.test(details);
-            case 'whatsapp':
-                return /^\+[0-9]{7,15}$/.test(details) ||
-                    /^(https?:\/\/)?(wa\.me)\/[0-9]{7,15}$/.test(details);
-            default:
-                return true;
-        }
-    };
-
-    const validateDate = (dateStr: string): boolean => {
-        if (!dateStr) return true;
-        const selectedDate = new Date(dateStr);
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        return selectedDate >= today;
-    };
-
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setSubmitAttempted(true);
@@ -90,7 +59,6 @@ const Contact = () => {
         const form = e.currentTarget;
         const formValues = {
             name: DOMPurify.sanitize((form.elements.namedItem('name') as HTMLInputElement)?.value || ''),
-            surname: DOMPurify.sanitize((form.elements.namedItem('surname') as HTMLInputElement)?.value || ''),
             message: DOMPurify.sanitize((form.elements.namedItem('message') as HTMLTextAreaElement)?.value || ''),
             contactDetails: DOMPurify.sanitize((form.elements.namedItem('contactDetails') as HTMLInputElement)?.value || ''),
             privacyAccepted: (form.elements.namedItem('privacyAccepted') as HTMLInputElement)?.checked || false,
@@ -99,7 +67,6 @@ const Contact = () => {
 
         const errors = {
             name: !formValues.name,
-            surname: !formValues.surname,
             message: !formValues.message || formValues.message.length < 30,
             contactDetails: !formValues.contactDetails || !validateContactDetails(selectedMethod, formValues.contactDetails),
             privacyAccepted: !formValues.privacyAccepted,
@@ -109,7 +76,7 @@ const Contact = () => {
         setFieldErrors(errors);
 
         if (Object.values(errors).some(Boolean)) {
-            showToast(contactData.toast.fill, 'error');
+            showToast(t.toast['form.fillRequiredFields'], 'error');
             return;
         }
 
@@ -117,21 +84,20 @@ const Contact = () => {
 
         try {
             if (!captchaReady) {
-                showToast(contactData.toast.init, 'error');
+                showToast(t.toast['form.recaptchaNotReady'], 'error');
                 setIsSubmitting(false);
                 return;
             }
 
             const recaptchaToken = await getReCaptchaToken();
             if (!recaptchaToken) {
-                showToast(contactData.toast.verify, 'error');
+                showToast(t.toast['form.recaptchaMissing'], 'error');
                 setIsSubmitting(false);
                 return;
             }
 
             const formData = new FormData();
             formData.append('name', formValues.name);
-            formData.append('surname', formValues.surname);
             formData.append('company', DOMPurify.sanitize((form.elements.namedItem('company') as HTMLInputElement)?.value || ''));
             formData.append('budget', DOMPurify.sanitize((form.elements.namedItem('budget') as HTMLInputElement)?.value || ''));
             formData.append('deadline', formValues.deadline);
@@ -150,7 +116,7 @@ const Contact = () => {
                 const result = await response.json();
 
                 if (!response.ok) {
-                    throw new Error(result.message || 'Failed to send message');
+                    throw new Error(result.message || t.toast['form.recaptchaFail']);
                 }
 
                 return result;
@@ -159,14 +125,18 @@ const Contact = () => {
             const result = await showPromiseToast(
                 sendRequest(),
                 {
-                    loading: contactData.toast.sending,
+                    loading: t.toast['form.sending'],
                     success: (result: FormState) => {
                         if (!result.success) {
-                            throw new Error(result.message || 'Failed to send message');
+                            throw new Error(result.message || t.toast['form.recaptchaFail']);
                         }
-                        return contactData.toast.success;
+                        return t.toast['form.success'];
                     },
-                    error: () => contactData.toast.success
+                    error: (err: unknown) => {
+                        const key = err instanceof Error ? err.message : 'form.error';
+                        return t.toast[key] || t.toast['form.error'];
+                    }
+
                 }
             );
 
@@ -176,7 +146,6 @@ const Contact = () => {
                 setSubmitAttempted(false);
                 setFieldErrors({
                     name: false,
-                    surname: false,
                     message: false,
                     contactDetails: false,
                     privacyAccepted: false,
@@ -188,6 +157,10 @@ const Contact = () => {
         } finally {
             setIsSubmitting(false);
         }
+    };
+
+    const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSelectedDate(e.target.value);
     };
 
     const getPlaceholderForMethod = (method: ContactMethod): string => {
@@ -210,40 +183,31 @@ const Contact = () => {
     };
 
     return (
-        <section className={styles.contact}>
+        <section className={styles.contact} id="contact">
+            <Image className={styles.blocks} src="/images/blocks3.svg" width={1000} height={1000} alt="Vector blocks" />
             <SectionContainer>
                 <div className={styles.contactWrapper}>
                     <div className={styles.contactInfo}>
-                        <h2>{contactData.h2}</h2>
-                        <p>{contactData.subtext}</p>
+                        <h2>{t.h2}</h2>
+                        <p>{t.subtext}</p>
                     </div>
 
                     <form className={styles.contactForm} onSubmit={handleSubmit}>
                         <fieldset>
-                            <div className={styles.halfWidth}>
                                 <div
                                     className={`${styles.inputRow} ${styles.required} ${(submitAttempted && fieldErrors.name) ? styles.error : ''}`}>
                                     <input
                                         type="text"
-                                        placeholder={contactData.form.name}
+                                        placeholder={t.form.name}
                                         name="name"
                                         disabled={isSubmitting}
                                     />
                                 </div>
-                                <div className={`${styles.inputRow} ${styles.required} ${(submitAttempted && fieldErrors.surname) ? styles.error : ''}`}>
-                                    <input
-                                        type="text"
-                                        placeholder={contactData.form.surname}
-                                        name="surname"
-                                        disabled={isSubmitting}
-                                    />
-                                </div>
-                            </div>
                             <div className={styles.halfWidth}>
                                 <div className={styles.inputRow}>
                                     <input
                                         type="text"
-                                        placeholder={contactData.form.company}
+                                        placeholder={t.form.company}
                                         name="company"
                                         disabled={isSubmitting}
                                     />
@@ -251,32 +215,51 @@ const Contact = () => {
                                 <div className={styles.inputRow}>
                                     <input
                                         type="text"
-                                        placeholder={contactData.form.budget}
+                                        placeholder={t.form.budget}
                                         name="budget"
                                         disabled={isSubmitting}
                                     />
                                 </div>
                             </div>
-                            <div className={styles.deadline}>
-                                <span>{contactData.form.deadline}</span>
-                                <input
-                                    type="date"
-                                    name="deadline"
-                                    disabled={isSubmitting}
-                                    className={submitAttempted && fieldErrors.deadline ? styles.error : ''}
-                                />
+                            <div 
+                                className={styles.deadline} 
+                                onClick={() => dateInputRef.current?.showPicker()}
+                                role="button"
+                                tabIndex={0}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        dateInputRef.current?.showPicker();
+                                    }
+                                }}
+                            >
+                                <span>{t.form.deadline}</span>
+                                <div className={styles.dateInputWrapper}>
+                                    <input
+                                        type="date"
+                                        name="deadline"
+                                        ref={dateInputRef}
+                                        disabled={isSubmitting}
+                                        onChange={handleDateChange}
+                                        className={`${submitAttempted && fieldErrors.deadline ? styles.error : ''} ${styles.dateInput}`}
+                                    />
+                                    <BsCalendar3 className={styles.calendarIcon} />
+                                    <div className={styles.dateDisplay} data-placeholder="Select date">
+                                        {selectedDate || t.form.selectDate}
+                                    </div>
+                                </div>
                             </div>
                             <div className={`${styles.inputRow} ${styles.required} ${(submitAttempted && fieldErrors.message) ? styles.error : ''}`}>
                                 <textarea
                                     name="message"
-                                    placeholder={contactData.form.message}
+                                    placeholder={t.form.message}
                                     disabled={isSubmitting}
                                 ></textarea>
                             </div>
 
                             <div className={styles.preferredContact}>
                                 <div className={styles.preferredLabel}>
-                                    {contactData.form.preferred}
+                                    {t.form.preferred}
                                 </div>
                                 <div className={styles.contactMethodWrapper}>
                                     <div className={styles.preferredItems}>
@@ -292,7 +275,7 @@ const Contact = () => {
                                         ))}
                                     </div>
                                     <div className={`${styles.contactDetailsInput} ${styles.required} ${(submitAttempted && fieldErrors.contactDetails) ? styles.error : ''}`}>
-                                    <input
+                                        <input
                                             type="text"
                                             name="contactDetails"
                                             placeholder={getPlaceholderForMethod(selectedMethod)}
@@ -315,14 +298,16 @@ const Contact = () => {
                                         value="on"
                                         disabled={isSubmitting}
                                     />
-                                    <span></span>
-                                    {contactData.form.privacy}
+                                    <span className={styles.square}></span>
+                                    <div className={styles.privacyText}>
+                                        {t.form.privacy} <Link href="/privacy-policy">{t.form.privacyText}</Link>
+                                    </div>
                                 </label>
                             </div>
                         </fieldset>
 
                         <Button
-                            text={isSubmitting || captchaLoading ? 'Sending...' : contactData.form.button}
+                            text={isSubmitting || captchaLoading ? t.toast['form.sending'] : t.form.button}
                             size="large"
                             color="light"
                             type="submit"
