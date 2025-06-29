@@ -11,7 +11,7 @@
       "url": "https://codewave.pro/ru",
       "site_name": "Codewave",
       "locale": "ru_RU",
-      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image": "https://codewave.pro/og/og-ru.jpg",
       "image:width": "1200",
       "image:height": "630",
       "image:alt": "Codewave - Веб-разработка"
@@ -22,7 +22,7 @@
       "creator": "@codewave_ru",
       "title": "Codewave | Профессиональная веб-разработка",
       "description": "Создание сайтов, которые работают на бизнес",
-      "image": "https://codewave.pro/images/og/og.jpg",
+      "image": "https://codewave.pro/og/og.jpg",
       "image:alt": "Codewave - Разработка сайтов"
     },
     "additionalMeta": [
@@ -46,7 +46,7 @@
       "description": "Защита персональных данных клиентов",
       "type": "article",
       "url": "https://codewave.pro/ru/privacy-policy",
-      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image": "https://codewave.pro/og/og-ru.jpg",
       "image:width": "1200",
       "image:height": "630",
       "image:alt": "Политика конфиденциальности"
@@ -57,7 +57,7 @@
       "creator": "@codewave_ru",
       "title": "Политика конфиденциальности Codewave",
       "description": "Как мы работаем с вашими данными",
-      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image": "https://codewave.pro/og/og-ru.jpg",
       "image:alt": "Политика конфиденциальности"
     },
     "additionalMeta": [
@@ -76,7 +76,7 @@
       "description": "Правила сотрудничества при разработке сайтов",
       "type": "article",
       "url": "https://codewave.pro/ru/terms-of-service",
-      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image": "https://codewave.pro/og/og-ru.jpg",
       "image:width": "1200",
       "image:height": "630",
       "image:alt": "Условия оказания услуг"
@@ -87,7 +87,7 @@
       "creator": "@codewave_ru",
       "title": "Условия оказания услуг Codewave",
       "description": "Правила работы с нашей студией",
-      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image": "https://codewave.pro/og/og-ru.jpg",
       "image:alt": "Условия оказания услуг"
     },
     "additionalMeta": [
@@ -106,7 +106,7 @@
       "description": "Правила работы с нашим сайтом",
       "type": "article",
       "url": "https://codewave.pro/ru/terms-of-use",
-      "image": "https://codewave.pro/images/og/og-ru.jpg",
+      "image": "https://codewave.pro/og/og-ru.jpg",
       "image:width": "1200",
       "image:height": "630",
       "image:alt": "Условия использования сайта"
@@ -117,7 +117,7 @@
       "creator": "@codewave_ru",
       "title": "Условия использования сайта Codewave",
       "description": "Как можно использовать материалы нашего сайта",
-      "image": "https://codewave.pro/images/og-ru.jpg",
+      "image": "https://codewave.pro/og-ru.jpg",
       "image:alt": "Условия использования сайта"
     },
     "additionalMeta": [
