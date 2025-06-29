@@ -11,7 +11,7 @@
       "url": "https://codewave.pro/en",
       "site_name": "Codewave",
       "locale": "en_US",
-      "image": "https://codewave.pro/images/og/og.jpg",
+      "image": "https://codewave.pro/og/og.jpg",
       "image:width": "1200",
       "image:height": "630",
       "image:alt": "Codewave - Web Development"
@@ -22,7 +22,7 @@
       "creator": "@codewave",
       "title": "Codewave | Website Development Services",
       "description": "Web development that delivers real business value",
-      "image": "https://codewave.pro/images/og/og.jpg",
+      "image": "https://codewave.pro/og/og.jpg",
       "image:alt": "Codewave - Web Development"
     },
     "additionalMeta": [
@@ -46,7 +46,7 @@
       "description": "Protection of our clients' personal data",
       "type": "article",
       "url": "https://codewave.pro/en/privacy-policy",
-      "image": "https://codewave.pro/images/og/og.jpg",
+      "image": "https://codewave.pro/og/og.jpg",
       "image:width": "1200",
       "image:height": "630",
       "image:alt": "Privacy Policy"
@@ -57,7 +57,7 @@
       "creator": "@codewave",
       "title": "Privacy Policy | Codewave",
       "description": "How we handle your data",
-      "image": "https://codewave.pro/images/og/og.jpg",
+      "image": "https://codewave.pro/og/og.jpg",
       "image:alt": "Privacy Policy"
     },
     "additionalMeta": [
@@ -76,7 +76,7 @@
       "description": "Terms for working with our web development agency",
       "type": "article",
       "url": "https://codewave.pro/en/terms-of-service",
-      "image": "https://codewave.pro/images/og/og.jpg",
+      "image": "https://codewave.pro/og/og.jpg",
       "image:width": "1200",
       "image:height": "630",
       "image:alt": "Service Terms"
@@ -87,7 +87,7 @@
       "creator": "@codewave",
       "title": "Service Terms | Codewave",
       "description": "Our development service terms",
-      "image": "https://codewave.pro/images/og/og.jpg",
+      "image": "https://codewave.pro/og/og.jpg",
       "image:alt": "Service Terms"
     },
     "additionalMeta": [
@@ -106,7 +106,7 @@
       "description": "Rules for using our website",
       "type": "article",
       "url": "https://codewave.pro/en/terms-of-use",
-      "image": "https://codewave.pro/images/og/og.jpg",
+      "image": "https://codewave.pro/og/og.jpg",
       "image:width": "1200",
       "image:height": "630",
       "image:alt": "Website Terms of Use"
@@ -117,7 +117,7 @@
       "creator": "@codewave",
       "title": "Website Terms of Use | Codewave",
       "description": "How you may use our website content",
-      "image": "https://codewave.pro/images/og/og.jpg",
+      "image": "https://codewave.pro/og/og.jpg",
       "image:alt": "Website Terms of Use"
     },
     "additionalMeta": [
